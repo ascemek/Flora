@@ -34,6 +34,19 @@ Everyone from beginner to experienced gardeners (accessible to many levels of ga
 As a busy landscape gardener, I want to be able to track all of my plants’ watering schedules so that I can track the last time they were watered
 As a researcher, I want to be able to search for a plant so that I can learn about different plants (planting zone, watering schedules, etc)
 
+# Features
+10 features with data storage, retrieval, display, and data consistency all be demonstrated:
+- Accounts
+- List of plants in your garden 
+- List of favorite plants
+- Ability to view other user’s gardens
+- Database of plants that users can search 
+- Users can post about their gardens and ask questions
+- Users can reply to posts in order to answer questions
+- Users can see which plants they need to water that day/a watering schedule
+- Users will have a fertilizer schedule 
+- Users will receive suggestions on what to plant this month
+
 ## User Testing Plan
 After a feature has been deemed completed and has been deployed to the test website for Flora, we will test it with a potential user of the platform 
 For example:
