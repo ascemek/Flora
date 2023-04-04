@@ -10,7 +10,7 @@ Contributors' names and contact info:
 * [Sami Cemek](https://github.com/ascemek) 
 * [Chloe Jones](https://github.com/chloemjones)
 
-# Tech Used
+## Tech Used
  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
  ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -19,6 +19,17 @@ Contributors' names and contact info:
  ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) 
  ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) 
  ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
+ 
+Deployment
+We will be deploying the website using AWS.
+Development Framework
+	We will be using sails.js.
+Database 
+	We will attempt to use sails.js built in resources, if we have issues we will use MongoDB.
+Other
+	We will be using Github to allow for collaboration.
+Why?
+	We chose these technologies because we all have experience with them.
 
 ## Product Description and Motivation
 
@@ -34,7 +45,7 @@ Everyone from beginner to experienced gardeners (accessible to many levels of ga
 As a busy landscape gardener, I want to be able to track all of my plants’ watering schedules so that I can track the last time they were watered
 As a researcher, I want to be able to search for a plant so that I can learn about different plants (planting zone, watering schedules, etc)
 
-# Features
+## Features
 10 features with data storage, retrieval, display, and data consistency all be demonstrated:
 - Accounts
 - List of plants in your garden 
@@ -71,17 +82,3 @@ Group Non Negotiables
 Be respectful
 Communicate about project
 Attend Daily Scrum and meetings
-
-
-## Technologies
-
-Deployment
-We will be deploying the website using AWS.
-Development Framework
-	We will be using sails.js.
-Database 
-	We will attempt to use sails.js built in resources, if we have issues we will use MongoDB.
-Other
-	We will be using Github to allow for collaboration.
-Why?
-	We chose these technologies because we all have experience with them.
