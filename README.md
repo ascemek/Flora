@@ -1,5 +1,5 @@
-# Flora
-Flora: Planting Companion (Software Engineering Final Project)
+# Flora: Planting Companion
+Software Engineering Final Project (Spring 2023)
 
 ## Authors
 
