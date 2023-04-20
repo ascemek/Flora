@@ -25,7 +25,8 @@ module.exports.routes = {
   '/my_garden': {view: 'pages/my_garden'},
   '/journal': {view: 'pages/journal'},
   '/profile': {view: 'pages/profile'},
-  '/watering': {view: 'pages/informationPages/watering'}
+  '/watering': {view: 'pages/informationPages/watering'},
+  '/information': {view: 'pages/informationPages/information'}
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
