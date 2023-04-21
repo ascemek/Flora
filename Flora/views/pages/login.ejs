@@ -1,0 +1,115 @@
+<style>
+    .loginContainer {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+
+    #username {
+        margin-left: 20px;
+        width: 35%;
+    }
+    #password {
+        margin-left: 25px;
+        width: 35%;
+    }
+    #login {
+        margin-right: 30%;
+        float: right;
+    }
+    #register {
+      margin-right: 30%;
+        float: right;
+    }
+</style>
+
+<h1>Flora</h1><br/><br/><br/>
+<div class="loginContainer"> <!-- This is the login container -->
+    <h2>Log In to Flora</h2><br/>
+    <label for="username">Username</label> <!-- Username label -->
+    <input name="username" id="username" placeholder="Username"> <!-- Username input -->
+    <br/><br/>
+    <label for="password">Password</label> <!-- Password label -->
+    <input type="password" name="password" id="password" placeholder="Password"> <!-- Password input -->
+    <br/><br/>
+    <button id="login">Login</button> <!-- Login button -->
+    <br/>
+    <br/>
+    <button id="register">Create Account</button> <!-- Register button -->
+</div>
+<button id="bypass">Click me to bypass login</button> <!-- Bypass button -->
+<div id="developerSettings" data-devmode="<%=sails.config.custom.devMode%>"></div> <!-- Developer settings -->
+
+<script>
+if ($("#developerSettings").data("devmode")) { // If devmode is true
+    $("#bypass").show(); // Show the bypass button
+    $("#bypass").on("click", () => { // When the bypass button is clicked
+        let devmode = $("#developerSettings").data("devmode");
+        if (devmode) { // If devmode is true
+            $.ajax({ // Send a request to the login endpoint
+                type: 'GET', 
+                url: "/user/login",
+                dataType: 'json',
+                contentType: 'json',
+                data: {username: "admin", password: "admin"}, // Use the admin account
+                async: false,
+                success: (data) => { // If the request is successful
+                    if (data.error) { // If there is an error
+                      Swal.fire({ // Show an error message
+                        icon: 'error',
+                        text: data.error
+                      })
+                    } else { // If there is no error
+                      window.location.href = "/"; // Redirect to the home page
+                    }
+                },
+                error: (err) => { // If the request fails
+                  Swal.fire({ // Show an error message
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!'
+                  })
+                }
+            });
+        }
+    });
+} else {
+    $("#bypass").hide(); // Hide the bypass button
+}
+$(document).ready(() => { // When the page is ready
+    $("#login").on("click", () => { // When the login button is clicked
+        let username = $("#username").val(); // Get the username
+        let password = $("#password").val(); // Get the password
+        $.ajax({ // Send a request to the login endpoint
+            type: 'GET', 
+            url: "/user/login",
+            dataType: 'json',
+            contentType: 'json',
+            data: {username: username, password: password}, // Use the username and password
+            async: false, // Make the request synchronous
+            success: (data) => { // If the request is successful
+                if (data.error) { // If there is an error
+                  Swal.fire({ // Show an error message
+                    icon: 'error',
+                    text: data.error
+                  })
+                } else { // If there is no error
+                  window.location.href = "/"; // Redirect to the home page
+                }
+            },
+            error: (err) => { // If the request fails
+              Swal.fire({ // Show an error message
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!'
+              })
+            }
+        });
+    });
+    $("#register").on("click", () => { // When the register button is clicked
+        window.location.href = "/register"; // Redirect to the register page
+    });
+});
+</script>
+
+

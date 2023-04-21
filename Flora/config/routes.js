@@ -13,19 +13,24 @@ module.exports.routes = {
   //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
   //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
-  '/': {view: 'pages/homepage'},
-  '/companion_planting': {view: 'pages/informationPages/companionPlanting'},
-  '/plantSearch': {view: 'pages/plantSearch'},
-  '/sunlight': {view: 'pages/informationPages/sunlight'},
-  '/fertilizer': {view: 'pages/informationPages/fertilizer'},
-  '/diseases_pests_weeds': {view: 'pages/informationPages/diseases_pests_weeds'},
-  '/agr_zones': {view: 'pages/informationPages/agr_zones'},
-  '/composting': {view: 'pages/informationPages/composting'},
-  '/forum': {view: 'pages/forum'},
-  '/my_garden': {view: 'pages/my_garden'},
-  '/journal': {view: 'pages/journal'},
-  '/profile': {view: 'pages/profile'},
-  '/watering': {view: 'pages/informationPages/watering'}
+  '/': {view: 'pages/homepage', policy: 'sessionAuth'},
+  '/login': { view: 'pages/login' }, // Login page
+  '/register': { view: 'pages/register' }, // Register page
+  '/user/login': 'UserController.login', // Login action
+  '/user/logout': 'UserController.logout', // Logout action
+  '/user/register': 'UserController.createAccount', // Register action
+  '/companion_planting': {view: 'pages/informationPages/companionPlanting', policy: 'sessionAuth'},
+  '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'},
+  '/sunlight': {view: 'pages/informationPages/sunlight', policy: 'sessionAuth'},
+  '/fertilizer': {view: 'pages/informationPages/fertilizer', policy: 'sessionAuth'},
+  '/diseases_pests_weeds': {view: 'pages/informationPages/diseases_pests_weeds', policy: 'sessionAuth'},
+  '/agr_zones': {view: 'pages/informationPages/agr_zones', policy: 'sessionAuth'},
+  '/composting': {view: 'pages/informationPages/composting', policy: 'sessionAuth'},
+  '/forum': {view: 'pages/forum', policy: 'sessionAuth'},
+  '/my_garden': {view: 'pages/my_garden', policy: 'sessionAuth'},
+  '/journal': {view: 'pages/journal', policy: 'sessionAuth'},
+  '/profile': {view: 'pages/profile', policy: 'sessionAuth'},
+  '/watering': {view: 'pages/informationPages/watering', policy: 'sessionAuth'}
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
