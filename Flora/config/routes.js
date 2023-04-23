@@ -16,6 +16,17 @@ module.exports.routes = {
   '/': {view: 'pages/homepage'},
   '/companion_planting': {view: 'pages/companionPlant'},
   '/composting': {view: 'pages/composting'},
+  '/plantSearch': {view: 'pages/plantSearch'},
+  '/sunlight': {view: 'pages/informationPages/sunlight'},
+  '/fertilizer': {view: 'pages/informationPages/fertilizer'},
+  '/diseases_pests_weeds': {view: 'pages/informationPages/diseases_pests_weeds'},
+  '/agr_zones': {view: 'pages/informationPages/agr_zones'},
+  '/forum': {view: 'pages/forum'},
+  '/my_garden': {view: 'pages/my_garden'},
+  '/journal': {view: 'pages/journal'},
+  '/profile': {view: 'pages/profile'},
+  '/watering': {view: 'pages/informationPages/watering'}
+
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
   //  ╩ ╩╩╚═╝╚═╝  ╩╚═╚═╝═╩╝╩╩╚═╚═╝╚═╝ ╩ ╚═╝  └┘   ═╩╝╚═╝╚╩╝╝╚╝╩═╝╚═╝╩ ╩═╩╝╚═╝
