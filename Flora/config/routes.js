@@ -23,6 +23,7 @@ module.exports.routes = {
   '/agr_zones': {view: 'pages/informationPages/agr_zones'},
   '/forum': {view: 'pages/forum'},
   '/my_garden': {view: 'pages/my_garden'},
+  '/plantInfo': {view: 'pages/plantInfo'},
   '/journal': {view: 'pages/journal'},
   '/profile': {view: 'pages/profile'},
   '/watering': {view: 'pages/informationPages/watering'}
