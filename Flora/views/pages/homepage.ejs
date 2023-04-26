@@ -1,3 +1,5 @@
+
+<!-- NAV BAR -->
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
 
   <a class="navbar-brand" href="#">Flora</a>
@@ -7,7 +9,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ms-auto">
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="/">Plant Search</a>
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -41,3 +43,83 @@
       </ul>
     </div>  
 </nav>
+
+<!-- BODY -->
+<body>
+<h1>Flora</h1><br/><br/><br/>
+<div class="loginContainer"> <!-- This is the login container -->
+    <h2 id = "loginHead">Log In to Flora</h2><br/>
+    <label for="username" id="userLabel">Username</label> <!-- Username label -->
+    <input name="username" id="username" placeholder="Username"> <!-- Username input -->
+    <br/><br/>
+    <label for="password" id="passLabel">Password</label> <!-- Password label -->
+    <input type="password" name="password" id="password" placeholder="Password"> <!-- Password input -->
+    <br/><br/>
+    <button id="login">Login</button> <!-- Login button -->
+    <br/>
+    <br/>
+    <button id="register">Create Account</button> <!-- Register button -->
+</div>
+<button id="bypass">Click me to bypass login</button> <!-- Bypass button -->
+<div id="developerSettings" data-devmode="<%=sails.config.custom.devMode%>"></div> <!-- Developer settings -->
+<br> 
+
+<hr class="dashed"> 
+
+<div class = "infoContainer"> <!-- This is the site information container -->
+  <br>
+  <h3 id="infoHead">What is Flora? </h2>
+  <p> 
+    <br> 
+    Flora is a personalized planting companion. With Flora you can keep track of your watering schedule, fertilizer schedule, make journal entries to track your garden's progress, connect with other gardeners through our forum, find information on: pests, diseases, weeds, agricultural zones, watering needs, sun needs, care guides for each plant, companion planting, composting, and more! Flora is suited to your needs based on your experience level, allowing it to be an amazing garden helper! 
+  </p>
+</div>
+
+</body>
+
+
+<!-- STYLE -->
+<style>
+  body{
+    background-color: #FAF9F6;
+  }
+
+  .loginContainer{
+      margin: auto;
+      display: block;
+      width: 50%;
+      padding: 2%;
+  }
+
+  .infoContainer{
+    margin: auto;
+    display: block;
+    width: 75%;
+    padding: 2%;
+  }
+
+  #username, #password {
+      margin-left: 5%;
+      width: 35%;
+  }
+  
+  #login, #register {
+      margin-right: 15%;
+      float: right;
+  }
+
+  #userLabel, #passLabel {
+      margin-left: 25%
+  }
+  
+  #infoHead, #loginHead {
+    margin: auto;
+    text-align: center;
+    color: #365E36;
+  }
+
+  hr.dashed {
+      border-top: 3px dotted #30007D;
+    }
+
+</style>
