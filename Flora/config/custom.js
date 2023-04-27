@@ -23,6 +23,12 @@ module.exports.custom = {
   *                                                                         *
   **************************************************************************/
   baseUrl: 'http://localhost:1337',
+  /*
+    Whether or not the app should run in development mode.
+    This is used to enable/disable certain features, like
+    bypassing login and populating the database with test data.
+  */
+  devMode: true,
 
   /**************************************************************************
   *                                                                         *

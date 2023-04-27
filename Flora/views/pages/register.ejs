@@ -1,0 +1,114 @@
+<style>
+  .registerContainer {
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+  }
+  input {
+      margin-left: 20px;
+      width: 35%;
+  }
+  label {
+    display: inline-block;
+    width: 150px;
+  }
+  #register {
+    margin-left: 42%;
+  }
+</style>
+
+<h1>Flora</h1><br/><br/><br/>
+<div class="registerContainer"> <!-- This is the register container -->
+    <h2>Register for Flora</h2><br/>
+    <form id="registerForm"> <!-- Register form -->
+    <label for="firstName"> <!-- First name label -->
+        First Name
+    </label>
+    <input name="firstName" id="firstName" placeholder="First Name" required> <!-- First name input -->
+    <br/><br/>
+    <label for="lastName"> <!-- Last name label -->
+        Last Name
+    </label>
+    <input name="lastName" id="lastName" placeholder="Last Name" required> <!-- Last name input -->
+    <br/><br/>
+    <label for="email"> <!-- Email label -->
+        Email
+    </label>
+    <input name="email" id="email" placeholder="Email" required> <!-- Email input -->
+    <br/><br/>
+    <label for="username"> <!-- Username label -->
+        Username
+    </label>
+    <input name="username" id="username" placeholder="Username" required> <!-- Username input -->
+    <br/><br/>
+    <label for="password"> <!-- Password label -->
+        Password
+    </label>
+    <input type="password" name="password" id="password" placeholder="Password" required> <!-- Password input -->
+    <br/><br/>
+    <label for="confirmPassword"> <!-- Confirm password label -->
+      Confirm Password
+    </label>
+    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required> <!-- Confirm password input -->
+    <br/><br/>
+    <button id="cancel">Cancel</button> <!-- Cancel button -->
+    <button type="submit" id="register">Register</button> <!-- Register button -->
+    </form>
+</div>
+
+<script>
+
+function initPage() { // Initialize the page
+  $("#cancel").on("click", () => { // When the cancel button is clicked
+    window.location.href = "/"; // Redirect to the home page
+  });
+  $("#registerForm").on("submit", async (e) => { // When the register form is submitted
+    e.preventDefault(); // Prevent the form from submitting
+    let firstName = $("#firstName").val(); // Get the first name
+    let lastName = $("#lastName").val(); // Get the last name
+    let email = $("#email").val(); // Get the email
+    let username = $("#username").val(); // Get the username
+    let password = $("#password").val(); // Get the password
+    let confirmPassword = $("#confirmPassword").val(); // Get the confirm password
+    if (password !== confirmPassword) { // If the passwords do not match
+      Swal.fire({ // Display an error message
+        icon: 'error',
+        text: "Passwords do not match"
+      })
+    } else { // If the passwords match
+      $.ajax({ // Send a request to the server to register the user
+        type: 'GET',
+        url: "/user/register",
+        dataType: 'json',
+        contentType: 'json',
+        async: false,
+        data: {firstName: firstName, lastName: lastName, email: email, username: username, password: password}, // Send the user's information
+        success: (data) => { // When the request is successful
+          if (data.error) { // If there is an error
+            Swal.fire({ // Display the error message
+              icon: 'error',
+              text: data.error
+            })
+          } else { // If there is no error
+            window.location.href = "/"; // Redirect to the home page
+          }
+        },
+        error: async (err) => { // When the request fails
+          console.log(err);
+          Swal.fire({ // Display an error message
+            icon: 'error',
+            text: "An error occurred"
+          })
+        }
+      });
+    }
+    return false; // Prevent the form from submitting
+  });
+}
+
+$(document).ready(() => { // When the page is ready
+  initPage(); // Initialize the page
+});
+</script>
+
+
