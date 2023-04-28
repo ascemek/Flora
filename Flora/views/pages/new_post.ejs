@@ -1,0 +1,136 @@
+<nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
+  <a class="navbar-brand" href="/">Flora</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" href="/composting">Composting</a></li>
+          </ul>
+ 
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/my_garden">My Garden</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link" href="/journal">Journal</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
+
+
+  <body id="new_post_body">
+
+    <h3 id="new_post_head">New Post</h3>
+    <div id="post_form">
+        <textarea id = "post_input" placeholder="What's happening? Type your post here" rows="10"  required></textarea>
+        <!-- <input type="submit" value="Post"/><br> -->
+    </div>
+
+
+    <button class="btn-float-right" onclick="formdata()"> Post </button>
+    
+    <script>
+      function formdata() 
+      {
+        var post = document.getElementById("post_input").value;
+
+        $.ajax({
+          url:  '/post/create',
+          type: 'GET',
+          data: {body: post},
+          success: function(result) {
+              console.log("success");
+              if(result.error)
+              {
+                Swal.fire({ //show error alert
+                title: "Error",
+                text: result.error,
+                icon: "error"
+              });
+                console.log("error");
+              }
+              else
+              {
+                window.location.href = "/";
+              }
+          }
+        });
+      }
+      </script>
+  </body>
+
+<style>
+
+  .btn-float-right{
+    float: right;
+    margin-right: 13%;
+    margin-top: 3%;
+    background-color: #487CB4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  #post_input{
+    background-color: #afd0f4;
+  }
+
+  #new_post_head{
+    margin-top: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;;
+    padding-left: 12.5%;
+    color: #487CB4;
+  }
+
+
+  #post_form{
+      margin: auto;
+  }
+
+  #post_input{
+      margin: auto;
+      width: 75%;
+      padding: 20px;
+      display: block;
+  }
+
+
+
+  #submit{
+      padding: 10px;
+      float: right;
+      display: block;
+      margin-right: 12.5%;
+      margin-top: 10px;
+  }
+
+</style>
