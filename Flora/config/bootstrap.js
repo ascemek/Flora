@@ -57,6 +57,5 @@ module.exports.bootstrap = async function(done) {
       }
     ]);
   }
-  console.log(await Users.find());
   return done();
 };

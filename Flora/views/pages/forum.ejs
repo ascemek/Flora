@@ -41,3 +41,86 @@
         </ul>
       </div>  
   </nav>
+
+  <div style=" margin-top: 5%; margin-left: 15%; margin-right: 15%; display:inline-block; width: 100%;">
+    <div style="width: 30%; height: auto; float: left; display:inline-block;">
+        <h1 class = "subheadLightBlue"> Recent Posts</h1>
+    </div>
+    <div style="width: 70%; height: auto; display:inline-block;">
+        <div>
+            <img class="create" id="createPostButton" src="images/pictures/plusPost.png" alt="New Post icon" style="width: 10%; height: 10%; display: block;
+            margin-left: auto;
+            margin-right: auto;">
+          </a>
+        </div>
+    </div> 
+  </div>
+  
+  <div id="postData" data-post="<%=postdata%>">
+  </div>
+  
+  
+  <div class="posts-wrapper" style="margin: 30px 150px;">
+    <!-- This will get's the posts from new_post.ejs-->
+  </div>
+  
+  
+  <script> // Template post
+    $(document).ready(() => {console.log($("#postData").data('post'));
+    $("#createPostButton").on("click", () => {
+      window.location.href = "/new_post";
+    }
+    );
+    // sort the posts by date
+    const post = $("#postData").data('post').sort((a, b) => {
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    });
+    for(let i = 0; i < post.length; i++){
+      $(".posts-wrapper").append(`
+    <div style="border: 6px solid #487CB4; padding: 10px; margin-top: 1%;">
+        <div>
+            <h3> <b>${post[i].userID.firstName + " " + post[i].userID.lastName } </b> </h3>
+            <h6> ${new Date(post[i].createdAt).toLocaleString('en-US') }</h6>
+        </div>
+        <p>  
+          ${post[i].body}
+        </p>
+    </div>
+    `);
+    }});
+  </script>
+
+<style>
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	background-color: #23488D;
+	display: flex;
+	align-items: center;
+	padding: .5%;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+header a, header p{
+	font-size:  20px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+h2{
+	color: #23488D;
+}
+
+.create:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+
+</style>

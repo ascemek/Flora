@@ -26,7 +26,12 @@ module.exports.routes = {
   '/diseases_pests_weeds': {view: 'pages/informationPages/diseases_pests_weeds', policy: 'sessionAuth'},
   '/agr_zones': {view: 'pages/informationPages/agr_zones', policy: 'sessionAuth'},
   '/composting': {view: 'pages/informationPages/composting', policy: 'sessionAuth'},
-  '/forum': {view: 'pages/forum', policy: 'sessionAuth'},
+  //Forum routes
+  '/forum': {view: 'pages/forum', policy: 'sessionAuth', controller: 'PostsController', action: 'fetchPosts'},
+  '/new_post': {view: 'pages/new_post'},
+  '/post/create': {controller: 'PostsController', action: 'createPost', policy: 'sessionAuth'},
+  '/post/fetch': {controller: 'PostsController', action: 'fetchPosts', policy: 'sessionAuth'},
+
   '/my_garden': {view: 'pages/my_garden', policy: 'sessionAuth'},
   '/journal': {view: 'pages/journal', policy: 'sessionAuth'},
   '/profile': {view: 'pages/profile', policy: 'sessionAuth'},
