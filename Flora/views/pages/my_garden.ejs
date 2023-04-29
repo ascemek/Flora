@@ -1,5 +1,13 @@
+<!--@author Sami Cemek-->
+<!--@version 1.0-->
+<!--@date 04/28/23-->
+
+
+<!--Frameworks Used: Bootstrap, Sails.JS-->
+
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/">Flora</a>
+    <a class="navbar-brand" href="/" style="font-size: 55px; font-family: 'tropicalTaste', Verdana;">Flora</a>
+    <img src="images/floraIcon.png" width="90" height="90">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -41,3 +49,264 @@
         </ul>
       </div>  
   </nav>
+
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class= "googleTranslateBox"> 
+      <div class="googleTranslate"> <!--Google translate feature-->
+        <br>  
+          <h6>You can translate this page to 100+ different languages now!</h6>
+          <div id="google_translate_element"></div>
+      </div>
+    </div>
+
+    <br>
+
+    <h1>My Garden</h1>
+
+    <br>
+    <br>
+
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-sm-6">
+          <div class = "TodayChecklist">
+            <h3>Today's Tasks</h3>
+            <br>
+            <form action="/action_page.php">
+              <input type="checkbox" id="plant1" name="plant1" value="plant1">
+              <label for="task1"> Water Basil</label><br> <!-- Make changes to get the name of the plant  -->
+              <input type="checkbox" id="plant2" name="plant2" value="plant2">
+              <label for="task2"> Water Rosemary</label><br> <!-- Make changes to get the name of the plant  -->
+              <input type="checkbox" id="plant3" name="plant3" value="plant3">
+              <label for="task3"> Fertilize Roses</label><br> <!-- Make changes to get the name of the plant  -->
+              <input type="checkbox" id="plant4" name="plant4" value="plant4">
+              <label for="task4"> Fertilize Roses</label><br><br> <!-- Make changes to get the name of the plant  -->
+            </form>
+          </div>
+        </div>
+        
+        <div class = "col-sm-6">
+          <div class="plantHappiness">
+            <h3>Plant Happiness</h3>
+            <br>
+            <br>
+            <br>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width:70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+            </div>
+            <br>
+            <br>
+            <p style="text-align: center;">
+              <img src="images/sadIcon.png" width="50" height="50" style="margin-right: 4em;">
+              You watered 7/10 of your plants today.
+              <img src="images/happyIcon.png" width="50" height="50" style="margin-left: 4em">
+            </p>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3 style="text-align: center;">My Favorites</h3>
+    
+    <p id="demo">
+      <img src="images/infoIcon.png" width="40" height="40">
+      Water your plants havorering over the plant icons below.
+    </p>
+
+    <div class="grid-container">
+        <div class="grid-item" onclick="myFunction()"><img src="images/plant1.jpg" alt="plant1 png" width="200" height="200"></div>
+        <div class="grid-item"><img src="images/plant2.jpg" alt="plant2 png" width="200" height="200"></div>
+        <div class="grid-item"><img src="images/plant3.jpg" alt="plant3 png" width="200" height="200"></div>  
+        <div class="grid-item"><img src="images/plant1.jpg" alt="plant4 png" width="200" height="200"></div>
+        <div class="grid-item"><img src="images/plant2.jpg" alt="plant5 png" width="200" height="200"></div>
+        <div class="grid-item"><img src="images/plant3.jpg" alt="plant6 png" width="200" height="200"></div>  
+        <div class="grid-item"><img src="images/plant1.jpg" alt="plant7 png" width="200" height="200"></div>
+        <div class="grid-item"><img src="images/plant2.jpg" alt="plant8 png" width="200" height="200"></div>
+        <div class="grid-item"><img src="images/plant3.jpg" alt="plant9 png" width="200" height="200"></div>  
+      </div>
+
+      <br>
+      <br>
+
+      <div class="keyBox" style="margin: auto;">
+        <h3 style="text-align: center;">Keys</h3>
+        <br>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-4" style="text-align: center; background-color: #c3f798;">
+              <img src="images/happySadIcon.png" width="70" height="70" style="margin-top: 2em">
+            </div>
+            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
+              <p>Happy/Sad meter shows the average of task completion.</p>
+            </div>
+          </div>
+          <br>
+          <div class="row justify-content-center">
+            <div class="col-4" style="text-align: center; background-color: #c3f798;">
+              <img src="images/fertilizersIcon.png" width="90" height="90" style="margin-top: 1em">
+            </div>
+            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
+              <p>Fertilizer shows how often you need to fertilize your plants.</p>
+            </div>
+          </div>
+          <br>
+          <div class="row justify-content-center">
+            <div class="col-4" style="text-align: center; background-color: #c3f798;">
+              <img src="images/plantIcon.png" width="70" height="70" style="margin-top: 1em; margin-bottom: 1em;">
+            </div>
+            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
+              <p>Plant shows the favorite plants in your garden.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <br>
+    <br>
+
+    <h3 style="text-align: center;"> My Plants </h3>
+    <br>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-4" style="text-align: center;">
+          <a href="/plantInfo">Plant 1</a>
+        </div>
+        <div class="col-4" style="text-align: center;">
+          <a href="/plantInfo">Plant 2</a>
+        </div>
+      </div>
+      <br>
+      <div class="row justify-content-center">
+        <div class="col-4" style="text-align: center;">
+          <a href="/plantInfo">Plant 3</a>
+        </div>
+        <div class="col-4" style="text-align: center;">
+          <a href="/plantInfo">Plant 4</a>
+        </div>
+      </div>
+    </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "You watered the plant!";
+      //document.getElementsByClassName("grid-item").innerHTML = "You watered the plant!";
+    }
+  </script>
+  <!--Google Translate feature-->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </body>
+
+  <style>    
+  
+  body{
+      background-color: #FAF9F6;
+      margin: auto;
+
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    h1{
+      text-align: center;
+      color: #365E36;
+    }
+  
+    h2{
+      text-align: center;
+      color: #365E36;
+    }
+
+    .grid-container img {
+        cursor: url("images/wateringCan.png"), auto;
+    }
+
+    .grid-container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto auto auto;
+        background-color: #964B00;
+        padding: 10px;
+        margin: 20px 120px;
+    }
+
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .keyBox{
+      background-color: lightgrey;
+      width: 500px;
+      border: 15px solid #365E36;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .googleTranslateBox{
+      text-align: center;
+      font-size: 20px;
+      background-color: #F4FFEB;
+   
+      border-style: dotted;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: block;
+    }
+
+    /*Google Translate*/
+    .googleTranslate{
+      justify-content: center;
+    }
+
+    /*Fonts*/
+    @font-face {
+      font-family: bohoLife;
+      src: url("fonts/bohoLife.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: myLeaf;
+      src: url("fonts/myLeaf.ttf") format("truetype"),
+           url("fonts/myLeaf.otf") format("opentype");
+    }
+
+    @font-face {
+      font-family: tropicalTaste;
+      src: url("fonts/tropicalTaste.otf") format("opentype");
+    }
+    
+</style>
