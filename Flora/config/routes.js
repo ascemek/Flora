@@ -16,7 +16,13 @@ module.exports.routes = {
   '/': {view: 'pages/homepage'},
   '/companion_planting': {view: 'pages/companionPlant'},
   '/composting': {view: 'pages/composting'},
+  //plant search functions
   '/plantSearch': {view: 'pages/plantSearch'},
+  '/createPlant': { controller: 'searchController', action: 'createPlant', view: 'pages/plantSearch' },  //create a plant
+  '/fetchPlants': { controller: 'searchController', action: 'fetchPlants', view: 'pages/plantSearch' }, //get all plants
+  '/searchPlants': {controller: 'searchController', action: 'searchPlants', view: 'pages/plantSearch'},//search for a specific plant
+
+  
   '/sunlight': {view: 'pages/informationPages/sunlight'},
   '/fertilizer': {view: 'pages/informationPages/fertilizer'},
   '/diseases_pests_weeds': {view: 'pages/informationPages/diseases_pests_weeds'},
