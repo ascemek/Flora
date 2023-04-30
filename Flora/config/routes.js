@@ -19,6 +19,7 @@ module.exports.routes = {
   '/user/login': 'UserController.login', // Login action
   '/user/logout': 'UserController.logout', // Logout action
   '/user/register': 'UserController.createAccount', // Register action
+  '/user/edit': {controller: 'UserController', action: 'editAccount', policy: 'sessionAuth'}, // Edit account action
   '/companion_planting': {view: 'pages/informationPages/companionPlanting', policy: 'sessionAuth'},
   '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'},
   '/sunlight': {view: 'pages/informationPages/sunlight', policy: 'sessionAuth'},
