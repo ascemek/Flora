@@ -19,14 +19,15 @@ module.exports.routes = {
   '/user/login': 'UserController.login', // Login action
   '/user/logout': 'UserController.logout', // Logout action
   '/user/register': 'UserController.createAccount', // Register action
-  '/companion_planting': {view: 'pages/informationPages/companionPlanting', policy: 'sessionAuth'},
-  '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'},
+  
+  //Information pages routes
+  '/companion_planting': {view: 'pages/informationPages/companion_planting', policy: 'sessionAuth'},
   '/sunlight': {view: 'pages/informationPages/sunlight', policy: 'sessionAuth'},
   '/fertilizer': {view: 'pages/informationPages/fertilizer', policy: 'sessionAuth'},
   '/diseases_pests_weeds': {view: 'pages/informationPages/diseases_pests_weeds', policy: 'sessionAuth'},
   '/agr_zones': {view: 'pages/informationPages/agr_zones', policy: 'sessionAuth'},
   '/composting': {view: 'pages/informationPages/composting', policy: 'sessionAuth'},
-  '/plantInfo': {view: 'pages/plantInfo', policy: 'sessionAuth'},
+
   //Forum routes
   '/forum': {view: 'pages/forum', policy: 'sessionAuth', controller: 'PostsController', action: 'fetchPosts'},
   '/new_post': {view: 'pages/new_post'},
@@ -37,7 +38,9 @@ module.exports.routes = {
   '/journal': {view: 'pages/journal', policy: 'sessionAuth'},
   '/profile': {view: 'pages/profile', policy: 'sessionAuth'},
   '/watering': {view: 'pages/informationPages/watering', policy: 'sessionAuth'},
-  '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'}
+  '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'},
+  '/plantInfo': {view: 'pages/plantInfo', policy: 'sessionAuth'},
+  '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'}
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
