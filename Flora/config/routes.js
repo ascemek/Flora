@@ -39,7 +39,7 @@ module.exports.routes = {
   '/profile': {view: 'pages/profile', policy: 'sessionAuth'},
   '/watering': {view: 'pages/informationPages/watering', policy: 'sessionAuth'},
   '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'},
-  '/new_plant': {view: 'pages/new_plant', policy: 'sessionAuth'}
+  '/new_plant': {view: 'pages/new_plant', policy: 'sessionAuth'},
   '/plantInfo': {view: 'pages/plantInfo', policy: 'sessionAuth'},
   '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'}
 
