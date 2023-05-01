@@ -37,7 +37,9 @@ module.exports.routes = {
   '/journal': {view: 'pages/journal', policy: 'sessionAuth'},
   '/profile': {view: 'pages/profile', policy: 'sessionAuth'},
   '/watering': {view: 'pages/informationPages/watering', policy: 'sessionAuth'},
-  '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'}
+  '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'},
+
+  '/new_plant': {view: 'pages/new_plant', policy: 'sessionAuth'}
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
