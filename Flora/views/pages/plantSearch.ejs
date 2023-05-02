@@ -44,27 +44,71 @@
   </nav>
 
   <!--Line breaks for spacing-->
+  <body>
   <br>
   <br>
-  <br>
+  <!--spacing for readability-->
 
-  <h1>Plants</h1>
-
-  <br> <!--spacing for readability-->
-
+  <div class="overallContainer">
+    <div class="headingContainer">
+        <h1 class = "subheadLightBlue"> Plants</h1>
+    </div>
+    <div class="buttonContainer">
+        <div>
+            <img class="create" id="createPlantButton" src="images/plantSearch/addPlantPlus3.png" alt="New Plant icon">
+          </a>
+        </div>
+    </div> 
+  </div>
+  
+  <br> <!--For Page Spacing-->
   <form>
-    <input type="text" id="plantSearchBar" onkeyup="searchForPlants()" placeholder="Search for a plant.." title="Type in a plant">
+    <div class="plantSearchBar">
+   
+    <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" " onclick="searchPlantData()">
+  </div>
 
   </form>
 
-  <!--This search bar is not showing up like I want it to yet-->
-  <!--div class="searchIconButton">
-    <input id="search" type="search" placeholder="search your products here">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" style="cursor: pointer; height: 100%;" onclick="alert('search: ' + document.querySelector('#search').value);">
-  </div-->
+  <br>
+  <!--Break for spacking-->
+
+  <!--Search Results will appear below this point-->
+
+  <div id="plantData" data-post="<%=plantdata%>">
+  </div>
+
+  <div class="plants-wrapper" style="margin: 30px 150px;">
+  </div>
+
+  <div class="resultBoxes">
+    <h4 id="plantResultName"></h4>
+    <br>
+    <img class="resultsImg" id ="plantResultIMg">
+    <p id="plantResultInfo"></p>
+  </div>
+  
+
+
+
+</body>
 
 
   <style>
+    .resultBoxes{
+      border: 6px solid #365E36; 
+      padding: 10px; 
+      margin-top: 1%;
+      width: 75%;
+      margin-left: 10%;
+    }
+    .resultsImg{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
     body{
       background-color: #FAF9F6;
       margin: auto;
@@ -73,23 +117,13 @@
     h1{
       /*text-align: center;*/
       color: #365E36;
+      display: block;
     }
   
     h2{
      /* text-align: center; */
       color: #365E36;
     }
-  
-  /*  .tableOfContents{
-      text-align: center;
-      font-size: 20px;
-      background-color: #F4FFEB;
-   
-      border-style: dotted;
-      margin-left: 10%;
-      margin-right: 10%;
-      display: block;
-    }*/
   
     /* unvisited link */
     a:link {
@@ -115,12 +149,6 @@
       border-top: 3px dotted #30007D;
     }
   
-    /*
-    .youtube {/*Centered Youtube video
-      text-align: center;
-      
-    } */
-
     .center {
       display: block;
       margin-left: auto;
@@ -128,35 +156,105 @@
       width: 50%;
       max-height: 50%;
     }
-   /* button{ /*Back to Top Button Styling
-      background-color: #365E36;
-      color: white;
-      border-color: #365E36;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-    } */
 
-    /*Test Styling for first search bar*/
-    #plantSearchBar {
-     /* background-image: url('/images/plantSearch/searchicon.png'); */
-      background-position: 10px 12px;
-      background-repeat: no-repeat;
-      width: 100%;
-      font-size: 16px;
-      padding: 12px 20px 12px 40px;
-      border: 1px solid #ddd;
-      margin-bottom: 12px;
-      display: inline-flex; 
-    }
-
-    /*Test styling for second search bar*/
-    .searchIconButton {
-      background: #ddd; 
-      display: inline-flex; 
+    /*search bar*/
+    .plantSearchBar {
+      background: #FAF9F6;  
       height: 32px;
+      width: 75%;
+      text-align:center;
+      display: inline-flex;
+      margin-left: 10%;
+
+    }
+
+    .create{ /*create a plant image styling*/
+        width: 10%; 
+        height: 10%; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    } 
+
+    .overallContainer{ /*container for heading and add a plant image button*/
+      margin-top: 3%; 
+      margin-left: 15%; 
+      margin-right: 15%; 
+      display:inline-block; 
       width: 100%;
     }
-      </style>
+    .headingContainer{ /*container for page heading*/
+      width: 30%; 
+      height: auto; 
+      float: left; 
+      display:inline-block;
+    }
+    .buttonContainer{ /*container for add plant button*/
+      width: 70%; 
+      height: auto; 
+      display:inline-block;
+    }
+        </style>
+
+<script>
+  $("#createPlantButton").on("click", () => {
+    window.location.href = "/new_plant"; //may need to be changed to reflect create plant in new window
+  });
+  </script>
+
+<script>
+  function searchPlantData()
+  {
+    var requestedPlantName = document.getElementById("plantSearchBar").value;
+
+
+    $("#searchedPlants").empty();
+
+
+    let plantData = $("#plantData").data("plant");
+
+
+      plantData = plantData.filter(a => {
+        //filter by name
+      return (//name);
+     });
+    console.log(plantData);
+
+
+    for(i = 0; i < plantData.length; i++){
+      $("#searchedPlants").append(`<li>${plantData[i].name}</li>`)
+
+
+    }
+
+
+
+
+    //need to write the route page for this
+    $.ajax({
+      url:  '/searchPlants',
+      type: 'GET',
+      data: {plantName},
+      success: function(result) {
+          console.log("success");
+          if(result.error)
+          {
+            Swal.fire({ //show error alert
+            title: "Error",
+            text: result.error,
+            icon: "error"
+          });
+            console.log("error");
+          }
+          else
+          {
+            window.location.href = "/plantSearch";
+          }
+      }
+    });
+  }
+  </script>
+
+
+

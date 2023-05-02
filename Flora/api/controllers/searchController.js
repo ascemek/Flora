@@ -24,7 +24,7 @@ module.exports = {
             images: params.images ? params.images : null,
           };
 
-          await PlantTable.create(plantRecord); //This is referencing plant table that is not connected to this yet (will add )
+          await Plant.create(plantRecord); //This is referencing plant table that is not connected to this yet (will add )
           return res.redirect('/plantSearch');
         } catch (error) {
           console.log(error);
@@ -36,7 +36,7 @@ module.exports = {
 
     fetchPlants: async function (req, res) { //get all plants
         try {
-            const plants = await plantTable.find(); //referencing unmade plant table (//update made but not connected)
+            const plants = await Plant.find(); //referencing unmade plant table (//update made but not connected)
             return res.send({
               plants
             });
@@ -61,4 +61,30 @@ module.exports = {
             });
         }
     } */
+    searchPlants: async function (req, res) { // This is the action to fetch events for a given date range
+      try {
+        
+        const plants = await Plant.find();
+       // const searchResult = [];
+       // const data = name.toLowerCase();
+        const params = {
+          plantName: req.param('plantName'), 
+
+        };
+        
+       
+        return res.view('pages/plantSearch', {
+    
+          plantData:JSON.stringify(plants)
+        }
+        );
+ 
+
+      } catch (error) {
+        console.log(error);
+        return res.send({
+          error: error
+        });
+      }
+    },
 };
