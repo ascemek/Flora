@@ -36,10 +36,9 @@ module.exports = {
 
     fetchPlants: async function (req, res) { //get all plants
         try {
-            const plants = await Plant.find(); //referencing unmade plant table (//update made but not connected)
-            return res.send({
-              plants
-            });
+           // const plants = await Plant.find(); //referencing unmade plant table (//update made but not connected)
+            return res.view('pages/plantSearch')
+
           } catch (error) {
             console.log(error);
             return res.send({
@@ -48,20 +47,32 @@ module.exports = {
         }
     },
 
-  /*  searchPlant: async function (req, res) { //search for a specific plant
+    searchPlant: async function (req, res) { //search for a specific plant
         try {
-            const requestedPlant = await //get input from search bar...
-            //compare info from search bar to each plant in db
-            //dont forget to adjust user input if needed
-            //maybe account for spelling errors
+            var totalPlants = await Plants.find();
+
+            const searchResultsArr = [];
+
+            for(i = 0; i < totalPlants.length; i++){
+              if(totalPlants[i].name == requestedPlant){
+                searchResultsArr.push(totalPlants[i]);
+
+              }
+              //check matching characters and sort by how close it is to search
+            };
+            return res.view('pages/searchPlants', {
+              //eventData:JSON.stringify(events),
+              plantdata:JSON.stringify(searchResultsArr)
+          });
+            
           } catch (error) {
             console.log(error);
             return res.send({
               error: error
             });
         }
-    } */
-    searchPlants: async function (req, res) { // This is the action to fetch events for a given date range
+    } 
+  /*  searchPlants: async function (req, res) { // This is the action to fetch events for a given date range
       try {
         
         const plants = await Plant.find();
@@ -87,4 +98,20 @@ module.exports = {
         });
       }
     },
+    //new get acutal plants
+    getDefaultPlants: async function (userPlants){
+      const defaultPlants = await Plants.find();
+      console.log(defaultPlants);
+      const defaultPlantsArr = [];
+      for(i = 0; i < defaultPlants.length; i++){
+        defaultPlantsArr.push(defaultPlants[i]);
+    
+      }
+    
+      for(i = 0; i < userPlants.length; i++){
+        defaultPlantsArr.push(userPlants[i]);
+      }
+    
+      return defaultsPlantsArr;
+    }*/
 };

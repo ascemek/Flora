@@ -66,7 +66,7 @@
     <div class="plantSearchBar">
    
     <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" " onclick="searchPlantData()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick="alert('search: ' + document.querySelector('#plantSearchBar').value);">
   </div>
 
   </form>
@@ -76,26 +76,41 @@
 
   <!--Search Results will appear below this point-->
 
-  <div id="plantData" data-post="<%=plantdata%>">
-  </div>
-
-  <div class="plants-wrapper" style="margin: 30px 150px;">
-  </div>
-
-  <div class="resultBoxes">
+  <!--div class="resultBoxes">
     <h4 id="plantResultName"></h4>
     <br>
     <img class="resultsImg" id ="plantResultIMg">
     <p id="plantResultInfo"></p>
+  </div-->
+
+  <div id="plantData" data-post="<%=plantdata%>">
   </div>
+
+
+
+
+  <div class="plants-wrapper">
+  
+  </div>
+
+
+  <!--div class="recPlants">
+    <h4 id="plantResultName">Recommended Plants: </h4>
+    <p></p>
+  </div-->
   
 
 
-
+  <h4 id="recPlants" class="recPlants">Recommended Plants: </h4>
+  <div id="recPlantsList" class="recPlantsList"> <!--Add links to the plant page of this plant?-->
+    <li>Tomatoes</li>
+    <li>Basil</li>
+    <li>Cilantro</li>
+  </div>
 </body>
 
 
-  <style>
+<style>
     .resultBoxes{
       border: 6px solid #365E36; 
       padding: 10px; 
@@ -122,6 +137,10 @@
   
     h2{
      /* text-align: center; */
+      color: #365E36;
+    }
+
+    h4{
       color: #365E36;
     }
   
@@ -209,27 +228,34 @@
     var requestedPlantName = document.getElementById("plantSearchBar").value;
 
 
-    $("#searchedPlants").empty();
+    $(".plants-wrapper").empty();
 
 
     let plantData = $("#plantData").data("plant");
 
 
-      plantData = plantData.filter(a => {
-        //filter by name
-      return (//name);
+      plantData = plantData.sort(a => {
+        var plantName = a.name;
+        //more info??
+        //var plantInfo = a.sun;
+        //var plantInfo2 = a.water;
+      return (plantName);
      });
     console.log(plantData);
 
 
     for(i = 0; i < plantData.length; i++){
-      $("#searchedPlants").append(`<li>${plantData[i].name}</li>`)
+      $(".plants-wrapper").append(`
+        <div class="resultBoxes"">
+          <h4 id="plantResultName">${plantData.name}</h4>
+          <br>
+          <img class="resultsImg" id ="plantResultIMg">
+           <p id="plantResultInfo"></p>
+        </div>
+`);
 
 
     }
-
-
-
 
     //need to write the route page for this
     $.ajax({
@@ -255,6 +281,5 @@
     });
   }
   </script>
-
 
 
