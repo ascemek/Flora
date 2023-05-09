@@ -59,8 +59,8 @@ module.exports.bootstrap = async function(done) {
       }
     ]);
   }
-  console.log(await Users.find());
-*/
+ // console.log(await Users.find());*/
+
   if (await Plants === 0){ /*.count function not working???*/
     await Plants.createEach( [
       {

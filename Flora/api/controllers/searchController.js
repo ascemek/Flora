@@ -7,24 +7,24 @@ module.exports = {
           const params = {
             name: req.param('name'), // This is the plant name
             sun: req.param('sun'), //Sunlight info 
-            waterFrequency: req.param('waterFrequency'), // how often plant is watered
+            water: req.param('water'), // how often plant is watered
             fertilizer: req.param('fertilizer'), //how often plant is fertilized
-            region: req.param('region'), //region of plant (if we do it)
+            nativeArea: req.param('nativeArea'), //region of plant (if we do it)
             category: req.param('category'), //plant type (herb, vegetable, flower, edible, etc)
-            images: req.param('images'), //picture of plant?
+            where: req.param('where'), //picture of plant?
     
           };
           const plantRecord = {
             name: params.name,
             sun: params.sun ? params.sun : null,
-            waterFrequency: params.waterFrequency,
+            water: params.water,
             fertilizer: params.fertilizer ? params.fertilizer : null,
-            region: params.region ? params.region : null,
+            nativeArea: params.nativeArea ? params.nativeArea : null,
             category: params.category ? true : false,
-            images: params.images ? params.images : null,
+            where: params.where ? params.where : null,
           };
 
-          await Plant.create(plantRecord); //This is referencing plant table that is not connected to this yet (will add )
+          await Plants.create(plantRecord); //This is referencing plant table that is not connected to this yet (will add )
           return res.redirect('/plantSearch');
         } catch (error) {
           console.log(error);
@@ -36,9 +36,11 @@ module.exports = {
 
     fetchPlants: async function (req, res) { //get all plants
         try {
-           // const plants = await Plant.find(); //referencing unmade plant table (//update made but not connected)
-            return res.view('pages/plantSearch')
-
+           const plantsList = await Plants.find(); //referencing unmade plant table (//update made but not connected)
+           return res.view('pages/plantSearch', {
+            //eventData:JSON.stringify(events),
+            plantdata:JSON.stringify(plantsList)
+        });
           } catch (error) {
             console.log(error);
             return res.send({
@@ -49,7 +51,8 @@ module.exports = {
 
     searchPlant: async function (req, res) { //search for a specific plant
         try {
-            var totalPlants = await Plants.find();
+            var totalPlants = await Plants.find(); 
+            var requestedPlant = req;
 
             const searchResultsArr = [];
 
@@ -59,8 +62,8 @@ module.exports = {
 
               }
               //check matching characters and sort by how close it is to search
-            };
-            return res.view('pages/searchPlants', {
+            }; 
+            return res.view('pages/plantSearch', {
               //eventData:JSON.stringify(events),
               plantdata:JSON.stringify(searchResultsArr)
           });

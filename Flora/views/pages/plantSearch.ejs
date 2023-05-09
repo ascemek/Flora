@@ -66,7 +66,7 @@
     <div class="plantSearchBar">
    
     <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick="alert('search: ' + document.querySelector('#plantSearchBar').value);">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick="searchPlantData()">
   </div>
 
   </form>
@@ -233,8 +233,16 @@
 
     let plantData = $("#plantData").data("plant");
 
+    const searchResultsArr = [];
 
-      plantData = plantData.sort(a => {
+            for(i = 0; i < plantData.length; i++){
+              if(totalPlants[i].name == requestedPlantName){
+                searchResultsArr.push(totalPlants[i]);
+
+              }
+
+
+      plantData = searchResultsArr.sort(a => {
         var plantName = a.name;
         //more info??
         //var plantInfo = a.sun;
@@ -258,10 +266,10 @@
     }
 
     //need to write the route page for this
-    $.ajax({
+   /* $.ajax({
       url:  '/searchPlants',
-      type: 'GET',
-      data: {plantName},
+      type: 'POST',
+      data: {requestedPlantName},
       success: function(result) {
           console.log("success");
           if(result.error)
@@ -278,8 +286,8 @@
             window.location.href = "/plantSearch";
           }
       }
-    });
-  }
+    }); */
+  } 
   </script>
 
 
