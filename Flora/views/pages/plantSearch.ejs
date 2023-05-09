@@ -66,7 +66,7 @@
     <div class="plantSearchBar">
    
     <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick="searchPlantData()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" >
   </div>
 
   </form>
@@ -99,13 +99,18 @@
     <p></p>
   </div-->
   
+  <!--div id="todaysPlants">
+    <p>Plants:---</p>
+  </div-->
 
 
   <h4 id="recPlants" class="recPlants">Recommended Plants: </h4>
   <div id="recPlantsList" class="recPlantsList"> <!--Add links to the plant page of this plant?-->
-    <li>Tomatoes</li>
+    <ul>
+      <li>Tomatoes</li>
     <li>Basil</li>
     <li>Cilantro</li>
+    </ul>
   </div>
 </body>
 
@@ -142,6 +147,8 @@
 
     h4{
       color: #365E36;
+      margin-left: 15%;
+
     }
   
     /* unvisited link */
@@ -214,6 +221,12 @@
       height: auto; 
       display:inline-block;
     }
+
+    .recPlantsList {
+      margin-left: 15%;
+    }
+
+
         </style>
 
 <script>
@@ -223,26 +236,35 @@
   </script>
 
 <script>
-  function searchPlantData()
-  {
+  $(document).ready(() => {console.log($("#plantData").data('plants'));
+  
     var requestedPlantName = document.getElementById("plantSearchBar").value;
 
 
     $(".plants-wrapper").empty();
 
 
-    let plantData = $("#plantData").data("plant");
+    let plants = $("#plantData").data("plant");
 
-    const searchResultsArr = [];
+    return plants;
 
-            for(i = 0; i < plantData.length; i++){
+    console.log(plants);
+
+    for(i = 0; i < plants.length; i++){
+      $("#todaysPlants").append(<p>plants[i].name</p>);
+
+    }
+
+  //  const searchResultsArr = [];
+
+   /*         for(i = 0; i < plantData.length; i++){
               if(totalPlants[i].name == requestedPlantName){
                 searchResultsArr.push(totalPlants[i]);
 
               }
 
-
-      plantData = searchResultsArr.sort(a => {
+*/
+ /*     plantData = searchResultsArr.sort(a => {
         var plantName = a.name;
         //more info??
         //var plantInfo = a.sun;
@@ -250,17 +272,16 @@
       return (plantName);
      });
     console.log(plantData);
+*/
 
-
-    for(i = 0; i < plantData.length; i++){
-      $(".plants-wrapper").append(`
+    for(i = 0; i < plants.length; i++){
+      $("#plants-wrapper").append(`
         <div class="resultBoxes"">
           <h4 id="plantResultName">${plantData.name}</h4>
           <br>
           <img class="resultsImg" id ="plantResultIMg">
            <p id="plantResultInfo"></p>
-        </div>
-`);
+        </div>`);
 
 
     }
@@ -287,7 +308,5 @@
           }
       }
     }); */
-  } 
+
   </script>
-
-

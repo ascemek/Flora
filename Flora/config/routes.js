@@ -18,7 +18,7 @@ module.exports.routes = {
   '/companion_planting': {view: 'pages/companionPlant'},
   '/composting': {view: 'pages/composting'},
   //plant search functions
-  '/plantSearch': {controller: 'SearchController', action: 'searchPlant', view: 'pages/plantSearch'},
+  '/plantSearch': {controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch'},
   '/createPlant': { controller: 'SearchController', action: 'createPlant', view: 'pages/plantSearch' },  //create a plant
   '/fetchPlants': { controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch' }, //get all plants
   '/searchPlants': {controller: 'SearchController', action: 'searchPlant', view: 'pages/plantSearch'},//search for a specific plant
