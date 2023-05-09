@@ -33,6 +33,7 @@ module.exports.routes = {
   '/new_post': {view: 'pages/new_post'},
   '/post/create': {controller: 'PostsController', action: 'createPost', policy: 'sessionAuth'},
   '/post/fetch': {controller: 'PostsController', action: 'fetchPosts', policy: 'sessionAuth'},
+  '/reply/create': {controller: 'PostsController', action: 'createReply', policy: 'sessionAuth'},
 
   '/my_garden': {view: 'pages/my_garden', policy: 'sessionAuth'},
   '/journal': {view: 'pages/journal', policy: 'sessionAuth'},
