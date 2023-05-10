@@ -125,7 +125,7 @@ module.exports = {
         accountId = userId;
       }
       let isSelfEdit = userId === parseInt(accountId);
-      const foundUser = await Users.find({id: accountId}).populate('tasks');
+      const foundUser = await Users.find({id: accountId})//.populate('tasks');
       if (!foundUser || foundUser.length === 0) { // User not found
         return res.view('pages/homepage', {
           error: 'User not found'
