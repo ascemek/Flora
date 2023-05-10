@@ -80,8 +80,16 @@
         <br>
 
         <div class = "plantInformationName">
+          <div class = "name_header">
             <h3>Plant name</h3>
+          </div>
+          <div class = "new_button">
+            <a href="/new_plant">
+              <button class="add_plant_button">Add to Garden</button>
+            </a>
+          </div>
         </div>
+
         <br>
         <br>
 
@@ -200,6 +208,8 @@
           text-align: center;
           color: #365E36;
         }
+
+        
       
         .googleTranslateBox{
           text-align: center;
@@ -239,6 +249,26 @@
         /*Google Translate*/
         .googleTranslate{
           justify-content: center;
+        }
+        .plantInformationName{
+          margin-top: 5%;
+          margin-left: 15%;
+          margin-right: 15%;
+          margin-bottom: 10%;
+          display: block;
+          width: 100%;
+        }
+        .name_header{
+          float: left;
+          width: 30%;
+        }
+        .new_button{
+          width: 70%;
+        }
+        .add_plant_button{
+          float: right;
+          margin-left: auto;
+          margin-right: auto;
         }
 
     </style>
