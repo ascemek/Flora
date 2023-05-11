@@ -81,7 +81,7 @@
       $(".posts-wrapper").append(`
     <div style="border: 6px solid #365E36; border-bottom: 4px dotted #365E36; padding: 10px; margin-top: 2%;">
         <div>
-            <h3 style = "color: #365E36;"> <b>${post[i].userID.firstName + " " + post[i].userID.lastName } </b> </h3>
+            <h3 style = "color: #365E36;"> <b><a class="postName" href="/profile?accountId=${post[i].userID.id}">${post[i].userID.firstName + " " + post[i].userID.lastName}</a></b> </h3>
             <h6> ${new Date(post[i].createdAt).toLocaleString('en-US') }</h6>
         </div>
         <p style="font-size:110%;">  
@@ -89,7 +89,7 @@
         </p>
     </div>
     `);
-    //for each post: sort replies
+    //for each post: sort replies by date
     const reply = post[i].reply.sort((a, b) => { 
         return new Date(b.createdAt) - new Date(a.createdAt);
       });
@@ -99,7 +99,7 @@
           <div style="border-bottom: 4px dotted #487CB4; border-left: 6px solid #365E36; border-right: 6px solid #365E36; padding: 2%; margin-top: 0%; margin-bottom:0%;">
             <div style="margin-left:1%">
               <div>
-                  <h5> Reply From:<b style = "color: #365E36;"> ${reply[j].userID.firstName + " " + reply[j].userID.lastName } </b> </h5>
+                  <h5> Reply From: <b style = "color: #365E36;"><a class = "replyName" href="/profile?accountId=${reply[j].userID.id}">${reply[j].userID.firstName + " " + reply[j].userID.lastName }</a></b> </h5>
                   <h6> ${new Date(reply[j].createdAt).toLocaleString('en-US') }</h6>
               </div>
               <p style="margin-bottom:0%; font-size:110%;">  
@@ -210,4 +210,28 @@ h2{
     font-size: 16px;
   }
 
+   /* unvisited link */
+   a:link {
+      color: #30007D;
+    }
+  
+    /* visited link */
+    a:visited {
+      color: #30007D;
+    }
+  
+    /* mouse over link */
+    a:hover {
+      color: #72418B;
+    }
+  
+    /* selected link */
+    a:active {
+      color: blue;
+    }
+
+/*  .postName, .replyName{
+    color: #365E36;
+  }
+*/
 </style>

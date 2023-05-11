@@ -17,6 +17,7 @@ module.exports.bootstrap = async function(done) {
         firstName: 'Admin',
         lastName: 'User',
         email: 'admin@admin.com',
+        experience: 'Expert',
         username: 'admin',
         password: await sails.helpers.passwords.hashPassword('admin'), // Hash password
       },
@@ -24,6 +25,7 @@ module.exports.bootstrap = async function(done) {
         firstName: 'John',
         lastName: 'Doe',
         email: 'john@doe.com',
+        experience: 'Expert',
         username: 'johndoe1',
         password: await sails.helpers.passwords.hashPassword('john'), // Hash password
       },
@@ -31,6 +33,7 @@ module.exports.bootstrap = async function(done) {
         firstName: 'Jane',
         lastName: 'Doe',
         email: 'jane@doe.com',
+        experience: 'Expert',
         username: 'janedoe1',
         password: await sails.helpers.passwords.hashPassword('jane'), // Hash password
       },
@@ -38,6 +41,7 @@ module.exports.bootstrap = async function(done) {
         firstName: 'Student',
         lastName: 'Tester',
         email: 'student@test.com',
+        experience: 'Expert',
         username: 'studenttest1',
         password: await sails.helpers.passwords.hashPassword('test'), // Hash password
       },
@@ -45,6 +49,7 @@ module.exports.bootstrap = async function(done) {
         firstName: 'Abigail',
         lastName: 'Star',
         email: 'abby@valley.com',
+        experience: 'Expert',
         username: 'abbyvalley1',
         password: await sails.helpers.passwords.hashPassword('abby'), // Hash password
       },
@@ -52,6 +57,7 @@ module.exports.bootstrap = async function(done) {
         firstName: 'Gunther',
         lastName: 'Hansen',
         email: 'gunther@valley.com',
+        experience: 'Expert',
         username: 'gunthervalley1',
         password: await sails.helpers.passwords.hashPassword('gunther'), // Hash password
       }
