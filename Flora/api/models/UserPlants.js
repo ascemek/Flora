@@ -33,6 +33,10 @@ module.exports = {
     quantity: {
       type: 'number',
       required: true,
+    },
+    isFavorite: {
+      type: 'boolean',
+      defaultsTo: false,
     }
   }
 };

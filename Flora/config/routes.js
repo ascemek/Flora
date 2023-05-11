@@ -36,13 +36,17 @@ module.exports.routes = {
   '/post/fetch': {controller: 'PostsController', action: 'fetchPosts', policy: 'sessionAuth'},
   '/reply/create': {controller: 'PostsController', action: 'createReply', policy: 'sessionAuth'},
 
-  '/my_garden': {view: 'pages/my_garden', policy: 'sessionAuth'},
+  //Garden routes
+  '/updateTask': {controller: 'GardenController', action: 'updateTask', policy: 'sessionAuth'},
+  '/removePlant': {controller: 'GardenController', action: 'removePlant', policy: 'sessionAuth'},
+  '/favoritePlant': {controller: 'GardenController', action: 'favoritePlant', policy: 'sessionAuth'},
+  '/my_garden': {view: 'pages/my_garden', controller: 'GardenController', action: 'viewGarden', policy: 'sessionAuth'},
   '/journal': {view: 'pages/journal', policy: 'sessionAuth'},
   '/profile': {view: 'pages/profile', policy: 'sessionAuth', controller: 'UserController', action: 'getAccount'}, // Profile page
   '/watering': {view: 'pages/informationPages/watering', policy: 'sessionAuth'},
   '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'},
   '/new_plant': {view: 'pages/new_plant', policy: 'sessionAuth'},
-  '/plantInfo': {view: 'pages/plantInfo', policy: 'sessionAuth'},
+  '/plantInfo/:plantID': {view: 'pages/plantInfo', controller: 'PlantController', action: 'viewPlantInfo', policy: 'sessionAuth'},
   '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'}
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗

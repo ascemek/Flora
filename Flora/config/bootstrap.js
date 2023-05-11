@@ -14,7 +14,7 @@ const moment = require('moment');
 
 module.exports.bootstrap = async function(done) {
   //Start the cron task for creating user plant tasks
-  scheduler.scheduleJob('*/15 * * * *', async () => { //Run every 15 minutes
+  scheduler.scheduleJob('* * * * *', async () => { //Run every 15 minutes */15 * * * *
     await sails.helpers.schedulePlantTasks();
   });
   // Set up administrators when there is no users and devMode is true
@@ -84,7 +84,8 @@ module.exports.bootstrap = async function(done) {
         fertilizerFrequency: 7,
         lastWatered: moment('04-01-2023').format(),
         lastFertilized: moment('04-01-2023').format(),
-        quantity: 2
+        quantity: 2,
+        isFavorite: true,
       }
     ]);
   }
