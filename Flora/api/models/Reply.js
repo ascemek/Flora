@@ -15,7 +15,7 @@ module.exports = {
       required: true,
     },
     forumID: {
-      model: 'forum'
+      model: 'forum',
     }
   }
 };

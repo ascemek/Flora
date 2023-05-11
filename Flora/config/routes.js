@@ -19,6 +19,7 @@ module.exports.routes = {
   '/user/login': 'UserController.login', // Login action
   '/user/logout': 'UserController.logout', // Logout action
   '/user/register': 'UserController.createAccount', // Register action
+  '/user/edit': {controller: 'UserController', action: 'editAccount', policy: 'sessionAuth'}, // Edit account action
   
   //Information pages routes
   '/companion_planting': {view: 'pages/informationPages/companion_planting', policy: 'sessionAuth'},
@@ -33,10 +34,11 @@ module.exports.routes = {
   '/new_post': {view: 'pages/new_post'},
   '/post/create': {controller: 'PostsController', action: 'createPost', policy: 'sessionAuth'},
   '/post/fetch': {controller: 'PostsController', action: 'fetchPosts', policy: 'sessionAuth'},
+  '/reply/create': {controller: 'PostsController', action: 'createReply', policy: 'sessionAuth'},
 
   '/my_garden': {view: 'pages/my_garden', policy: 'sessionAuth'},
   '/journal': {view: 'pages/journal', policy: 'sessionAuth'},
-  '/profile': {view: 'pages/profile', policy: 'sessionAuth'},
+  '/profile': {view: 'pages/profile', policy: 'sessionAuth', controller: 'UserController', action: 'getAccount'}, // Profile page
   '/watering': {view: 'pages/informationPages/watering', policy: 'sessionAuth'},
   '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'},
   '/new_plant': {view: 'pages/new_plant', policy: 'sessionAuth'},
