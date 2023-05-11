@@ -7,10 +7,6 @@
 
  module.exports = {
     attributes: {
-      id: {  // Unique ID
-        type: 'string',
-        required: true,
-      },
       name: { // Plant name
         type: 'string',
         required: true,

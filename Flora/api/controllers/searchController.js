@@ -36,10 +36,10 @@ module.exports = {
 
     fetchPlants: async function (req, res) { //get all plants
         try {
-           const plantsList = await Plants.find(); //referencing unmade plant table (//update made but not connected)
+           const plants = await Plants.find(); //referencing unmade plant table (//update made but not connected)
            return res.view('pages/plantSearch', {
             //eventData:JSON.stringify(events),
-            plantdata:JSON.stringify(plantsList)
+            plantData:JSON.stringify(plants)
         });
           } catch (error) {
             console.log(error);
@@ -65,7 +65,7 @@ module.exports = {
             }; 
             return res.view('pages/plantSearch', {
               //eventData:JSON.stringify(events),
-              plantdata:JSON.stringify(searchResultsArr)
+              plantData:JSON.stringify(searchResultsArr)
           });
             
           } catch (error) {

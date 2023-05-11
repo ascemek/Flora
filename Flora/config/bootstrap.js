@@ -9,7 +9,6 @@
  * https://sailsjs.com/config/bootstrap
  */
 
-const Plants = require("..\\api\\models\\Plants");
 
 module.exports.bootstrap = async function(done) {
   // Set up administrators when there is no users and devMode is true
@@ -61,10 +60,10 @@ module.exports.bootstrap = async function(done) {
   }
  // console.log(await Users.find());*/
 
-  if (await Plants === 0){ /*.count function not working???*/
+  if (await Plants.count() === 0){ /*.count function not working???*/
     await Plants.createEach( [
       {
-        id: 'basil',
+       // id: 'basil',
         name: 'Basil',
         sun: 'Basil thrives in warm temperatures and full morning sun. If you live in an area with scorching midday sun, try to give your basil light shade during the hottest time of day.',
         water: 'Basil likes to stay moist and requires approximately 1 inch of water every week. Water deeply at least once a week to keep roots growing deep and the soil moist. Basil growing in containers will need more frequent watering. Your goal when growing basil in a container is to keep the soil from drying out. The best time of day to water basil is early in the morning.',
@@ -72,7 +71,7 @@ module.exports.bootstrap = async function(done) {
         where: 'outdoor',
       },
       {
-        id: 'rosemary',
+       // id: 'rosemary',
         name: 'Rosemary',
         sun: 'Rosemary needs at least six hours of sun daily.',
         water: 'The plant is originally from the Mediterranean, so it prefers dry conditions and suffers when watered too frequently.',
@@ -81,7 +80,7 @@ module.exports.bootstrap = async function(done) {
         where: 'outdoor',
       },
       {
-        id: 'bellPepper',
+       // id: 'bellPepper',
         name: 'Bell Pepper',
         sun: 'Peppers need full, direct sun at least six to eight hours each day.',
         water: 'Keep bell peppers well-watered, but never leave soil soggy. Water to moisten soil about 6 inches deep, then let it dry slightly. Watering is especially important during fruit set, when tiny peppers take the place of blossoms, and as the bells mature. Consistent moisture helps keep peppers firm and healthy.',
@@ -89,7 +88,7 @@ module.exports.bootstrap = async function(done) {
         where: 'outdoor',
       },
       {
-        id: 'cantaloupe',
+       // id: 'cantaloupe',
         name: 'Cantaloupe',
         sun: 'Cantaloupes need full sun for 6 to 8 hours a day. ',
         water: 'Water cantaloupe deeply and infrequently, 1-2 inches per week. Use drip irrigation if possible. Mulch around the plants will help conserve soil moisture and reduce weed growth. Irrigate so that moisture goes deeply into the soil.',
@@ -97,7 +96,7 @@ module.exports.bootstrap = async function(done) {
         where: 'outdoor',
       },
       {
-        id: 'tomato',
+       // id: 'tomato',
         name: 'Tomato',
         sun: 'Tomatoes need at least 8 hours of sunlight daily. ',
         water: 'Water with about one to two inches of water per week, with heavy soakings once a week being preferred to several lighter sprinklings with the hose.',
@@ -105,14 +104,14 @@ module.exports.bootstrap = async function(done) {
         where: 'outdoor',
       },
       {
-        id: 'strawberry',
+      //  id: 'strawberry',
         name: 'Strawberry',
         sun: 'Ten or more hours of sunlight each day is ideal, but they need a minimum of six hours of direct sunlight each day.',
         water: 'During normal weather conditions, strawberries need water equal to 1 to 1.5 inches of rain each week. During hot, dry periods, water as needed to prevent shallow roots from drying out. Plants in containers may need daily watering. Always water early in the day so that foliage dries well before nightfall.',
         fertilizer: "Established strawberries should be fertilized once per year after the final harvest. Spring fertilization is not recommended because it can result in soft berries and overly vigorous growth that can increase the incidence of disease. Spread 8 ounces (one cup) 10-10-10 or 12-12-12 evenly over a 20-foot row. If a soil test indicates a need for phosphorus or potassium, these nutrients may be applied in the spring without causing berry softening. Sometimes small amounts of nitrogen fertilizer may be beneficial for strawberries in the spring. If the plants are not growing vigorously, are light green or the plants are growing on sandy soils and there has been higher than normal rainfall, an application of nitrogen at the very low rate of 1.6 ounces (3 T) per 20-foot row should be helpful.",
       },
       {
-        id: 'pothos',
+      //  id: 'pothos',
         name: 'Pothos',
         sun: 'Pothos need full sun/ partial shade. They like bright indirect light, but can survive in low light.',
         water: 'Water deeply when soil is dry. Let soil completely dry out before watering again.',
@@ -120,7 +119,7 @@ module.exports.bootstrap = async function(done) {
         where: 'indoor',
       },
       {
-        id: 'snake',
+      //  id: 'snake',
         name: 'Snake Plant',
         sun: 'While snake plants prefer bright indirect sunlight, they can survive in low light.',
         water: 'Water fortnightly or when top 2 inches of soil feel dry. ',
@@ -130,5 +129,6 @@ module.exports.bootstrap = async function(done) {
     ])
   }
 
+  console.log(await Plants.find());
   return done();
 };

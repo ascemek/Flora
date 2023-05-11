@@ -66,7 +66,7 @@
     <div class="plantSearchBar">
    
     <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick=searchPlants()>
   </div>
 
   </form>
@@ -83,7 +83,7 @@
     <p id="plantResultInfo"></p>
   </div-->
 
-  <div id="plantData" data-post="<%=plantdata%>">
+  <div id="plantData" data-post="<%=plantData%>">
   </div>
 
 
@@ -104,6 +104,9 @@
   </div-->
 
 
+  <br>
+  <br>
+  <br>
   <h4 id="recPlants" class="recPlants">Recommended Plants: </h4>
   <div id="recPlantsList" class="recPlantsList"> <!--Add links to the plant page of this plant?-->
     <ul>
@@ -236,7 +239,10 @@
   </script>
 
 <script>
-  $(document).ready(() => {console.log($("#plantData").data('plants'));
+  function searchPlants(){
+
+  
+  $(document).ready(() => {console.log($("#plantData").data("post"))});
   
     var requestedPlantName = document.getElementById("plantSearchBar").value;
 
@@ -244,40 +250,36 @@
     $(".plants-wrapper").empty();
 
 
-    let plants = $("#plantData").data("plant");
+    let plants = $("#plantData").data("post");
 
-    return plants;
+   // return plants;
 
     console.log(plants);
 
-    for(i = 0; i < plants.length; i++){
-      $("#todaysPlants").append(<p>plants[i].name</p>);
+  /*  for(i = 0; i < plants.length; i++){
+      $("#todaysPlants").append(`<p>${plants[i].name}</p>`);
 
-    }
+    } */
 
-  //  const searchResultsArr = [];
+    const searchResultsArr = [];
 
-   /*         for(i = 0; i < plantData.length; i++){
-              if(totalPlants[i].name == requestedPlantName){
-                searchResultsArr.push(totalPlants[i]);
+            for(i = 0; i < plants.length; i++){
+              //update casing
+              lowerCaseRequested = requestedPlantName.toLowerCase(); //change search result to lowercase
+              currPlant = (plants[i].name).toLowerCase(); //change curr plant to lowercase
+              if(currPlant == lowerCaseRequested){
+                searchResultsArr.push(plants[i]);
 
               }
+            }
 
-*/
- /*     plantData = searchResultsArr.sort(a => {
-        var plantName = a.name;
-        //more info??
-        //var plantInfo = a.sun;
-        //var plantInfo2 = a.water;
-      return (plantName);
-     });
-    console.log(plantData);
-*/
 
-    for(i = 0; i < plants.length; i++){
-      $("#plants-wrapper").append(`
-        <div class="resultBoxes"">
-          <h4 id="plantResultName">${plantData.name}</h4>
+
+
+    for(i = 0; i < searchResultsArr.length; i++){
+      $(".plants-wrapper").append(`
+        <div class="resultBoxes">
+          <h4 id="plantResultName">${searchResultsArr[i].name}</h4>
           <br>
           <img class="resultsImg" id ="plantResultIMg">
            <p id="plantResultInfo"></p>
@@ -308,5 +310,5 @@
           }
       }
     }); */
-
+  }
   </script>
