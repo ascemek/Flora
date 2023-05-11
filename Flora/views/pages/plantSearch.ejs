@@ -69,7 +69,7 @@
     <div class="plantSearchBar">
    
     <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick=searchPlants()>
+    <img id="searchBtn" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick=searchPlants()>
   </div>
 
   </form>
@@ -315,7 +315,7 @@
           <h4 id="plantResultName" style="color: #365E36;">${searchResultsArr[i].name}</h4>
           <br>
           <img class="resultsImg" id ="plantResultIMg">
-           <p id="plantResultInfo"><b>General Information: </b> ${searchResultsArr[i].water}</p> 
+           <p id="plantResultInfo"><b>Sunlight Information: </b> ${searchResultsArr[i].sun}</p> 
         </div>`);
 
 
@@ -345,3 +345,12 @@
     }); */
   }
   </script>
+  <script> /*allow user to search the search bar by pressing enter in addition to pressing search icon*/
+    var input = document.getElementById("plantSearchBar");
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("searchBtn").click();
+      }
+    });
+    </script>
