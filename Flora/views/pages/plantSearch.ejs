@@ -53,9 +53,12 @@
     <div class="headingContainer">
         <h1 class = "subheadLightBlue"> Plants</h1>
     </div>
+
+    <br>
+    <br>
     <div class="buttonContainer">
         <div>
-            <img class="create" id="createPlantButton" src="images/plantSearch/addPlantPlus3.png" alt="New Plant icon">
+            <!--img class="create" id="createPlantButton" src="images/plantSearch/addPlantPlus3.png" alt="New Plant icon"-->
           </a>
         </div>
     </div> 
@@ -107,7 +110,7 @@
   <br>
   <br>
   <br>
-  <h4 id="recPlants" class="recPlants">Recommended Plants: </h4>
+  <h4 id="recPlantsTitle" class="recPlantsTitle">Recommended Plants: </h4>
   <div id="recPlantsList" class="recPlantsList"> <!--Add links to the plant page of this plant?-->
     <ul>
       <li>Tomatoes</li>
@@ -148,7 +151,7 @@
       color: #365E36;
     }
 
-    h4{
+    .recPlantsTitle{
       color: #365E36;
       margin-left: 15%;
 
@@ -229,6 +232,11 @@
       margin-left: 15%;
     }
 
+    .plantResultName {
+      color: #365E36;
+      /*text-align: center;*/
+    }
+
 
         </style>
 
@@ -271,18 +279,30 @@
                 searchResultsArr.push(plants[i]);
 
               }
+            /*  else if(i == (plant.length - 1)){
+                searchResultsArr.push("No results. Please try searching using a different term")
+              } */
+
+            }
+
+            /*make this prettier*/
+            if(searchResultsArr.length == 0){
+              $(".plants-wrapper").append(`<div class="resultBoxes">
+                <h3 style="text-align: center;">No search results, Please try searching using a different term</h3>
+                </div>`);
             }
 
 
 
 
-    for(i = 0; i < searchResultsArr.length; i++){
+    //turn plant name into a link to plant info page
+    for(i = 0; i < searchResultsArr.length; i++){  //update to include general info instead of water info
       $(".plants-wrapper").append(`
         <div class="resultBoxes">
-          <h4 id="plantResultName">${searchResultsArr[i].name}</h4>
+          <h4 id="plantResultName" style="color: #365E36;">${searchResultsArr[i].name}</h4>
           <br>
           <img class="resultsImg" id ="plantResultIMg">
-           <p id="plantResultInfo"></p>
+           <p id="plantResultInfo"><b>General Information: </b> ${searchResultsArr[i].water}</p> 
         </div>`);
 
 
