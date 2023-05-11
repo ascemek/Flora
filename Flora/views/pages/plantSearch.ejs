@@ -279,11 +279,24 @@
                 searchResultsArr.push(plants[i]);
 
               }
+              else if(currPlant.includes(lowerCaseRequested)){
+                searchResultsArr.push(plants[i]);
+              }
+             /* else if(i = plants.length-1 && searchResultsArr.length==0){
+                lowerCaseRequested = lowerCaseRequested.substring(0, lowerCaseRequested.length - 1); //search for name minus one character
+                for(i = 0; i < plants.length; i++){
+                  if(currPlant == lowerCaseRequested){
+                    searchResultsArr.push(plants[i]);
+
+                  }
+                } 
+              }*/
             /*  else if(i == (plant.length - 1)){
                 searchResultsArr.push("No results. Please try searching using a different term")
               } */
 
             }
+            //text.includes("world");
 
             /*make this prettier*/
             if(searchResultsArr.length == 0){
