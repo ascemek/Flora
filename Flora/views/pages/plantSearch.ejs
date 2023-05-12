@@ -111,9 +111,9 @@
   <br>
   <br>
   <h4 id="recPlantsTitle" class="recPlantsTitle">Recommended Plants: </h4>
-  <div id="recPlantsList" class="recPlantsList"> <!--Add links to the plant page of this plant?-->
-    <ul>
-      <li>Tomatoes</li>
+  <div> <!--Add links to the plant page of this plant?-->
+    <ul  id="recPlantsList" class="recPlantsList">
+    <li>Tomatoes</li>
     <li>Basil</li>
     <li>Cilantro</li>
     </ul>
@@ -262,7 +262,7 @@
 
    // return plants;
 
-    console.log(plants);
+   // console.log(plants);
 
   /*  for(i = 0; i < plants.length; i++){
       $("#todaysPlants").append(`<p>${plants[i].name}</p>`);
@@ -330,5 +330,107 @@
         event.preventDefault();
         document.getElementById("searchBtn").click();
       }
+    });
+
+  /*  function checkIfEqual(plant1, plant2, plantLength){
+      if(plant1 == plant2){
+        newNum = Math.floor(Math.random() * (plantLength - 1));
+        numChange = checkIfEqual(plant1, newNum, plantLength);
+        if(newNum == numChange){
+          return newNum;
+        }
+        else{
+          return numChange;
+        }
+      }
+
+    } */
+
+
+  /*  function generateNumber(plantLength){
+      recPlantNum1 = Math.floor(Math.random() * (plantLength - 1));
+      recPlantNum2 = Math.floor(Math.random() * (plantLength - 1));
+      //check if equal
+      recPlantNum2 = checkIfEqual(recPlantNum1, recPlantNum2, plantLength);
+
+      recPlantNum3 = Math.floor(Math.random() * (plantLength - 1));
+
+      recPlantNum3 = checkIfEqual(recPlantNum2, recPlantNum3, plantLength);
+
+      //add to number array
+      const plantIDnumArr = []; //plantID number array
+
+      plantIDnumArr.push(recPlantNum1);
+      plantIDnumArr.push(recPlantNum2);
+      plantIDnumArr.push(recPlantNum3);
+
+      return plantIDnumArr;
+
+
+
+    } */
+    //rec plants function
+    function changeRecPlants() {
+      $(".recPlantsList").empty();
+
+
+      let plants = $("#plantData").data("post");
+
+      const recPlantsArr = [];
+
+      recPlantNum1 = Math.floor(Math.random() * (plants.length - 1));
+      recPlantNum2 = Math.floor(Math.random() * (plants.length - 1));
+      //check if equal
+      //recPlantNum2 = checkIfEqual(recPlantNum1, recPlantNum2, plants.length);
+
+      recPlantNum3 = Math.floor(Math.random() * (plants.length - 1));
+
+      //recPlantNum3 = checkIfEqual(recPlantNum2, recPlantNum3, plants.length);
+
+      //add to number array
+      const plantIDnumArr = []; //plantID number array
+
+      plantIDnumArr.push(recPlantNum1);
+      plantIDnumArr.push(recPlantNum2);
+      plantIDnumArr.push(recPlantNum3);
+
+      for(i = 0; i < plantIDnumArr.length; i++){
+        recPlant = plants[plantIDnumArr[i]];
+        recPlantsArr.push(recPlant);
+        
+
+      }
+
+      //randomly generate 3 numbers
+    //  const recPlant1 = Math.getRandomInt(0, (plants.length - 1));
+   //   recPlantNum1 = Math.floor(Math.random() * (plants.length - 1)); //put in a new function
+   //   recPlantNum2 = Math.floor(Math.random() * (plants.length - 1));
+    //  recPlantNum3 = Math.floor(Math.random() * (plants.length - 1));
+     // const recPlant2 = Math.getRandomInt(0, (plants.length - 1));
+      //const recPlant3 = Math.getRandomInt(0, (plants.length - 1));
+
+    //  recPlant1 = plants[recPlantNum1];
+    //  recPlant2 = plants[recPlantNum2];
+    //  recPlant3 = plants[recPlantNum3];
+      
+
+    //  recPlantsArr.push(recPlant1);
+    //  recPlantsArr.push(recPlant2);
+    //  recPlantsArr.push(recPlant3);
+
+      console.log(recPlantsArr);
+
+      //look for rec plants list
+      for(i = 0; i < recPlantsArr.length; i ++){
+        $(".recPlantsList").append(`<li><a href="/plantInfo/${recPlantsArr[i].id}">${recPlantsArr[i].name}</a></li>`);
+
+      }
+      
+      
+
+    }
+
+    $(document).ready( function () {
+      changeRecPlants();
     });
     </script>

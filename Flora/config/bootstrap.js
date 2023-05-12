@@ -129,6 +129,6 @@ module.exports.bootstrap = async function(done) {
     ])
   }
 
-  console.log(await Plants.find());
+  //console.log(await Plants.find());
   return done();
 };
