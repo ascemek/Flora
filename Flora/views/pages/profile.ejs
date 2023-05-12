@@ -47,6 +47,12 @@
     .nav-item{
       font-size: 18px;
     }
+    button{ /*Button Styling*/
+      background-color: #365E36;
+      color: white;
+      text-align: center;
+      justify-content: center;
+    }
 </style>
 
 <!-- NAV -->
@@ -83,10 +89,10 @@
           <a class="nav-link" href="/forum">Forum</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/my_garden">My Garden</a>
+          <a class="nav-link" href="/my_garden">My Garden</a>
         </li>      
         <li class="nav-item">
-          <a class="nav-link" href="/profile">Profile</a>
+          <a class="nav-link active" href="/profile">Profile</a>
         </li>    
       </ul>
     </div>  
@@ -183,7 +189,6 @@
               $("#lastName").text(lastName); //change last name
               $("#experience").text(experience); //change experience
               $("#email").text(email); //change email
-              $("#interests").text(interests); //change interests
               $("#editAccountValues").show(); //show edit button
               $("#saveAccountValues").hide(); //hide save button
               Swal.fire({ //show success alert

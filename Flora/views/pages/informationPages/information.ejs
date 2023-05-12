@@ -10,7 +10,7 @@
         <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             Information
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -31,7 +31,7 @@
           <a class="nav-link" href="/forum">Forum</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/my_garden">My Garden</a>
+          <a class="nav-link" href="/my_garden">My Garden</a>
         </li>      
         <li class="nav-item">
           <a class="nav-link" href="/profile">Profile</a>
@@ -78,7 +78,7 @@
     <br>
   
     <hr class="dashed">
-  
+  <!--Links and summaries of all info pages -->
     <h2 id="guide">Information Guide</h2>
     
     <p>
@@ -108,24 +108,18 @@
       Geographical location plays a big role in what you can plant, when you should plant, and how to treat your plants. Learn about these zones and which zone you're in so that you can make the best decisions for your garden. 
     <br>
     <br>
-    <class="subhead"><a href="/companion_planting"><b>Companion Planting</b></a></class>
-    <br>
-    Let the plants do the work for you! By learning how different plants interact with eachother we can allow our plants to act as pest repellent, mulch, fertilizer, and more. Visit this page before you start your next planting. 
-    <br>
-    <br>
-    <class="subhead"><a href="/composting"><b>Composting</b></a></class>
-    <br>
-    Most of us have heard of composting, but did you know you can do it at home? Visit this page to learn how you can repurpose your food and other organic waste into a source of nutrients for your plants.
-    <br>
-    <br>
+    <div class="expert_info_wrapper">
+      <!-- This is where the companion planting and composting info will go (based on experience level) -->
+    </div>
+
+
    </p>
-    <!--Should prob add citation or pic or somthing..-->
   
     <br>
     <br>
   
     <hr class="dashed">
-  
+   <!-- Guide to starting out -->
     <h2 id="start">Starting a Garden</h2>
     <p>
       <br>
@@ -143,14 +137,13 @@
       <b>Care for your garden - </b> Now it's time to start focusing on garden maintenance. make sure to set up your <a href="/my_garden">watering and fertilizer schedule</a> so that you can keep track of your plants needs. For <a href="/diseases_pests_weeds">pests, diseases, and weeds</a>, remember that the best offense is a good defense! Consider mulching your beds and regularly check plants for signs of an infestation or disease. 
     </p>
    
-    <!--Need to add in text citations for most of this info.... maybe add a picture-->
     <br>
     <br>
   
     <hr class="dashed">
   
     <h2 id="resource">Additional Resources</h2>
-    <!--Add resources (possibly the Youtube videos if I havent found a place for them)-->
+    <!-- More resources and info -->
   
     <br>
     <a href = "https://gardeningsolutions.ifas.ufl.edu/care/florida-friendly-landscapes/">https://gardeningsolutions.ifas.ufl.edu/care/florida-friendly-landscapes/</a>
@@ -264,6 +257,7 @@
       font-size: 18px;
     }
   </style>
+  
   <script>
     $(document).ready(()=>{
       $.ajax({
@@ -271,11 +265,46 @@
         type:'GET',
         success:(data)=>{
           if(data.experience == "Beginner"){
+            //hide nav bar links
             $("#companion_planting").hide();
             $("#composting").hide();
+
+            //show info message
+            $(".expert_info_wrapper").append(`
+              Become an Intermediate level gardener to unlock more information ! 
+              <br>
+            `);
           }
           if(data.experience == "Intermediate"){
+            //hide nav bar link
             $("#composting").hide();
+            
+            //show companion planting info and info message for expert gardening
+            $(".expert_info_wrapper").append(`
+              <class="subhead"><a href="/companion_planting"><b>Companion Planting</b></a></class>
+              <br>
+              Let the plants do the work for you! By learning how different plants interact with eachother we can allow our plants to act as pest repellent, mulch, fertilizer, and more. Visit this page before you start your next planting. 
+              <br>
+              <br>
+              Become an Expert gardener to unlock more information ! 
+            `);
+          }
+          if(data.experience === "Expert"){
+            //show all the info 
+            $(".expert_info_wrapper").append(`
+              <class="subhead"><a href="/companion_planting"><b>Companion Planting</b></a></class>
+              <br>
+              Let the plants do the work for you! By learning how different plants interact with eachother we can allow our plants to act as pest repellent, mulch, fertilizer, and more. Visit this page before you start your next planting. 
+              <br>
+              <br>
+            `);
+            $(".expert_info_wrapper").append(`
+              <class="subhead"><a href="/composting"><b>Composting</b></a></class>
+              <br>
+              Most of us have heard of composting, but did you know you can do it at home? Visit this page to learn how you can repurpose your food and other organic waste into a source of nutrients for your plants.
+              <br>
+              <br>
+            `);
           }
         }
       })
