@@ -1,42 +1,345 @@
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/">Flora</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" href="/composting">Composting</a></li>
-            </ul>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
+
+<body id="topOfPage">
+
+  <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  <h1>Diseases, Pests, and Weeds</h1>
+  
+  <div class= "googleTranslateBox"> 
+    <div class="googleTranslate"> <!--Google translate feature-->
+      <br>  
+        <h6>You can translate this page to 100+ different languages now!</h6>
+        <div id="google_translate_element"></div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <!--Table of Contents to aid in user's navigation of the page-->
+  <div class="tableOfContents">
+    <a href="#pests">Pest Management Basics</a> <!--Info on what Composting is-->
+    <br>
+
+    <a href="#prevention">Pest Prevention</a> <!--Common benefits of composting-->
+    <br>
+
+    <a href="#treat">Treating Pest Problems</a> <!--Examples of how to compost-->
+    <br>
+    
+    <a href="#diseases">Diseases</a> <!--Helpful composting tips-->
+    <br>
+
+    <a href="#weeds">Weeds and Invasive Plants</a> <!--Helpful composting tips-->
+    <br>
+
+    <a href="#resource">Additional Resources</a> <!--Extra resources about composint-->
+    <br>
+
+  </div>
+
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="pests">Pest Management Basics</h2>
+  
+  <p>
+  <br>
+    Integrated Pest Management (IPM) is the best way to approach pest control in your garden. 
+    IPM allows the gardener to look at pests and their role in the garden's ecosystem. 
+    By addressing what may attract pests, or environmental factors which can be adjusted to repel them, 
+    we are able to effectively protect our gardens while using pesticides as a last resort.
+  <br>
+  <br>
+    <b>Cultural Control</b> of pests means choosing gardening practices that make your plants less vulnerable to pests. 
+    This is the most important component of IPM. Some pest like Aphids, mites, and thrips feed by sucking the sap out of a plant's tissues. 
+    If your plant is underwatered or overfertilized, the nutrients in these juices will be more concentrated and the plant will be more nutritious to pests.
+    By making sure your plants are healthy and properly nurished, but not over-nurished, you can prevent pests.
+    Weeding is another form of cultural control. Controlling the weeds in your garden can remove alternate host plants for many of these pests. Your plants will have less competition for water, too, and additional airflow can help prevent fungal growth.
+  <br>
+  <br>
+    <b>Biological Control</b> simply means allowing a pest's natural predators to thrive in your landscape and help you control the pests. 
+    Think of your garden as an ecosystem, one with both predators and prey. If you avoid broad-spectrum insecticides, or use them only for severe pest outbreaks, these predators will survive and keep the pests in check in your garden.
+    Some bugs that you may first assume are pests may in fact be predatory and protecting your plant. Before you treat, look for damage. 
+  <br>
+  <br>
+    <b>Mechanical Controls</b> are actions, like pruning, that physically remove a plant or pest from the landscape. 
+    If you prune away an infested or diseased portion of a plant, be sure to keep it separated from the rest of your landscape plants. 
+    Piles of decaying plant material can harbor the pests you hoped to remove.
+  <br>
+  <br>
+    <b>Chemical Controls</b> are important, but a last resort in an IPM approach to pest control. 
+    Remember, broad-spectrum insecticides kill beneficial insects along with the pests. 
+    IPM recommends beginning with the least toxic products, like horticultural oils and insecticidal soaps, applied directly to the pests.
+    Remeber to always use any chemicals only as the label specifies! Deviating from this may cause harm to your garden and local ecosystem. 
+  <br>
+  <br>
+ </p>
+  <!--Should prob add citation or pic or somthing..-->
+
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="prevention">Pest Prevention</h2>
+  <p>
+    <br>
+    <li>Make sure your plants are planted or placed in locations suitable for them. This includes proper sunlight, soil, drainage, and temperature. Never plant something which is invasive to the local area!</li>
+    <li>Plan your plants! Pest resistant plants and companion planting can help to prevent future pest issues.</li>
+    <li>Keep your plants healthy. Healthy plants are less vulnerable to pests (and disease). </li>
+    <li>Keep a lookout. By regularly checking your plants for signs of pests (or diseases) you are able to correct issues before they get out of hand. </li>
+    <li>Prune selectively. Over-pruning can cause stress to the plant and leave it weak and vulnerable.</li>
+    <li>Encourage beneficial insects. Learn to recognize the insects that help manage pests and let them keep up the good work. </li>
+  </p>
+ 
+  <!--Need to add in text citations for most of this info.... maybe add a picture-->
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="treat">Treating Pest Problems</h2>
+  <p>
+    <br>
+    <li> Pruning. When pests are concentrated on one area of a plant, you can often reduce or eliminate the problem by removing affected leaves or stems. </li>
+    <li> Manually remove insects. By picking insects off of the plants you can often have a larger impact than one would expect. Make sure to kill and dispose of any captured insects to ensure that they do not return to the plant. </li>
+    <li> Look for beneficial insects. Sometimes beneficial insects may have already stepped in to help manage an outbreak. Make sure any pest treatment you do doesn't harm these beneficials. </li>
+    <li> Remember that there will always be insects. Any healthy landscape will have insects, and so before treating check your plant for harm. Some insects may inflict purely aesthetic damage, or damage so minimal that it's not worth treating. </li> 
+    <li> Start small. Before escalating to pesticides, try low-impact techniques. Always try the safest alternatives first, such as handpicking insects or pruning affected parts of a plant. If pesticide use does become necessary, choose products that are the least harmful to people, pets, and wildlife. These products include insecticidal soap, horticultural oil, botanicals (e.g., pyrethrum, neem, and rotenone), microbials (e.g., spinosad, abamectin, and Bacillus thuringiensis), and entomopathogenic nematodes (small worms that kill insects). </li>
+    <li> Avoid using broad-spectrum insecticides. They're not selective, meaning they also kill beneficials. Instead, choose targeted products, which are designed to harm only specific pests. </li>
+    <li>Spot-treat only. Use pesticides to treat only the affected areas of a plant or lawn. Never use blanket applications to treat problems. </li>
+    <li>Read and follow all label instructions. Be careful and remember that the label is the law! Apply pesticides during the cooler part of the day. Heat combined with soaps, horticultural oils, and other pesticides can injure plants. </li>
+  </p>
+
+
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="diseases">Diseases</h2>
+  <p>
+    <br>
+    There are many viruses, fungi, and bacteria which can cause diseases in plants. While diseases can be specific to certain plants identifying them can be extremely difficult.
+    <br><br>
+    Often, gardeners mistake environmental or maintenance problems for diseases. Some plants like Spanish moss, lichens, and ball moss may be assumed to be parasites that need to be killed or removed, but they are merely harmless plants themselves.
+    <br><br>
+    Saltwater damage may also be mistaken for disease. Irrigating plants with salty well water can cause yellowing around the edges of leaves and leaf-drop starting from the bottom part of the plant's canopy.
+    <br><br>
+    When a plant does have a disease, the problem may be merely cosmetic rather than truly damaging to the plant. Examples are minor leaf spots or other damage to select leaves. Such minor aesthetic concerns are no cause for alarm or treatment.
+    <br><br>
+    There are serious diseases, however, that can damage or kill plants they affect. Examples are mushroom root rot on landscape plants, lethal bronzing disease in palms, and take-all root rot on turf. Such diseases can seriously damage the plant's appearance or growth.
+    <br><br>
+    Because diseases are difficult to identify, do not assume a disease is in the works just because of a plant's appearance. Use a magnifying glass to look for insect pests that may be causing the damage. Also analyze maintenance practices for causes related to visible symptoms. If you still suspect a disease, contact your county extension office for advice on how to collect and submit plant samples for disease diagnosis and recommendations on the least toxic methods of treatment.</p>
+  
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="weeds">Weeds and Invasive Plants</h2>
+  <p>
+    <br>
+    A weed is just a plant growing in a place you don't want it, but invasive plants are harmful to Florida's ecology. Weeds can compete with vegetable plants for moisture and nutrients, and they can harbor insects, but be mindful of removing plants which may be beneficial to your plants, polinators, or local biodiversity for only aesthetic purposes.
+    <br>
+    <br>
+    <b>Prevention</b> makes weed maitanence easy. One of the best methods of prevention is mulching your beds.  Mulch obstructs light making it difficult for weeds to develop. Common mulch materials include pine-bark, pine-straw, melaleuca, mixed hardwood, and various stone materials. For maximum effectiveness, this material should be applied at least two inches thick in your bed. Mulch should be kept several inches away from plant bases to keep them healthy. 
+    <br>
+    <br>
+    <b>Hand Pulling</b> is one of the most cost effective and environmentally friendly weed removal methods. It may become overwhelming if weeds become prominent in your garden, so frequent maitanence is important. 
+    <br> <br>
+    <b>Shallow Cultivation</b> with a hoe or scuffle hoe will "decapitate" and control some weeds if they don't have root systems that allow them to regenerate. Some are easy enough to pull up and remove by hand, but others usually leave roots, tubers, or other plant parts in the ground that allow the plants to regrow.
+    <br> <br>
+    <b>Herbicide</b> are chemicals that are applied to weeds to prevent or kill them. They should be used minimally and only in cases where mechanical removal methods have proven unsuccessful. They can be effective if instructions are properly followed and the correct herbicide is used.  Timing of herbicide applications is the key to successful herbicide use. 
+    There are many different types; do your research and choose the proper herbicide for your specific weeds. Herbicides containing glyphosate are effective on many weeds, though for woody invasive plants like coral ardisia or Chinese tallow trees, you may need a product containing triclopyr. Always read and follow the product label whenever you use herbicides.
+    
+  </p>
+  
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="resource">Additional Resources</h2>
+  <!--Add resources (possibly the Youtube videos if I havent found a place for them)-->
+
+  <br>
+  <a href = "https://gardeningsolutions.ifas.ufl.edu/care/pests-and-diseases/diseases/">https://gardeningsolutions.ifas.ufl.edu/care/pests-and-diseases/diseases/</a>
+  <br><br>
+  <a href="https://gardeningsolutions.ifas.ufl.edu/care/pests-and-diseases/pests/">https://gardeningsolutions.ifas.ufl.edu/care/pests-and-diseases/pests/</a>
+  <br><br>
+  <a href="https://gardeningsolutions.ifas.ufl.edu/care/pests-and-diseases/pests/management/pesticides.html">https://gardeningsolutions.ifas.ufl.edu/care/pests-and-diseases/pests/management/pesticides.html</a>
+  <br><br>
+  <a href="https://gardeningsolutions.ifas.ufl.edu/care/weeds-and-invasive-plants/">https://gardeningsolutions.ifas.ufl.edu/care/weeds-and-invasive-plants/</a>
+  <br>
+  <br>
+
+  <button onclick="document.location='#topOfPage'">Back To Top</button> <!--Back to top button-->
+    <br>
+    <br>
+    <br>
+</body>
+
+<!--Google Translate feature-->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+  body{
+    background-color: #FAF9F6;
+    margin: auto;
+  }
+
+  h1{
+    text-align: center;
+    color: #365E36;
+  }
+
+  h2{
+    text-align: center;
+    color: #365E36;
+  }
+
+  .tableOfContents{
+    text-align: center;
+    font-size: 20px;
+    background-color: #F4FFEB;
+ 
+    border-style: dotted;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+  }
+
+  /* unvisited link */
+  a:link {
+    color: #30007D;
+  }
+
+  /* visited link */
+  a:visited {
+    color: #30007D;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: #72418B;
+  }
+
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+  hr.dashed {
+    border-top: 3px dotted #30007D;
+  }
+
+  .youtube {
+    text-align: center;
+    
+  }
+
+  button{ /*Back to Top Button Styling*/
+      background-color: #365E36;
+      color: white;
+      border-color: #365E36;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+   /*Google Translate*/
+   .googleTranslate{
+      justify-content: center;
+    }
+    .googleTranslateBox{
+      text-align: center;
+      font-size: 20px;
+      background-color: #F4FFEB;
    
-          </li>
+      border-style: dotted;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: block;
+    }
+    @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+    .nav-item{
+      font-size: 18px;
+    }
+</style>
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
   
-  
-          <li class="nav-item">
-            <a class="nav-link" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/my_garden">My Garden</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/journal">Journal</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Profile</a>
-          </li>    
-        </ul>
-      </div>  
-  </nav>
+</script>

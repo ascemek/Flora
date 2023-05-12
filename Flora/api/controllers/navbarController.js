@@ -35,6 +35,9 @@ module.exports = {
     },
     watering:function(req, res){
         res.view('watering');
+    },
+    information: function(req, res){
+        res.view('information');
     }
 
 };

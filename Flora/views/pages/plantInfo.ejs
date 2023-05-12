@@ -19,54 +19,54 @@
   </head>
   
   <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-      <a class="navbar-brand" href="/">Flora</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+    <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+    <img src="images/floraIcon.png" width="60" height="60">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Information
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+              <li><a class="dropdown-item " href="/watering">Watering</a></li>
+              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+              <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+              <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+            </ul>
+   
           </li>
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
-                Information
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item " href="/watering">Watering</a></li>
-                <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-                <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-                <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-                <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-                <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
-                <li><a class= "dropdown-item" href="/composting">Composting</a></li>
-              </ul>
-     
-            </li>
-    
-    
-            <li class="nav-item">
-              <a class="nav-link" href="/forum">Forum</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/my_garden">My Garden</a>
-            </li>    
-            <li class="nav-item">
-              <a class="nav-link" href="/journal">Journal</a>
-            </li>    
-            <li class="nav-item">
-              <a class="nav-link" href="/profile">Profile</a>
-            </li>    
-          </ul>
-        </div>  
-        
-    </nav>
   
-    <body>
-        <br>
-        <br>
-        <br>
-        <br>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="/forum">Forum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/my_garden">My Garden</a>
+          </li>      
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>    
+        </ul>
+      </div>  
+  </nav>
+
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   
         <div class= "googleTranslateBox"> 
             <div class="googleTranslate"> <!--Google translate feature-->
@@ -80,8 +80,16 @@
         <br>
 
         <div class = "plantInformationName">
+          <div class = "name_header">
             <h3>Plant name</h3>
+          </div>
+          <div class = "new_button">
+            <a href="/new_plant">
+              <button class="add_plant_button">Add to Garden</button>
+            </a>
+          </div>
         </div>
+
         <br>
         <br>
 
@@ -200,6 +208,8 @@
           text-align: center;
           color: #365E36;
         }
+
+        
       
         .googleTranslateBox{
           text-align: center;
@@ -240,6 +250,50 @@
         .googleTranslate{
           justify-content: center;
         }
-
+        .plantInformationName{
+          margin-top: 5%;
+          margin-left: 15%;
+          margin-right: 15%;
+          margin-bottom: 10%;
+          display: block;
+          width: 100%;
+        }
+        .name_header{
+          float: left;
+          width: 30%;
+        }
+        .new_button{
+          width: 70%;
+        }
+        .add_plant_button{
+          float: right;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @font-face {
+        font-family: growingGarden;
+        src: url("fonts/growingGarden.ttf") format("truetype");
+        }
+        .nav-item{
+          font-size: 18px;
+        }
     </style>
 
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
+  
+</script>

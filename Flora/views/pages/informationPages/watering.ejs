@@ -1,42 +1,268 @@
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/">Flora</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" href="/composting">Composting</a></li>
-            </ul>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
+
+  <body id="topOfPage">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>Watering</h1>
+    
+    <div class= "googleTranslateBox"> 
+      <div class="googleTranslate"> <!--Google translate feature-->
+        <br>  
+          <h6>You can translate this page to 100+ different languages now!</h6>
+          <div id="google_translate_element"></div>
+      </div>
+    </div>
+    
+    <br>
+    <br>
+    <!--Table of Contents to aid in user's navigation of the page-->
+    <div class="tableOfContents">
+      <a href="#whyIs">Why is watering important?</a> <!--Info on why watering is important-->
+      <br>
+      <a href="#howTo">Proper Watering Techniques</a> <!--Tips for a healthy garden-->
+      
+      <br>
+      <a href="#howOften">How often should I water?</a> <!--Tips on how often one should water-->
+
+      <br>
+
+      <a href="#resources">Additional Resources</a> <!--Links to Additional Resources-->
+      <br>
+  
+    </div>
+
+    <br>
+    <br>
+  
+    <hr class="dashed">
+  
+    <h2 id="whyIs">Why is watering important?</h2>
+    
+    <p><br>
+      <ls>
+        <li>Watering a plant is very important for its growth. Plants use a process called photosynthesis to create energy and water is required for it to work. Photosynthesis uses carbon dioxide from the air and hydrogen from the water to create a type of sugar that can be used by the plant to grow. </li>
+        <br>
+        <li>Water carries nutrients like the sugar from the leaves to the stems and buds, supporting new growth.</li>
+        <br>
+        <li>Water helps the plant stay cool by evaporating water in the leaves and taking away excess heat, this also pulls up more water from the ground.</li>
+        <br>
+        <li>Water provides support to the plant cells and allows it to bend in the wind without breaking.</li>
+        <br>
+        <li>Underwatered plants are suseptible to pests. </li>
+      </ls>
+  
+    <!--Should prob add citation or pic or somthing..-->
+  
+    <br>
+    <br>
+  
+    <hr class="dashed">
+
+    <h2 id="howTo">Proper Watering Techniques</h2>
+    <br>
+    <p>Water in the evening or early morning, watering while the soil is cool lets the plant absorb more of the moisture before it evaporates. When you water, keep your plant leaves dry, this helps avoid various diseases. Water evenly and gradually. Make sure that the plant is getting an even amount of water from all sides, this helps promote even root growth. Watering gradually allows time for the water to seep into the soil and avoids runoff, try watering in parts. Water needs to get to the plant roots to be effective. Watering deeply less frequently is preferable to watering lightly everyday. Avoid overwatering, if too much water is left in the soil it can drown the roots of the plant. Make sure your plants have good drainage so the roots can breathe.</p>
+    <br>
+    <div class = "container-fluid" >
+      <div class = "row" >
+        <div class = "col-sm-6" >
+          <iframe class="youtube" style= "width:99%" width="560" height="315" src="https://www.youtube.com/embed/VaTkzYv8sMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class = "col-sm-6">
+          <iframe class = "youtube" style="width:99%;" width="560" height="315" src="https://www.youtube.com/embed/OOLgbkq_P4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  
+    <hr class="dashed">
+  
+    <h2 id="howOften">How often should I water?</h2>
+    <br>
+    <p>Needed watering frequency changes by plant, season, development stage, etc. The best way to keep track of these needs is through research and planning, using our watering scheduler, and to monitor your plant for signs of dehydration. Keep in mind that a lot of plants need to have their soil fully dry between waterings. Too much water, a poorly draining environment, or consistently wet conditions around the roots can cause root rot. </p>
+    <br>
+    <iframe class = "youtube" style = "display:block; margin:auto;" width="560" height="315" src="https://www.youtube.com/embed/4lm6cd5aTgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <br>
+    <br>
+
+    <hr class="dashed">
+    
+    <h2 id="resources">Additional Resources</h2>
+<!--Add resources (possibly the Youtube videos if I havent found a place for them)-->
+    <br>
+    <a href="https://www.longfield-gardens.com/article/how-to-water-your-plants">https://www.longfield-gardens.com/article/how-to-water-your-plants</a>
+    <br><br>
+    <a href="https://bloomscape.com/plant-care/how-to-water-indoor-plants-correctly/">https://bloomscape.com/plant-care/how-to-water-indoor-plants-correctly/</a>
+    <br><br>
+    <a href="https://theplantgallery.com/how-to-fix-and-prevent-root-rot/">https://theplantgallery.com/how-to-fix-and-prevent-root-rot/</a>
+    <br><br>
+    <a href="https://www.almanac.com/when-water-your-vegetable-garden-watering-chart#:~:text=Plants%20do%20best%20when%20watered,Feel%20your%20soil!">https://www.almanac.com/when-water-your-vegetable-garden-watering-chart</a>
+    <br><br><br>
+
+  </body>
+  
+  <button onclick="document.location='#topOfPage'">Back To Top</button> <!--Back to top button-->
+  <br>
+  <br>
+  <br>
+  
+    <!--Google Translate feature-->
+   <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  <style>
+    body{
+      background-color: #FAF9F6;
+      margin: auto;
+    }
+  
+    h1{
+      text-align: center;
+      color: #365E36;
+    }
+  
+    h2{
+      text-align: center;
+      color: #365E36;
+    }
+  
+    .tableOfContents{
+      text-align: center;
+      font-size: 20px;
+      background-color: #F4FFEB;
    
-          </li>
+      border-style: dotted;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: block;
+    }
   
+    /* unvisited link */
+    a:link {
+      color: #30007D;
+    }
   
-          <li class="nav-item">
-            <a class="nav-link" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/my_garden">My Garden</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/journal">Journal</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Profile</a>
-          </li>    
-        </ul>
-      </div>  
-  </nav>
+    /* visited link */
+    a:visited {
+      color: #30007D;
+    }
+  
+    /* mouse over link */
+    a:hover {
+      color: #72418B;
+    }
+  
+    /* selected link */
+    a:active {
+      color: blue;
+    }
+  
+    hr.dashed {
+      border-top: 3px dotted #30007D;
+    }
+  
+    .youtube {
+      text-align: center;
+    }
+
+    button{ /*Back to Top Button Styling*/
+      background-color: #365E36;
+      color: white;
+      border-color: #365E36;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+     /*Google Translate*/
+     .googleTranslate{
+      justify-content: center;
+    }
+    .googleTranslateBox{
+      text-align: center;
+      font-size: 20px;
+      background-color: #F4FFEB;
+   
+      border-style: dotted;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: block;
+    }
+    @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+    .nav-item{
+      font-size: 18px;
+    }
+  </style>
+
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
+  
+</script>

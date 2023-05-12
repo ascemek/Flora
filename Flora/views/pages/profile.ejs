@@ -1,42 +1,279 @@
+<!-- STYLE -->
+<style>
+  body{
+    background-color: #FAF9F6;
+  }
+  #profileHeader {
+    color: #365E36;
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+    margin-top: 5%;
+  }
+  .accountContainer {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+  }
+  .userInfo {
+    display: inline-block;
+    margin-left: 5%;
+    width: 40%;
+  }
+  label {
+    width: 40%;
+    margin-right: 10%
+    /*text-align: right;*/
+  }
+  #username {
+    margin-left: 5%;
+    width: 40%;
+  }
+  #tasksCompletedTitle {
+    width: 40%;
+    /*text-align: right;*/
+  }
+  .selfEditButtons {
+    display: inline-block;
+  }
+  .editButton, #logout {
+    margin-top: 5%;
+    margin-left: 1%;
+  }
+  @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+    .nav-item{
+      font-size: 18px;
+    }
+</style>
+
+<!-- NAV -->
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/">Flora</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" href="/composting">Composting</a></li>
-            </ul>
-   
-          </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
+
+
+<!-- BODY -->
+<body>
   
   
-          <li class="nav-item">
-            <a class="nav-link" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/my_garden">My Garden</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/journal">Journal</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link active" href="/profile">Profile</a>
-          </li>    
-        </ul>
-      </div>  
-  </nav>
+  <div id="accountInfo" data-account="<%=account%>"></div> <!-- data-account attribute holds account info for page to use -->
+  <br/>
+  <div id="profileHeaderContainer"><img id="profileIcon" src="images/pictures/ppIcon.png" style="max-width: 10%; height: auto" alt="profile icon"><h2 id="profileHeader">Account Information</h2></div> <!-- header for page -->
+  <div class="accountContainer"> <!-- container for account info -->
+  
+    <br/>
+    <label for="username"><b>Username:</b></label> <!-- label for username -->
+    <div id="username" name="username" class="userInfo"></div> <!-- div to hold username -->
+    <br/>
+    <label for="firstName"><b>First Name:</b></label> <!-- label for first name -->
+    <div id="firstName" name="firstName" class="userInfo"></div> <!-- div to hold first name -->
+    <br/>
+    <label for="lastName"><b>Last Name:</b></label> <!-- label for last name -->
+    <div id="lastName" name="lastName" class="userInfo"></div> <!-- div to hold last name -->
+    <br/>
+    <label for="experience"><b>Experience:</b></label> <!-- label for last name -->
+    <div id="experience" name="experience" class="userInfo"></div> <!-- div to hold last name -->
+    <br/>
+    <label for="email"><b>Email:</b></label> <!-- label for email -->
+    <div id="email" name="email" class="userInfo"></div> <!-- div to hold email -->
+    <br/>
+    <br/><br/><br/>
+    <div class="selfEditButtons"><button id="logout">Logout</button><button id="editAccountValues" class="editButton">Edit Account</button></div> <!-- div to hold edit and logout buttons -->
+    <button id="saveAccountValues" class="editButton">Save Changes</button> <!-- button to save changes -->
+    <br>
+  </div>
+  
+  <div id="emailButton">
+    <p>
+      Contact them by sending an email!
+    </p>
+    <button onclick="emailFunc()">Send E-mail</button>
+  </div>
+
+</body>
+
+<!-- SCRIPT -->
+<script>
+  function emailFunc() {
+    let account = $("#accountInfo").data("account");
+    let emailacc = document.querySelector("#email").innerHTML;
+    window.open(`mailto:${emailacc}`, "myWindow", 'width=800,height=600');
+    window.close();
+  }
+
+  function initPage() { //function to initialize page
+    $("#saveAccountValues").hide(); //hide save button
+    
+    let account = $("#accountInfo").data("account"); //get account info from data-account attribute
+    if (account.isSelfEdit) { //if user is viewing their own profile
+      $("#emailButton").hide(); //hide send email button
+      $("#profileHeader").text("My Profile"); //change header to "My Profile"
+      $("#editAccountValues").click(function() { //edit button
+        $("#firstName").html(`<input type="text" id="firstNameInput" name="firstNameInput" value="${account.firstName}">`); //change to input
+        $("#lastName").html(`<input type="text" id="lastNameInput" name="lastNameInput" value="${account.lastName}">`); //change to input
+        $("#experience").html(`<select id="experienceInput" name="experienceInput" > 
+          <option value="${account.experience}">${account.experience}</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Expert">Expert</option>
+          </select>`); //change to dropdown 
+        $("#email").html(`<input type="text" id="emailInput" name="emailInput" value="${account.email}">`); //change to input
+        $("#editAccountValues").hide(); //hide edit button
+        $("#newProfilePic").hide(); //hide edit profile picture button
+        $("#saveAccountValues").show(); //show save button
+      });
+      $("#saveAccountValues").click(function() { //save button
+        let firstName = $("#firstNameInput").val(); //get new first name
+        let lastName = $("#lastNameInput").val(); //get new last name
+        let experience = $("#experienceInput").val(); //get new experience level
+        let email = $("#emailInput").val(); //get new email
+        $.ajax({ //send ajax request to save changes
+          url: "/user/edit", //edit user route
+          type: "GET", //get request
+          data: { //data to send
+            firstName: firstName,
+            lastName: lastName,
+            experience: experience,
+            email: email,
+          },
+          success: function(data) { //on success
+            if (data.success) { //if success
+              $("#firstName").text(firstName); //change first name
+              $("#lastName").text(lastName); //change last name
+              $("#experience").text(experience); //change experience
+              $("#email").text(email); //change email
+              $("#interests").text(interests); //change interests
+              $("#editAccountValues").show(); //show edit button
+              $("#saveAccountValues").hide(); //hide save button
+              Swal.fire({ //show success alert
+                title: "Success",
+                text: "Your changes have been saved.",
+                icon: "success",
+                confirmButtonText: "Ok"
+              });
+            } else {
+              Swal.fire({ //show error alert
+                title: "Error",
+                text: data.error,
+                icon: "error",
+                confirmButtonText: "Ok"
+              });
+            }
+          },
+          error: function(err) { //on error
+            Swal.fire({ //show error alert
+              title: "Error",
+              text: "An error occurred while trying to save your changes.",
+              icon: "error",
+              confirmButtonText: "Ok"
+            })
+          }
+        });
+      });
+    $("#logout").click(function() { //logout button
+      $.ajax({ //send ajax request to logout
+        url: "/user/logout",
+        type: "GET",
+        success: function(data) { //on success
+          if (data.success) {
+            window.location.href = "/"; //redirect to home page
+          } else {
+            Swal.fire({ //show error alert
+              title: "Error",
+              text: data.error,
+              icon: "error",
+              confirmButtonText: "Ok"
+            })
+          }
+        },
+        error: function(err) { //on error
+          Swal.fire({ //show error alert
+            title: "Error",
+            text: "An error occurred while trying to logout.",
+            icon: "error",
+            confirmButtonText: "Ok"
+          })
+        }
+      });
+    });
+  } else {
+    $("#profileHeader").text(`${account.firstName} ${account.lastName}'s Profile`); //change header to "First Last's Profile"
+    $(".selfEditButtons").hide(); //hide edit and logout buttons
+    $("#newProfilePic").hide();//hide edit profile pic button
+    $("#emailButton").show(); //show send email button
+
+  }
+  $("#profileIcon").attr("src", account.userProfileImage); //set profile picture
+  $("#username").text(account.username); //set username
+  $("#firstName").text(account.firstName); //set first name
+  $("#lastName").text(account.lastName); //set last name
+  $("#experience").text(account.experience); //set experience
+  $("#email").text(account.email); //set email
+  $("#interests").text(account.interests); //set interests
+  for (let task = 0; task < account.tasks.length; task += 1) { //for each task completed
+    //$("#tasksCompletedList").append(`<label id='tasksCompletedTitle'>${task === 0 ? "<b>Tasks Completed:</b>" : ""}</label>`);
+    $("#tasksCompletedList").append(`<div id='tasksCompleted' class="task" title="${account.tasks[task].name}" name='tasksCompleted' class='userInfo'>${account.tasks[task].taskElement}</div>`);
+  }  
+}
+initPage(); //call function to initialize page
+</script>
+
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
+  
+</script>

@@ -13,27 +13,45 @@ module.exports.routes = {
   //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
   //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
-  '/': {view: 'pages/homepage'},
 
-  '/companion_planting': {view: 'pages/companionPlant'},
-  '/composting': {view: 'pages/composting'},
   //plant search functions
-  '/plantSearch': {controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch'},
-  '/createPlant': { controller: 'SearchController', action: 'createPlant', view: 'pages/plantSearch' },  //create a plant
-  '/fetchPlants': { controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch' }, //get all plants
-  '/searchPlants': {controller: 'SearchController', action: 'searchPlant', view: 'pages/plantSearch'},//search for a specific plant
+  '/plantSearch': {controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch'}, policy: 'sessionAuth',
+  '/createPlant': { controller: 'SearchController', action: 'createPlant', view: 'pages/plantSearch', policy: 'sessionAuth' },  //create a plant
+  '/fetchPlants': { controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch', policy: 'sessionAuth' }, //get all plants
+  '/searchPlants': {controller: 'SearchController', action: 'searchPlant', view: 'pages/plantSearch', policy: 'sessionAuth'},//search for a specific plant
 
+  '/': {view: 'pages/homepage', policy: 'sessionAuth'},
+  '/login': { view: 'pages/login' }, // Login page
+  '/register': { view: 'pages/register' }, // Register page
+  '/user/login': 'UserController.login', // Login action
+  '/user/logout': 'UserController.logout', // Logout action
+  '/user/register': 'UserController.createAccount', // Register action
+  '/user/edit': {controller: 'UserController', action: 'editAccount', policy: 'sessionAuth'}, // Edit account action
   
-  '/sunlight': {view: 'pages/informationPages/sunlight'},
-  '/fertilizer': {view: 'pages/informationPages/fertilizer'},
-  '/diseases_pests_weeds': {view: 'pages/informationPages/diseases_pests_weeds'},
-  '/agr_zones': {view: 'pages/informationPages/agr_zones'},
-  '/forum': {view: 'pages/forum'},
-  '/my_garden': {view: 'pages/my_garden'},
-  '/plantInfo': {view: 'pages/plantInfo'},
-  '/journal': {view: 'pages/journal'},
-  '/profile': {view: 'pages/profile'},
-  '/watering': {view: 'pages/informationPages/watering'}
+  //Information pages routes
+  '/companion_planting': {view: 'pages/informationPages/companion_planting', policy: 'sessionAuth'},
+  '/sunlight': {view: 'pages/informationPages/sunlight', policy: 'sessionAuth'},
+  '/fertilizer': {view: 'pages/informationPages/fertilizer', policy: 'sessionAuth'},
+  '/diseases_pests_weeds': {view: 'pages/informationPages/diseases_pests_weeds', policy: 'sessionAuth'},
+  '/agr_zones': {view: 'pages/informationPages/agr_zones', policy: 'sessionAuth'},
+  '/composting': {view: 'pages/informationPages/composting', policy: 'sessionAuth'},
+
+  //Forum routes
+  '/forum': {view: 'pages/forum', policy: 'sessionAuth', controller: 'PostsController', action: 'fetchPosts'},
+  '/new_post': {view: 'pages/new_post'},
+  '/post/create': {controller: 'PostsController', action: 'createPost', policy: 'sessionAuth'},
+  '/post/fetch': {controller: 'PostsController', action: 'fetchPosts', policy: 'sessionAuth'},
+  '/reply/create': {controller: 'PostsController', action: 'createReply', policy: 'sessionAuth'},
+
+  '/my_garden': {view: 'pages/my_garden', policy: 'sessionAuth'},
+  '/journal': {view: 'pages/journal', policy: 'sessionAuth'},
+  '/profile': {view: 'pages/profile', policy: 'sessionAuth', controller: 'UserController', action: 'getAccount'}, // Profile page
+  '/watering': {view: 'pages/informationPages/watering', policy: 'sessionAuth'},
+  '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'},
+  '/new_plant': {view: 'pages/new_plant', policy: 'sessionAuth'},
+  '/plantInfo': {view: 'pages/plantInfo', policy: 'sessionAuth'},
+  '/getCurrentXP': {policy: 'sessionAuth', controller: 'UserController', action: 'getCurrentXP'}, // Profile page
+
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗

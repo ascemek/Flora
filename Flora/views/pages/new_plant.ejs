@@ -1,0 +1,162 @@
+<!-- STYLE -->
+<style>
+/* unvisited link */
+body{
+      background-color: #FAF9F6;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+form{
+    
+    width: 75%;
+}
+#favorite{
+    margin-left: 40%;
+}
+#fav_label{
+    margin-left:2%;
+}
+label{
+    margin-left: 40%;
+}
+#submit{
+    float: right;
+}
+    h2{
+          text-align: center;
+          color: #365E36;
+        }
+    a:link {
+        color: #30007D;
+    }
+    
+    /* visited link */
+    a:visited {
+        color: #30007D;
+    }
+    /* mouse over link */
+    a:hover {
+        color: #72418B;
+    }
+    
+    /* selected link */
+    a:active {
+        color: blue;
+    }
+    
+    hr.dashed {
+        border-top: 3px dotted #30007D;
+    }
+    @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+    .nav-item{
+      font-size: 18px;
+    }
+</style>
+
+<!-- NAV BAR -->
+<nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
+
+<body>
+  <br>
+  <br>
+  <!-- BODY -->
+    <br><br><br><br>
+    <h2> Add PLANTNAME to My Garden</h2>
+    <form>
+        <!--Number input and select for watering frequency-->
+        <br>
+        <label for="water">Water every </label>
+        <input class = "water" type="number" id="water" name="water" min="0">
+        <select class = "water_time" type="select" id="water_time" name="water_time">
+            <option value="day">Day(s)</option>
+            <option value="week">Week(s)</option>
+            <option value="month">Month(s)</option>
+        </select>
+        <!--Number input and select for fertilizer frequency-->
+        <br><br>
+        <label for="fertilizer">Fertilize every </label>
+        <input class = "fertilizer" type="number" id="fertilizer" name="fertilizer" min="0">
+        <select class = "f_time" type="select" id="f_time" name="f_time">
+            <option value="day">Day(s)</option>
+            <option value="week">Week(s)</option>
+            <option value="month">Month(s)</option>
+        </select>
+        <!--Number input for selecting quantity-->
+        <br><br>
+        <label for="quantity">Quantity </label>
+        <input class = "quantity" type="number" id="quantity" name="quantity" min="1">
+        <!--Radio button for selecting favorite-->
+        <br><br>
+        <input class = "favorite" type="checkbox" id="favorite" name="favorite">
+        <label for="favorite" id ="fav_label">Favorite</label>
+        <br>
+        <br>
+        <input type="submit" value="Submit" id="submit">
+
+    </form>
+</body>
+
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
+  
+</script>

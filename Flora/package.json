@@ -9,11 +9,13 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
     "bootstrap": "^3.4.1",
+    "bcrypt": "^5.1.0",
     "sails": "^1.5.4",
     "sails-hook-apianalytics": "^2.0.3",
     "sails-hook-organics": "^2.0.0",
     "sails-hook-orm": "^4.0.0",
-    "sails-hook-sockets": "^2.0.0"
+    "sails-hook-sockets": "^2.0.0",
+    "sweetalert2": "^11.7.3"
   },
   "devDependencies": {
     "eslint": "5.16.0",
