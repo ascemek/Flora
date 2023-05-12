@@ -1,54 +1,55 @@
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/">Flora</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/information">Getting Started</a></li>
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" href="/composting">Composting</a></li>
-            </ul>
-   
-          </li>
-  
-  
-          <li class="nav-item">
-            <a class="nav-link active" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/my_garden">My Garden</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/journal">Journal</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Profile</a>
-          </li>    
-        </ul>
-      </div>  
-  </nav>
 
-  <div style=" margin-top: 5%; margin-left: 15%; margin-right: 15%; display:inline-block; width: 100%;">
-    <div style="width: 30%; height: auto; float: left; display:inline-block;">
-        <h1 class = "subheadLightBlue"> Recent Posts</h1>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
+
+
+<body>
+  <br><br>
+  <div style=" margin-top: 7%; margin-left: 15%; margin-right: 15%; display:inline-block; width: 100%;">
+    <div style="width: 30%; height: auto; float: left; display:inline-block; margin-top:1%">
+        <h1 style="color:#365E36; " > Recent Posts</h1>
     </div>
     <div style="width: 70%; height: auto; display:inline-block;">
         <div>
-            <img class="create" id="createPostButton" src="images/pictures/plusPost.png" alt="New Post icon" style="width: 10%; height: 10%; display: block;
+            <img class="create" id="createPostButton" src="images/pictures/plusPost5.png" alt="New Post icon" style="width: 10%; height: 10%; display: block;
             margin-left: auto;
             margin-right: auto;">
           </a>
@@ -63,7 +64,7 @@
   <div class="posts-wrapper" style="margin: 30px 150px;">
     <!-- This will get's the posts from new_post.ejs-->
   </div>
-  
+</body>
   
   <script> // Template post
     $(document).ready(() => {console.log($("#postData").data('post'));
@@ -75,20 +76,99 @@
     const post = $("#postData").data('post').sort((a, b) => {
       return new Date(b.createdAt) - new Date(a.createdAt);
     });
+    //write each post
     for(let i = 0; i < post.length; i++){
+      console.log(post[i])
       $(".posts-wrapper").append(`
-    <div style="border: 6px solid #487CB4; padding: 10px; margin-top: 1%;">
+    <div style="border: 6px solid #365E36; border-bottom: 4px dotted #365E36; padding: 10px; margin-top: 2%;">
         <div>
-            <h3> <b>${post[i].userID.firstName + " " + post[i].userID.lastName } </b> </h3>
+            <h3 style = "color: #365E36;"> <b><a class="postName" href="/profile?accountId=${post[i].userID.id}">${post[i].userID.firstName + " " + post[i].userID.lastName}</a></b> </h3>
             <h6> ${new Date(post[i].createdAt).toLocaleString('en-US') }</h6>
         </div>
-        <p>  
+        <p style="font-size:110%;">  
           ${post[i].body}
         </p>
     </div>
     `);
+    //for each post: sort replies by date
+    const reply = post[i].reply.sort((a, b) => { 
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      });
+      //write replies
+       for(let j = 0; j < reply.length; j++){
+        $(".posts-wrapper").append(`
+          <div style="border-bottom: 4px dotted #487CB4; border-left: 6px solid #365E36; border-right: 6px solid #365E36; padding: 2%; margin-top: 0%; margin-bottom:0%;">
+            <div style="margin-left:1%">
+              <div>
+                  <h5> Reply From: <b style = "color: #365E36;"><a class = "replyName" href="/profile?accountId=${reply[j].userID.id}">${reply[j].userID.firstName + " " + reply[j].userID.lastName }</a></b> </h5>
+                  <h6> ${new Date(reply[j].createdAt).toLocaleString('en-US') }</h6>
+              </div>
+              <p style="margin-bottom:0%; font-size:110%;">  
+                ${reply[j].body}
+              </p>
+            </div>
+          </div>
+          `); 
+      } 
+      //and create a reply box
+    $(".posts-wrapper").append(`
+    <div class = "reply_wrap">
+      <div id="reply_form">
+        <textarea id = "reply_input${post[i].id}" placeholder="What's happening? Type your reply here!" rows="2" style="background-color: #FAF9F6; margin: auto; width: 85%; padding: 2%; display: inline-block;" required></textarea>
+        <button class="btn-float-right" onclick = "createreply(${post[i].id})"> Reply </button>
+      </div>
+    </div>
+    `); 
     }});
+  
+
+    function createreply(postid) 
+      {
+        var reply = document.getElementById("reply_input"+postid).value; //which reply box to get from?
+
+        $.ajax({
+          url:  '/reply/create', //URL? 
+          type: 'GET',
+          data: {body: reply, forum: postid},
+          success: function(result) {
+              console.log("success");
+              if(result.error)
+              {
+                Swal.fire({ //show error alert
+                title: "Error",
+                text: result.error,
+                icon: "error"
+              });
+                console.log("error");
+              }
+              else
+              {
+                window.location.href = "/forum";;
+              }
+          }
+        });
+      }
   </script>
+  
+  <script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
+  
+</script>
+  
 
 <style>
 
@@ -96,9 +176,11 @@
 	margin: 0;
 	padding: 0;
 }
-
+body{
+  background-color: #FAF9F6;
+}
 header{
-	background-color: #23488D;
+	color: #365E36;
 	display: flex;
 	align-items: center;
 	padding: .5%;
@@ -111,11 +193,11 @@ header a, header p{
 	font-size:  20px;
 	text-align: center;
 	text-decoration: none;
-	color: white;
+	color: #FAF9F6;;
 }
 
 h2{
-	color: #23488D;
+	color: #365E36;
 }
 
 .create:hover{
@@ -123,4 +205,64 @@ h2{
     box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
 
+
+.reply_wrap{
+  border-bottom: 6px solid #365E36; 
+  border-left: 6px solid #365E36;
+  border-right: 6px solid #365E36;
+  padding: 10px;
+}
+
+  #reply_form{
+      margin: auto;
+  }
+
+  .btn-float-right{
+    float: right;
+    margin-right: 2%;
+    margin-top: 2.5%;
+    background-color: #365E36;
+    border: none;
+    color: #FAF9F6;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+    .nav-item{
+      font-size: 18px;
+    }
+    
+   /* unvisited link */
+   a:link {
+      color: #30007D;
+    }
+  
+    /* visited link */
+    a:visited {
+      color: #30007D;
+    }
+  
+    /* mouse over link */
+    a:hover {
+      color: #72418B;
+    }
+  
+    /* selected link */
+    a:active {
+      color: blue;
+    }
+
+  /*  .postName, .replyName{
+    color: #365E36;
+  }
+  */
+
 </style>
+
+  

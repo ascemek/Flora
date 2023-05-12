@@ -64,6 +64,7 @@ module.exports = {
       const firstName = req.param('firstName');
       const lastName = req.param('lastName');
       const email = req.param('email');
+      const experience = req.param('experience');
       const username = req.param('username');
       const password = req.param('password');
       if (!firstName || !lastName || !email || !username || !password) { // Missing required params
@@ -89,6 +90,7 @@ module.exports = {
         firstName: firstName,
         lastName: lastName,
         email: email,
+        experience: experience,
         username: username,
         password: hash,
       }).exec((err, user) => { // Error handling
@@ -125,7 +127,7 @@ module.exports = {
         accountId = userId;
       }
       let isSelfEdit = userId === parseInt(accountId);
-      const foundUser = await Users.find({id: accountId}).populate('tasks');
+      const foundUser = await Users.find({id: accountId})
       if (!foundUser || foundUser.length === 0) { // User not found
         return res.view('pages/homepage', {
           error: 'User not found'
@@ -137,6 +139,7 @@ module.exports = {
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,
+        experience: user.experience,
         username: user.username,
         isSelfEdit: isSelfEdit
       };
@@ -162,19 +165,20 @@ module.exports = {
       const firstName = req.param('firstName');
       const lastName = req.param('lastName');
       const email = req.param('email');
-      const interests = req.param('interests');
+      const experience = req.param('experience');
+      //const interests = req.param('interests');
       const userId = req.session.userId;
       if (!userId) { //Redirect to login page if not logged in
         return res.view('pages/login', {
           error: 'Missing required params'
         });
       }
-      if (!firstName || !lastName || !email || !interests) { //Check for missing params
+      if (!firstName || !lastName || !email ){ //!interests) { //Check for missing params
         return res.send({
           error: 'All fields required'
         });
       }
-      if (firstName === '' || lastName === '' || email === '' || interests === '') { //Check for empty params
+      if (firstName === '' || lastName === '' || email === '' ){ //|| interests === '') { //Check for empty params
         return res.send({
           error: 'All fields required'
         });
@@ -192,7 +196,8 @@ module.exports = {
         firstName: firstName,
         lastName: lastName,
         email: email,
-        interests: interests
+        experience: experience,
+        //interests: interests
       }).exec((err, user) => { //Return error if update fails
         if (err) {
           return res.send({
@@ -205,6 +210,21 @@ module.exports = {
         success: true
       });
     } catch (err) { //Return error if error occurs
+      return res.send({
+        error: 'Error updating user'
+      });
+    }
+  },
+
+  getCurrentXP: async function(req, res) {
+    try{
+      const user =  await Users.find({id: req.session.userID}); 
+      const experience = user[0].experience;
+      return res.send({
+        experience
+      })
+    }
+    catch (err) { //Return error if error occurs
       return res.send({
         error: 'Error updating user'
       });
