@@ -84,7 +84,7 @@
             <h3 id="plantNameHeader">Plant name</h3>
           </div>
           <div class = "new_button">
-            <a href="/new_plant">
+            <a id="newPlantLink" href="/new_plant">
               <button class="add_plant_button">Add to Garden</button>
             </a>
           </div>
@@ -110,12 +110,12 @@
                         </p>
                     </div> -->
         
-                    <div class = "plantInformationWatering">
+                    <!-- <div class = "plantInformationWatering">
                         <h3>Watering</h3>
                         <p id="plantWateringInfo">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                    </div>
+                    </div> -->
         
                     <div class = "plantInformationSunlight">
                         <h3>Sunlight</h3>
@@ -181,13 +181,13 @@
               const plantData = $("#plantData").data("plant");
               console.log(plantData);
               $("#plantNameHeader").text(plantData.name);
-              $("#plantWateringInfo").text(plantData.waterFrequency);
+              //$("#plantWateringInfo").text(plantData.waterFrequency);
               $("#plantSunlightInfo").text(plantData.sunFrequency);
               $("#plantFertilizerInfo").text(plantData.fertilizerFrequency);
               $("#plantNativeRegionInfo").text(plantData.nativeRegion);
               $("#plantSeedLink").attr("href", plantData.seedLink);
               images = ["../" + plantData.images]
-              console.log(images);
+              $("#newPlantLink").attr("href", "/new_plant/" + plantData.id)
             });
          </script>
         <!-- Meme List End-->

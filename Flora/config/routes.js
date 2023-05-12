@@ -45,7 +45,8 @@ module.exports.routes = {
   '/profile': {view: 'pages/profile', policy: 'sessionAuth', controller: 'UserController', action: 'getAccount'}, // Profile page
   '/watering': {view: 'pages/informationPages/watering', policy: 'sessionAuth'},
   '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'},
-  '/new_plant': {view: 'pages/new_plant', policy: 'sessionAuth'},
+  '/new_plant/:plantID': {view: 'pages/new_plant', controller: 'PlantController', action: 'viewPlantAdd', policy: 'sessionAuth'},
+  '/userAddPlant': {controller: 'PlantController', action: 'addPlant', policy: 'sessionAuth'},
   '/plantInfo/:plantID': {view: 'pages/plantInfo', controller: 'PlantController', action: 'viewPlantInfo', policy: 'sessionAuth'},
   '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'}
 
