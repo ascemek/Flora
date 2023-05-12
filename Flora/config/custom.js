@@ -29,6 +29,10 @@ module.exports.custom = {
     bypassing login and populating the database with test data.
   */
   devMode: true,
+  /*
+    The number of days before a task should be removed from the database.
+  */
+  taskExpirationDays: 7,
 
   /**************************************************************************
   *                                                                         *

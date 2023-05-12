@@ -103,44 +103,103 @@ label{
 </nav>
 
 <body>
-  <br>
-  <br>
-  <!-- BODY -->
+    <div id="plantDataDiv" data-plant="<%=plantInfo%>"></div>
     <br><br><br><br>
-    <h2> Add PLANTNAME to My Garden</h2>
-    <form>
-        <!--Number input and select for watering frequency-->
-        <br>
-        <label for="water">Water every </label>
-        <input class = "water" type="number" id="water" name="water" min="0">
-        <select class = "water_time" type="select" id="water_time" name="water_time">
-            <option value="day">Day(s)</option>
-            <option value="week">Week(s)</option>
-            <option value="month">Month(s)</option>
-        </select>
-        <!--Number input and select for fertilizer frequency-->
-        <br><br>
-        <label for="fertilizer">Fertilize every </label>
-        <input class = "fertilizer" type="number" id="fertilizer" name="fertilizer" min="0">
-        <select class = "f_time" type="select" id="f_time" name="f_time">
-            <option value="day">Day(s)</option>
-            <option value="week">Week(s)</option>
-            <option value="month">Month(s)</option>
-        </select>
-        <!--Number input for selecting quantity-->
-        <br><br>
-        <label for="quantity">Quantity </label>
-        <input class = "quantity" type="number" id="quantity" name="quantity" min="1">
-        <!--Radio button for selecting favorite-->
-        <br><br>
-        <input class = "favorite" type="checkbox" id="favorite" name="favorite">
-        <label for="favorite" id ="fav_label">Favorite</label>
-        <br>
-        <br>
-        <input type="submit" value="Submit" id="submit">
-
-    </form>
+    <h2 id="plantNameHeader"> Add PLANTNAME to My Garden</h2>
+    <!--Number input and select for watering frequency-->
+    <br>
+    <label for="water">Water every </label>
+    <input class = "water" type="number" id="water" name="water" min="0">
+    <select class = "water_time" type="select" id="water_time" name="water_time">
+        <option value="day">Day(s)</option>
+        <option value="week">Week(s)</option>
+        <option value="month">Month(s)</option>
+    </select>
+    <!--Number input and select for fertilizer frequency-->
+    <br><br>
+    <label for="fertilizer">Fertilize every </label>
+    <input class = "fertilizer" type="number" id="fertilizer" name="fertilizer" min="0">
+    <select class = "f_time" type="select" id="f_time" name="f_time">
+        <option value="day">Day(s)</option>
+        <option value="week">Week(s)</option>
+        <option value="month">Month(s)</option>
+    </select>
+    <!--Number input for selecting quantity-->
+    <br><br>
+    <label for="quantity">Quantity </label>
+    <input class = "quantity" type="number" id="quantity" name="quantity" min="1">
+    <!--Radio button for selecting favorite-->
+    <br><br>
+    <input class = "favorite" type="checkbox" id="favorite" name="favorite">
+    <label for="favorite" id ="fav_label">Favorite</label>
+    <br>
+    <br>
+    <input type="submit" value="Submit" id="submit">
 </body>
+
+<script>
+  async function ajaxCall(url, params) {
+      return new Promise((resolve, reject) => {
+        try {
+          $.ajax({ //send ajax request to logout
+            url: url,
+            type: "GET",
+            data: params,
+            success: function(data) { //on success
+              if (!data.success) {
+                Swal.fire({ //show error alert
+                  title: "Error",
+                  text: data.error,
+                  icon: "error",
+                  confirmButtonText: "Ok"
+                })
+              }
+              resolve(data);
+            },
+            error: function(err) { //on error
+              resolve({ success: false, error: err });
+            }
+          });
+        } catch (err) {
+          resolve({ success: false, error: err });
+        }
+      });
+    }
+  $(document).ready(() => {
+    const plantData = $('#plantDataDiv').data('plant');
+    $("#plantNameHeader").text(`Add ${plantData.name} to My Garden`);
+    $("#submit").on("click", async () => {
+      let water = $("#water").val();
+      const water_time = $("#water_time").val();
+      if (water_time === "week") {
+        water = water * 7;
+      } else if (water_time === "month") {
+        water = water * 30;
+      }
+      let fertilizer = $("#fertilizer").val();
+      const f_time = $("#f_time").val();
+      if (f_time === "week") {
+        fertilizer = fertilizer * 7;
+      } else if (f_time === "month") {
+        fertilizer = fertilizer * 30;
+      }
+      const quantity = $("#quantity").val();
+      const favorite = $("#favorite").is(":checked");
+      const plantId = plantData.id;
+      const data = {
+        water,
+        fertilizer,
+        quantity,
+        favorite,
+        plantId
+      };
+      const result = await ajaxCall("/userAddPlant", data);
+      if (result.success) {
+        window.location.href = "/my_garden";
+      }
+    });
+  });
+</script>
 
 <script>
   $(document).ready(()=>{
@@ -158,5 +217,4 @@ label{
       }
     })
   })
-  
 </script>
