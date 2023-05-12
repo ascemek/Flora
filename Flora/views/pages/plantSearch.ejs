@@ -68,7 +68,7 @@
   <form>
     <div class="plantSearchBar">
    
-    <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant">
+    <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant" spellcheck="true">
     <img id="searchBtn" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick=searchPlants()>
   </div>
 
@@ -321,28 +321,6 @@
 
     }
 
-    //need to write the route page for this
-   /* $.ajax({
-      url:  '/searchPlants',
-      type: 'POST',
-      data: {requestedPlantName},
-      success: function(result) {
-          console.log("success");
-          if(result.error)
-          {
-            Swal.fire({ //show error alert
-            title: "Error",
-            text: result.error,
-            icon: "error"
-          });
-            console.log("error");
-          }
-          else
-          {
-            window.location.href = "/plantSearch";
-          }
-      }
-    }); */
   }
   </script>
   <script> /*allow user to search the search bar by pressing enter in addition to pressing search icon*/
