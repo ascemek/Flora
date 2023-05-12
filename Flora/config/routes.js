@@ -15,7 +15,7 @@ module.exports.routes = {
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
 
   //plant search functions
-  '/plantSearch': {controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch'}, policy: 'sessionAuth',
+  '/plantSearch': {controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch', policy: 'sessionAuth'},
   '/createPlant': { controller: 'SearchController', action: 'createPlant', view: 'pages/plantSearch', policy: 'sessionAuth' },  //create a plant
   '/fetchPlants': { controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch', policy: 'sessionAuth' }, //get all plants
   '/searchPlants': {controller: 'SearchController', action: 'searchPlant', view: 'pages/plantSearch', policy: 'sessionAuth'},//search for a specific plant
@@ -55,7 +55,6 @@ module.exports.routes = {
   '/new_plant/:plantID': {view: 'pages/new_plant', controller: 'PlantController', action: 'viewPlantAdd', policy: 'sessionAuth'},
   '/userAddPlant': {controller: 'PlantController', action: 'addPlant', policy: 'sessionAuth'},
   '/plantInfo/:plantID': {view: 'pages/plantInfo', controller: 'PlantController', action: 'viewPlantInfo', policy: 'sessionAuth'},
-  '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'},
   '/getCurrentXP': {policy: 'sessionAuth', controller: 'UserController', action: 'getCurrentXP'}, // Profile page
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗

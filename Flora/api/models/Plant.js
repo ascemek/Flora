@@ -1,4 +1,4 @@
-/**
+/*
  * @author Sami Cemek
  * @version 1.0
  * @date 04/28/23
@@ -6,7 +6,7 @@
  * @description This model handles all the requests for the plant model.
  * @usage This model holds the scraped plants' information.
  * @frameworks sails.js
-\
+*/
 
 module.exports = {
     attributes: {
