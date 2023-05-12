@@ -6,7 +6,7 @@
  * @description This model handles all the requests for the plant model.
  * @usage This model holds the scraped plants' information.
  * @frameworks sails.js
- */
+\
 
 module.exports = {
     attributes: {
@@ -53,4 +53,6 @@ module.exports = {
             defaultsTo: 'images/defaultPlantIcon.png',
         },
       }
+
 };
+
