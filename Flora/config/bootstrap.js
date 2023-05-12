@@ -169,24 +169,24 @@ module.exports.bootstrap = async function(done) {
 };
 
 // setting up baseline data for the plants table
-module.exports.bootstrap = async function(done) {
+// module.exports.bootstrap = async function(done) {
 
-  const Plants = [];
+  //const Plants = [];
 
   // loop through the scraped plant information and add it to the database
-  for (scraped of plantInfo) { // for each plant in the plantInfo array
-    await Plants.createEach([ // create a plant with the following information
-      {
-        name: scraped["COMMON NAME"],
-        sunFrequency: scraped["LIGHT"],
-        waterFrequency: scraped["WATER"],
-        fertilizerFrequency: scraped["FERTILIZER"],
-        nativeRegion: scraped["NATIVE REGION"],
-        category: scraped["CATEGORY"],
-        seedLink: scraped["SEED LINK"],
-        images: scraped["IMAGES"],
-      }
-    ]);
+  // for (scraped of plantInfo) { // for each plant in the plantInfo array
+  //   await Plants.createEach([ // create a plant with the following information
+  //     {
+  //       name: scraped["COMMON NAME"],
+  //       sunFrequency: scraped["LIGHT"],
+  //       waterFrequency: scraped["WATER"],
+  //       fertilizerFrequency: scraped["FERTILIZER"],
+  //       nativeRegion: scraped["NATIVE REGION"],
+  //       category: scraped["CATEGORY"],
+  //       seedLink: scraped["SEED LINK"],
+  //       images: scraped["IMAGES"],
+  //     }
+  //   ]);
     
   // MANUALLY ADDING PLANTS TO THE DATABASE
   // if ((await Plant.count()) === 0 && sails.config.custom.devMode) {
@@ -272,8 +272,8 @@ module.exports.bootstrap = async function(done) {
   //       images: 'images/defaultPlantIcon.png',
   //     }
   //   ]);
-  }
-};
+  // }
+// };
 
 // scraped plant information from the plantInfoScraped.json file
 const plantInfo =
