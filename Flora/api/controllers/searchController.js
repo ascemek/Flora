@@ -36,7 +36,7 @@ module.exports = {
 
     fetchPlants: async function (req, res) { //get all plants
         try {
-           const plants = await Plants.find(); //referencing unmade plant table (//update made but not connected)
+           const plants = await Plant.find(); //referencing unmade plant table (//update made but not connected)
            return res.view('pages/plantSearch', {
             //eventData:JSON.stringify(events),
             plantData:JSON.stringify(plants)
@@ -51,7 +51,7 @@ module.exports = {
 
     searchPlant: async function (req, res) { //search for a specific plant
         try {
-            var totalPlants = await Plants.find(); 
+            var totalPlants = await Plant.find(); 
             var requestedPlant = req;
 
             const searchResultsArr = [];

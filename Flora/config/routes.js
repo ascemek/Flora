@@ -55,6 +55,7 @@ module.exports.routes = {
   '/new_plant/:plantID': {view: 'pages/new_plant', controller: 'PlantController', action: 'viewPlantAdd', policy: 'sessionAuth'},
   '/userAddPlant': {controller: 'PlantController', action: 'addPlant', policy: 'sessionAuth'},
   '/plantInfo/:plantID': {view: 'pages/plantInfo', controller: 'PlantController', action: 'viewPlantInfo', policy: 'sessionAuth'},
+  //'/plantInfo': {view: 'pages/plantInfo', controller: 'PlantController', action: 'viewPlantInfo', policy: 'sessionAuth'},
   '/getCurrentXP': {policy: 'sessionAuth', controller: 'UserController', action: 'getCurrentXP'}, // Profile page
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
