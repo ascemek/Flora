@@ -18,6 +18,10 @@ module.exports = {
       type: 'string',
       required: true,
     },
+    experience: { //Experience Level
+      type:'string',
+      required: true,
+    },
     username: { // Username
       type: 'string',
       required: true,

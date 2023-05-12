@@ -1,30 +1,82 @@
+<!--@author Faye Landers
+  --@purpose Allow website users to search for a specific plant. Users will click on plant for info.-->
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/">Flora</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/plantSearch">Plant Search</a>
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/information">Getting Started</a></li>
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" href="/composting">Composting</a></li>
-            </ul>
-   
-          </li>
-  
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
+
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <style>
+    @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+    .nav-item{
+      font-size: 18px;
+    }
+  </style>
+
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
   
           <li class="nav-item">
             <a class="nav-link" href="/forum">Forum</a>
@@ -41,3 +93,397 @@
         </ul>
       </div>  
   </nav>
+
+  <!--Line breaks for spacing-->
+  <body>
+  <br>
+  <br>
+  <!--spacing for readability-->
+
+  <div class="overallContainer">
+    <div class="headingContainer">
+        <h1 class = "subheadLightBlue"> Plants</h1>
+    </div>
+
+    <br>
+    <br>
+    <div class="buttonContainer">
+        <div>
+            <!--img class="create" id="createPlantButton" src="images/plantSearch/addPlantPlus3.png" alt="New Plant icon"-->
+          </a>
+        </div>
+    </div> 
+  </div>
+  
+  <br> <!--For Page Spacing-->
+  <form>
+    <div class="plantSearchBar">
+   
+    <input type="text" class="plantSearchBar" id="plantSearchBar" placeholder="Search for a plant.." title="Type in a plant" spellcheck="true">
+    <img id="searchBtn" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/750px-Search_Icon.svg.png" onclick=searchPlants()>
+  </div>
+
+  </form>
+
+  <br>
+  <!--Break for spacking-->
+
+  <!--Search Results will appear below this point-->
+
+  <!--div class="resultBoxes">
+    <h4 id="plantResultName"></h4>
+    <br>
+    <img class="resultsImg" id ="plantResultIMg">
+    <p id="plantResultInfo"></p>
+  </div-->
+
+  <div id="plantData" data-post="<%=plantData%>">
+  </div>
+
+
+
+
+  <div class="plants-wrapper">
+  
+  </div>
+
+
+  <!--div class="recPlants">
+    <h4 id="plantResultName">Recommended Plants: </h4>
+    <p></p>
+  </div-->
+  
+  <!--div id="todaysPlants">
+    <p>Plants:---</p>
+  </div-->
+
+
+  <br>
+  <br>
+  <br>
+  <h4 id="recPlantsTitle" class="recPlantsTitle">Recommended Plants: </h4>
+  <div> <!--Add links to the plant page of this plant?-->
+    <ul  id="recPlantsList" class="recPlantsList">
+    <li>Tomatoes</li>
+    <li>Basil</li>
+    <li>Cilantro</li>
+    </ul>
+  </div>
+</body>
+
+
+<style>
+    .resultBoxes{
+      border: 6px solid #365E36; 
+      padding: 10px; 
+      margin-top: 1%;
+      width: 75%;
+      margin-left: 10%;
+    }
+    .resultsImg{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    body{
+      background-color: #FAF9F6;
+      margin: auto;
+    }
+  
+    h1{
+      /*text-align: center;*/
+      color: #365E36;
+      display: block;
+    }
+  
+    h2{
+     /* text-align: center; */
+      color: #365E36;
+    }
+
+    .recPlantsTitle{
+      color: #365E36;
+      margin-left: 15%;
+
+    }
+  
+    /* unvisited link */
+    a:link {
+      color: #30007D;
+    }
+  
+    /* visited link */
+    a:visited {
+      color: #30007D;
+    }
+  
+    /* mouse over link */
+    a:hover {
+      color: #72418B;
+    }
+  
+    /* selected link */
+    a:active {
+      color: blue;
+    }
+  
+    hr.dashed { /*dashed border*/
+      border-top: 3px dotted #30007D;
+    }
+  
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      max-height: 50%;
+    }
+
+    /*search bar*/
+    .plantSearchBar {
+      background: #FAF9F6;  
+      height: 32px;
+      width: 75%;
+      text-align:center;
+      display: inline-flex;
+      margin-left: 10%;
+
+    }
+
+    .create{ /*create a plant image styling*/
+        width: 10%; 
+        height: 10%; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    } 
+
+    .overallContainer{ /*container for heading and add a plant image button*/
+      margin-top: 3%; 
+      margin-left: 15%; 
+      margin-right: 15%; 
+      display:inline-block; 
+      width: 100%;
+    }
+    .headingContainer{ /*container for page heading*/
+      width: 30%; 
+      height: auto; 
+      float: left; 
+      display:inline-block;
+    }
+    .buttonContainer{ /*container for add plant button*/
+      width: 70%; 
+      height: auto; 
+      display:inline-block;
+    }
+
+    .recPlantsList {
+      margin-left: 15%;
+    }
+
+    .plantResultName {
+      color: #365E36;
+      /*text-align: center;*/
+    }
+
+
+        </style>
+
+<script>
+  $("#createPlantButton").on("click", () => {
+    window.location.href = "/new_plant"; //may need to be changed to reflect create plant in new window
+  });
+  </script>
+
+<script>
+  function searchPlants(){
+
+  
+  $(document).ready(() => {console.log($("#plantData").data("post"))});
+  
+    var requestedPlantName = document.getElementById("plantSearchBar").value;
+
+
+    $(".plants-wrapper").empty();
+
+
+    let plants = $("#plantData").data("post");
+
+   // return plants;
+
+   // console.log(plants);
+
+  /*  for(i = 0; i < plants.length; i++){
+      $("#todaysPlants").append(`<p>${plants[i].name}</p>`);
+
+    } */
+
+    const searchResultsArr = [];
+
+            for(i = 0; i < plants.length; i++){
+              //update casing
+              lowerCaseRequested = requestedPlantName.toLowerCase(); //change search result to lowercase
+              currPlant = (plants[i].name).toLowerCase(); //change curr plant to lowercase
+              if(currPlant == lowerCaseRequested){
+                searchResultsArr.push(plants[i]);
+
+              }
+              else if(currPlant.includes(lowerCaseRequested)){
+                searchResultsArr.push(plants[i]);
+              }
+             /* else if(i = plants.length-1 && searchResultsArr.length==0){
+                lowerCaseRequested = lowerCaseRequested.substring(0, lowerCaseRequested.length - 1); //search for name minus one character
+                for(i = 0; i < plants.length; i++){
+                  if(currPlant == lowerCaseRequested){
+                    searchResultsArr.push(plants[i]);
+
+                  }
+                } 
+              }*/
+            /*  else if(i == (plant.length - 1)){
+                searchResultsArr.push("No results. Please try searching using a different term")
+              } */
+
+            }
+            //text.includes("world");
+
+            /*make this prettier*/
+            if(searchResultsArr.length == 0){
+              $(".plants-wrapper").append(`<div class="resultBoxes">
+                <h3 style="text-align: center;">No search results, Please try searching using a different term</h3>
+                </div>`);
+            }
+
+
+
+
+    //turn plant name into a link to plant info page
+    for(i = 0; i < searchResultsArr.length; i++){  //update to include general info instead of water info
+      $(".plants-wrapper").append(`
+        <div class="resultBoxes">
+          <h4 id="plantResultName" style="color: #365E36;"><a href="/plantInfo/${searchResultsArr[i].id}">${searchResultsArr[i].name}</a></h4>
+          <br>
+          <img class="resultsImg" id ="plantResultIMg">
+           <p id="plantResultInfo"><b>Sunlight Information: </b> ${searchResultsArr[i].sun}</p> 
+        </div>`);
+
+
+    }
+
+  }
+  </script>
+  <script> /*allow user to search the search bar by pressing enter in addition to pressing search icon*/
+    var input = document.getElementById("plantSearchBar");
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("searchBtn").click();
+      }
+    });
+
+  /*  function checkIfEqual(plant1, plant2, plantLength){
+      if(plant1 == plant2){
+        newNum = Math.floor(Math.random() * (plantLength - 1));
+        numChange = checkIfEqual(plant1, newNum, plantLength);
+        if(newNum == numChange){
+          return newNum;
+        }
+        else{
+          return numChange;
+        }
+      }
+
+    } */
+
+
+  /*  function generateNumber(plantLength){
+      recPlantNum1 = Math.floor(Math.random() * (plantLength - 1));
+      recPlantNum2 = Math.floor(Math.random() * (plantLength - 1));
+      //check if equal
+      recPlantNum2 = checkIfEqual(recPlantNum1, recPlantNum2, plantLength);
+
+      recPlantNum3 = Math.floor(Math.random() * (plantLength - 1));
+
+      recPlantNum3 = checkIfEqual(recPlantNum2, recPlantNum3, plantLength);
+
+      //add to number array
+      const plantIDnumArr = []; //plantID number array
+
+      plantIDnumArr.push(recPlantNum1);
+      plantIDnumArr.push(recPlantNum2);
+      plantIDnumArr.push(recPlantNum3);
+
+      return plantIDnumArr;
+
+
+
+    } */
+    //rec plants function
+    function changeRecPlants() {
+      $(".recPlantsList").empty();
+
+
+      let plants = $("#plantData").data("post");
+
+      const recPlantsArr = [];
+
+      recPlantNum1 = Math.floor(Math.random() * (plants.length - 1));
+      recPlantNum2 = Math.floor(Math.random() * (plants.length - 1));
+      //check if equal
+      //recPlantNum2 = checkIfEqual(recPlantNum1, recPlantNum2, plants.length);
+
+      recPlantNum3 = Math.floor(Math.random() * (plants.length - 1));
+
+      //recPlantNum3 = checkIfEqual(recPlantNum2, recPlantNum3, plants.length);
+
+      //add to number array
+      const plantIDnumArr = []; //plantID number array
+
+      plantIDnumArr.push(recPlantNum1);
+      plantIDnumArr.push(recPlantNum2);
+      plantIDnumArr.push(recPlantNum3);
+
+      for(i = 0; i < plantIDnumArr.length; i++){
+        recPlant = plants[plantIDnumArr[i]];
+        recPlantsArr.push(recPlant);
+        
+
+      }
+
+      //randomly generate 3 numbers
+    //  const recPlant1 = Math.getRandomInt(0, (plants.length - 1));
+   //   recPlantNum1 = Math.floor(Math.random() * (plants.length - 1)); //put in a new function
+   //   recPlantNum2 = Math.floor(Math.random() * (plants.length - 1));
+    //  recPlantNum3 = Math.floor(Math.random() * (plants.length - 1));
+     // const recPlant2 = Math.getRandomInt(0, (plants.length - 1));
+      //const recPlant3 = Math.getRandomInt(0, (plants.length - 1));
+
+    //  recPlant1 = plants[recPlantNum1];
+    //  recPlant2 = plants[recPlantNum2];
+    //  recPlant3 = plants[recPlantNum3];
+      
+
+    //  recPlantsArr.push(recPlant1);
+    //  recPlantsArr.push(recPlant2);
+    //  recPlantsArr.push(recPlant3);
+
+      console.log(recPlantsArr);
+
+      //look for rec plants list
+      for(i = 0; i < recPlantsArr.length; i ++){
+        $(".recPlantsList").append(`<li><a href="/plantInfo/${recPlantsArr[i].id}">${recPlantsArr[i].name}</a></li>`);
+
+      }
+      
+      
+
+    }
+
+    $(document).ready( function () {
+      changeRecPlants();
+    });
+    </script>
+
+

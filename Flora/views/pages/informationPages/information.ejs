@@ -1,54 +1,63 @@
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/">Flora</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/information">Getting Started</a></li>
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" href="/composting">Composting</a></li>
-            </ul>
-   
-          </li>
-  
-  
-          <li class="nav-item">
-            <a class="nav-link" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/my_garden">My Garden</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/journal">Journal</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Profile</a>
-          </li>    
-        </ul>
-      </div>  
-  </nav>
 
-  <body>
 
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
+
+  <body id="topOfPage">
+
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
   
     <h1>Getting Started</h1>
+    
+    <div class= "googleTranslateBox"> 
+      <div class="googleTranslate"> <!--Google translate feature-->
+        <br>  
+          <h6>You can translate this page to 100+ different languages now!</h6>
+          <div id="google_translate_element"></div>
+      </div>
+    </div>
     
     <br>
     <br>
@@ -152,10 +161,20 @@
     <br>
     <br>
   
-    <!--Add back to top button -->
+    <button onclick="document.location='#topOfPage'">Back To Top</button> <!--Back to top button-->
+    <br>
+    <br>
+    <br>
   </body>
   
-  
+  <!--Google Translate feature-->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <style>
     body{
       background-color: #FAF9F6;
@@ -211,4 +230,55 @@
       text-align: center;
       
     }
+
+    button{ /*Back to Top Button Styling*/
+      background-color: #365E36;
+      color: white;
+      border-color: #365E36;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+     /*Google Translate*/
+     .googleTranslate{
+      justify-content: center;
+    }
+    .googleTranslateBox{
+      text-align: center;
+      font-size: 20px;
+      background-color: #F4FFEB;
+   
+      border-style: dotted;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: block;
+    }
+    @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+    .nav-item{
+      font-size: 18px;
+    }
   </style>
+  <script>
+    $(document).ready(()=>{
+      $.ajax({
+        url:"/getCurrentXP",
+        type:'GET',
+        success:(data)=>{
+          if(data.experience == "Beginner"){
+            $("#companion_planting").hide();
+            $("#composting").hide();
+          }
+          if(data.experience == "Intermediate"){
+            $("#composting").hide();
+          }
+        }
+      })
+    })
+    
+  </script>
