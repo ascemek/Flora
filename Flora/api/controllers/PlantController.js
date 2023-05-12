@@ -79,11 +79,9 @@ module.exports = {
           error: 'Invalid plant ID'
         });
       }
-      console.log(plantID);
       const plantInfo = await Plant.find({
         where: {id: plantID},
       });
-      console.log(plantInfo);
       return res.view('pages/new_plant', {
         plantInfo: JSON.stringify(plantInfo[0])
       }

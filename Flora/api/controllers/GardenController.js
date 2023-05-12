@@ -130,7 +130,6 @@ module.exports = {
       } else {
         isFavorite = isFavorite === 'true'; // Convert to boolean
       }
-      console.log({id: plantID, userID: req.session.userId});
       const plant = await UserPlants.update({id: plantID, userID: req.session.userId}, {isFavorite}).fetch(); // Update the plant and fetch the record
       if (plant.length === 0) { // Check if plant was updated
         return res.send({

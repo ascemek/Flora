@@ -191,7 +191,6 @@ label{
         plantId
       };
       const result = await ajaxCall("/userAddPlant", data);
-      console.log(result);
       if (result.success) {
         window.location.href = "/my_garden";
       }
