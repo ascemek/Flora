@@ -312,7 +312,7 @@
     for(i = 0; i < searchResultsArr.length; i++){  //update to include general info instead of water info
       $(".plants-wrapper").append(`
         <div class="resultBoxes">
-          <h4 id="plantResultName" style="color: #365E36;">${searchResultsArr[i].name}</h4>
+          <h4 id="plantResultName" style="color: #365E36;"><a href="/plantInfo/${searchResultsArr[i].id}">${searchResultsArr[i].name}</a></h4>
           <br>
           <img class="resultsImg" id ="plantResultIMg">
            <p id="plantResultInfo"><b>Sunlight Information: </b> ${searchResultsArr[i].sun}</p> 
