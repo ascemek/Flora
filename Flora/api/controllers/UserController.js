@@ -215,4 +215,19 @@ module.exports = {
       });
     }
   },
+
+  getCurrentXP: async function(req, res) {
+    try{
+      const user =  await Users.find({id: req.session.userID}); 
+      const experience = user[0].experience;
+      return res.send({
+        experience
+      })
+    }
+    catch (err) { //Return error if error occurs
+      return res.send({
+        error: 'Error updating user'
+      });
+    }
+  },
 };

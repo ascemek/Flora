@@ -43,7 +43,9 @@ module.exports.routes = {
   '/information': {view: 'pages/informationPages/information', policy: 'sessionAuth'},
   '/new_plant': {view: 'pages/new_plant', policy: 'sessionAuth'},
   '/plantInfo': {view: 'pages/plantInfo', policy: 'sessionAuth'},
-  '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'}
+  '/plantSearch': {view: 'pages/plantSearch', policy: 'sessionAuth'},
+  '/getCurrentXP': {policy: 'sessionAuth', controller: 'UserController', action: 'getCurrentXP'}, // Profile page
+
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗

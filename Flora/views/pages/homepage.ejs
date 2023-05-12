@@ -20,8 +20,8 @@
             <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
             <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
             <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-            <li><a class = "dropdown-item" href="/companion_planting">Companion Planting</a></li>
-            <li><a class= "dropdown-item" href="/composting">Composting</a></li>
+            <li><a class = "dropdown-item" id = "companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id = "composting" href="/composting">Composting</a></li>
           </ul>
  
         </li>
@@ -42,3 +42,41 @@
       </ul>
     </div>  
 </nav>
+
+
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
+  
+</script>
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
+  
+</script>
