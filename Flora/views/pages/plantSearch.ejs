@@ -44,55 +44,6 @@
 
 <body>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-  <style>
-    @font-face {
-      font-family: growingGarden;
-      src: url("fonts/growingGarden.ttf") format("truetype");
-    }
-    .nav-item{
-      font-size: 18px;
-    }
-  </style>
-
-<script>
-  $(document).ready(()=>{
-    $.ajax({
-      url:"/getCurrentXP",
-      type:'GET',
-      success:(data)=>{
-        if(data.experience == "Beginner"){
-          $("#companion_planting").hide();
-          $("#composting").hide();
-        }
-        if(data.experience == "Intermediate"){
-          $("#composting").hide();
-        }
-      }
-    })
-  })
-  
-          <li class="nav-item">
-            <a class="nav-link" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/my_garden">My Garden</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/journal">Journal</a>
-          </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Profile</a>
-          </li>    
-        </ul>
-      </div>  
-  </nav>
 
   <!--Line breaks for spacing-->
   <body>
@@ -171,6 +122,15 @@
   </div>
 </body>
 
+<style>
+  @font-face {
+    font-family: growingGarden;
+    src: url("fonts/growingGarden.ttf") format("truetype");
+  }
+  .nav-item{
+    font-size: 18px;
+  }
+</style>
 
 <style>
     .resultBoxes{
@@ -290,7 +250,23 @@
 
 
         </style>
-
+<script>
+  $(document).ready(()=>{
+    $.ajax({
+      url:"/getCurrentXP",
+      type:'GET',
+      success:(data)=>{
+        if(data.experience == "Beginner"){
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if(data.experience == "Intermediate"){
+          $("#composting").hide();
+        }
+      }
+    })
+  })
+  </script>
 <script>
   $("#createPlantButton").on("click", () => {
     window.location.href = "/new_plant"; //may need to be changed to reflect create plant in new window
