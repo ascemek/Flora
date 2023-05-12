@@ -112,6 +112,9 @@
     <label for="lastName"><b>Last Name:</b></label> <!-- label for last name -->
     <div id="lastName" name="lastName" class="userInfo"></div> <!-- div to hold last name -->
     <br/>
+    <label for="experience"><b>Experience:</b></label> <!-- label for last name -->
+    <div id="experience" name="experience" class="userInfo"></div> <!-- div to hold last name -->
+    <br/>
     <label for="email"><b>Email:</b></label> <!-- label for email -->
     <div id="email" name="email" class="userInfo"></div> <!-- div to hold email -->
     <br/>
@@ -149,6 +152,12 @@
       $("#editAccountValues").click(function() { //edit button
         $("#firstName").html(`<input type="text" id="firstNameInput" name="firstNameInput" value="${account.firstName}">`); //change to input
         $("#lastName").html(`<input type="text" id="lastNameInput" name="lastNameInput" value="${account.lastName}">`); //change to input
+        $("#experience").html(`<select id="experienceInput" name="experienceInput" > 
+          <option value="${account.experience}">${account.experience}</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Expert">Expert</option>
+          </select>`); //change to dropdown 
         $("#email").html(`<input type="text" id="emailInput" name="emailInput" value="${account.email}">`); //change to input
         $("#editAccountValues").hide(); //hide edit button
         $("#newProfilePic").hide(); //hide edit profile picture button
@@ -157,6 +166,7 @@
       $("#saveAccountValues").click(function() { //save button
         let firstName = $("#firstNameInput").val(); //get new first name
         let lastName = $("#lastNameInput").val(); //get new last name
+        let experience = $("#experienceInput").val(); //get new experience level
         let email = $("#emailInput").val(); //get new email
         $.ajax({ //send ajax request to save changes
           url: "/user/edit", //edit user route
@@ -164,13 +174,14 @@
           data: { //data to send
             firstName: firstName,
             lastName: lastName,
+            experience: experience,
             email: email,
-            interests: interests
           },
           success: function(data) { //on success
             if (data.success) { //if success
               $("#firstName").text(firstName); //change first name
               $("#lastName").text(lastName); //change last name
+              $("#experience").text(experience); //change experience
               $("#email").text(email); //change email
               $("#interests").text(interests); //change interests
               $("#editAccountValues").show(); //show edit button
@@ -237,6 +248,7 @@
   $("#username").text(account.username); //set username
   $("#firstName").text(account.firstName); //set first name
   $("#lastName").text(account.lastName); //set last name
+  $("#experience").text(account.experience); //set experience
   $("#email").text(account.email); //set email
   $("#interests").text(account.interests); //set interests
   for (let task = 0; task < account.tasks.length; task += 1) { //for each task completed

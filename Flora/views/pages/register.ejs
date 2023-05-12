@@ -4,7 +4,7 @@
       width: 50%;
       padding: 10px;
   }
-  input {
+  input, select {
       margin-left: 20px;
       width: 35%;
   }
@@ -35,6 +35,15 @@
         Email
     </label>
     <input name="email" id="email" placeholder="Email" required> <!-- Email input -->
+    <br/><br/>
+    <label for="experience"> <!-- Username label -->
+      Experience Level
+    </label>
+    <select name="experience" id="experience" required> <!-- Experience Level input -->
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Expert">Expert</option>
+    </select>
     <br/><br/>
     <label for="username"> <!-- Username label -->
         Username
@@ -67,6 +76,7 @@ function initPage() { // Initialize the page
     let firstName = $("#firstName").val(); // Get the first name
     let lastName = $("#lastName").val(); // Get the last name
     let email = $("#email").val(); // Get the email
+    let experience = $("#experience").val(); //Get experience level
     let username = $("#username").val(); // Get the username
     let password = $("#password").val(); // Get the password
     let confirmPassword = $("#confirmPassword").val(); // Get the confirm password
@@ -82,7 +92,7 @@ function initPage() { // Initialize the page
         dataType: 'json',
         contentType: 'json',
         async: false,
-        data: {firstName: firstName, lastName: lastName, email: email, username: username, password: password}, // Send the user's information
+        data: {firstName: firstName, lastName: lastName, email: email, experience:experience, username: username, password: password}, // Send the user's information
         success: (data) => { // When the request is successful
           if (data.error) { // If there is an error
             Swal.fire({ // Display the error message
