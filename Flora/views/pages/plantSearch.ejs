@@ -273,6 +273,25 @@
   });
   </script>
 
+  <script>
+    $(document).ready(() => {console.log($("#plantData").data("post"))});
+
+    $(".plants-wrapper").empty();
+
+
+    let plants = $("#plantData").data("post");
+
+    for(i = 0; i < plants.length; i++){  //update to include general info instead of water info
+      $(".plants-wrapper").append(`
+        <div class="resultBoxes">
+          <h4 id="plantResultName" style="color: #365E36;"><a href="/plantInfo/${plants[i].id}">${plants[i].name}</a></h4>
+          <br>
+          <img class="resultsImg" id ="plantResultIMg">
+           <p id="plantResultInfo"><b>Sunlight Information: </b> ${plants[i].sunFrequency}</p> 
+        </div>`);
+      }
+  </script>
+
 <script>
   function searchPlants(){
 
