@@ -6,46 +6,47 @@
 <!--Frameworks Used: Bootstrap, Sails.JS-->
 
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
-    <img src="images/floraIcon.png" width="60" height="60">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/">Getting Started</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/information">Getting Started</a></li>
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
-            </ul>
-   
-          </li>
-  
-  
-          <li class="nav-item">
-            <a class="nav-link" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/my_garden">My Garden</a>
-          </li>      
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Profile</a>
-          </li>    
-        </ul>
-      </div>  
-  </nav>
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
 
   <body>
     <div id="myGardenData" data-tasks="<%=tasks%>" data-plants="<%=plants%>"></div>
@@ -215,7 +216,7 @@
           taskTotalCounter += parseInt($(this).data("plantquantity"));
         });
         const plantPercentage = Math.round(((taskTotalCounter > 0 ? taskCompletedCounter : 1) / (taskTotalCounter > 0 ? taskTotalCounter : 1)) * 100);
-        $("#plantHappinesScore").html(`You watered ${taskCompletedCounter}/${taskTotalCounter} of your plants today.`);
+        $("#plantHappinesScore").html(`You completed ${taskCompletedCounter}/${taskTotalCounter} of today's tasks.`);
         $("#plantHappinessBar").html(`
           <div class="progress-bar" role="progressbar" style="width:${plantPercentage}%" aria-valuenow="${plantPercentage}" aria-valuemin="0" aria-valuemax="100">${plantPercentage}%</div>
         `);
@@ -293,14 +294,18 @@
         if (column1) {
           $("#myPlantColumn1").append(`
           <div class="col-4" style="text-align: center;">
-            <a onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})">${plant.plantID.name}</a>
+            <button style="background-color: #365E36; color: white; text-align: center; justify-content: center; padding:2%;">
+              <a onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})">${plant.plantID.name}</a>
+            </button>
           </div>`);
           column1 = false;
         } else {
           $("#myPlantColumn2").append(`
           <div class="col-4" style="text-align: center;">
-            <a onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})">${plant.plantID.name}</a>
-          </div>`);
+            <button style="background-color: #365E36; color: white; text-align: center; justify-content: center; padding:2%;">
+              <a onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})">${plant.plantID.name}</a>
+            </button>
+           </div>`);
           column1 = true;
         }
       }
