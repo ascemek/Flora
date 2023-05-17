@@ -101,7 +101,7 @@ if ($("#developerSettings").data("devmode")) { // If devmode is true
                         text: data.error
                       })
                     } else { // If there is no error
-                      window.location.href = "/plantSearch"; // Redirect to the home page
+                      window.location.href = "/"; // Redirect to the home page
                     }
                 },
                 error: (err) => { // If the request fails
@@ -135,7 +135,7 @@ $(document).ready(() => { // When the page is ready
                     text: data.error
                   })
                 } else { // If there is no error
-                  window.location.href = "/plantSearch"; // Redirect to the home page
+                  window.location.href = "/"; // Redirect to the home page
                 }
             },
             error: (err) => { // If the request fails

@@ -1,41 +1,39 @@
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-
-  <a class="navbar-brand" href="/">Flora</a>
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ms-auto">
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+        <a class="nav-link active" aria-current="page" href="/">Getting Started</a>
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             Information
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
             <li><a class="dropdown-item " href="/watering">Watering</a></li>
             <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
             <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
             <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
             <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-            <li><a class = "dropdown-item" id = "companion_planting" href="/companion_planting">Companion Planting</a></li>
-            <li><a class= "dropdown-item" id = "composting" href="/composting">Composting</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
           </ul>
  
         </li>
 
-
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/forum">Forum</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/my_garden">My Garden</a>
-        </li>    
-        <li class="nav-item">
-          <a class="nav-link" href="/journal">Journal</a>
-        </li>    
+        </li>      
         <li class="nav-item">
           <a class="nav-link" href="/profile">Profile</a>
         </li>    
@@ -43,40 +41,274 @@
     </div>  
 </nav>
 
+  <body id="topOfPage">
 
-<script>
-  $(document).ready(()=>{
-    $.ajax({
-      url:"/getCurrentXP",
-      type:'GET',
-      success:(data)=>{
-        if(data.experience == "Beginner"){
-          $("#companion_planting").hide();
-          $("#composting").hide();
-        }
-        if(data.experience == "Intermediate"){
-          $("#composting").hide();
-        }
-      }
-    })
-  })
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   
-</script>
-<script>
-  $(document).ready(()=>{
-    $.ajax({
-      url:"/getCurrentXP",
-      type:'GET',
-      success:(data)=>{
-        if(data.experience == "Beginner"){
-          $("#companion_planting").hide();
-          $("#composting").hide();
-        }
-        if(data.experience == "Intermediate"){
-          $("#composting").hide();
-        }
-      }
-    })
-  })
+    <h1>Getting Started</h1>
+    
+    <div class= "googleTranslateBox"> 
+      <div class="googleTranslate"> <!--Google translate feature-->
+        <br>  
+          <h6>You can translate this page to 100+ different languages now!</h6>
+          <div id="google_translate_element"></div>
+      </div>
+    </div>
+    
+    <br>
+    <br>
+    <!--Table of Contents to aid in user's navigation of the page-->
+    <div class="tableOfContents">
+      <a href="#guide">Information Guide</a> <!--Info on what Composting is-->
+      <br>
   
-</script>
+      <a href="#start">Starting a Garden</a> <!--Common benefits of composting-->
+      <br>
+  
+      <a href="#resource">Resources</a> <!--Examples of how to compost-->
+      <br>
+  
+    </div>
+  
+    <br>
+    <br>
+  
+    <hr class="dashed">
+  <!--Links and summaries of all info pages -->
+    <h2 id="guide">Information Guide</h2>
+    
+    <p>
+    <br>
+    <class="subhead"><a href="/watering"><b>Watering</b></a></class>
+    <br>
+      Properly watering your plants is essential to their care. Visit this page to better understand watering techniques and best practices.
+    <br>
+    <br>
+    <class="subhead"><a href="/sunlight"><b>Sunlight</b></a></class>
+    <br>
+      Confused by vague descriptions of sunlight requirements like "partial indirect sunlight"? This is the page for you! Learn about your plants' sunlight needs and common expressions used to describe sunlight requirements. 
+    <br>
+    <br>
+    <class="subhead"><a href="/fertilizer"><b>Fertilizer</b></a></class>
+    <br>
+      Like so many things in gardening, fertilizer can be tricky. Learn about different types of fertilizers, proper application, and quantity on this page. 
+    <br>
+    <br>
+    <class="subhead"><a href="/diseases_pests_weeds"><b>Diseases, Pests, and Weeds</b></a></class>
+    <br>
+      Just when you think you've figured out your plants, pesky aphids appear! When it starts to feel like your garden is under attack, visit this page to develop a war plan. One that's hollistic and sustainable, of course. 
+    <br>
+    <br>
+    <class="subhead"><a href="/agr_zones"><b>Agricultural Zones</b></a></class>
+    <br>
+      Geographical location plays a big role in what you can plant, when you should plant, and how to treat your plants. Learn about these zones and which zone you're in so that you can make the best decisions for your garden. 
+    <br>
+    <br>
+    <div class="expert_info_wrapper">
+      <!-- This is where the companion planting and composting info will go (based on experience level) -->
+    </div>
+
+
+   </p>
+  
+    <br>
+    <br>
+  
+    <hr class="dashed">
+   <!-- Guide to starting out -->
+    <h2 id="start">Starting a Garden</h2>
+    <p>
+      <br>
+      <b>Choosing your type of garden - </b> Do you want to grow herbs, vegtables, flowers, a combination? There's a lot of options. While there's no wrong answer, do make sure to start small and with something you will find passion in attending to. 
+      <br><br>
+      <b>Decide on location - </b> When picking specific plants, it is important to consider if your garden's location can meet the plants needs. Watch your yard and take note of how much <a href="/sunlight">sunlight</a> each area gets, the type of soil, and the grade. Generally speaking, you will want to plant in a flat place with nutrient dense soil. Different plants will have different soil and sunlight needs. You can contact your county extensions office for soil testing and recommendations on how to improve it. You may also decide to plant in pots or raised beds. 
+      <br><br>
+      <b>Pick your plants - </b> This is the most exciting step! While considereing the limitations and resources of your garden, you still will find an abundance of options. Check out our <a href="plantSearch">plant search page</a> to find information of different plants, their care requirements, and links to buy seeds. Factors to consider include: 
+      <br> Care Requirements, how much time will you be able to dedicate to your garden maintenance? 
+      <br> Environmental Factors, consider the <a href="/sunlight">sun</a>, <a href="/fertilizer">soil</a>, <a href="/agr_zones">agricultural zone</a>, and season you are planting in. 
+      <br> Personal Interest, what plants spark an excitement in you? Choosing plants which interest you will make gardening even more rewarding.  
+      <br><br>
+      <b>Start Planting - </b> Okay, this might actually be the most exciting step. You've scouted the best location, you've picked out the seeds or plants you want to grow, and now it's time to build the garden bed or pot your plants! Make sure to not over pack your soil, follow any instructions for seeds (paying particular mind to depth), and know that it's normal for plants to experience an initial transplant shock when replanted.
+      <br> <br>
+      <b>Care for your garden - </b> Now it's time to start focusing on garden maintenance. make sure to set up your <a href="/my_garden">watering and fertilizer schedule</a> so that you can keep track of your plants needs. For <a href="/diseases_pests_weeds">pests, diseases, and weeds</a>, remember that the best offense is a good defense! Consider mulching your beds and regularly check plants for signs of an infestation or disease. 
+    </p>
+   
+    <br>
+    <br>
+  
+    <hr class="dashed">
+  
+    <h2 id="resource">Additional Resources</h2>
+    <!-- More resources and info -->
+  
+    <br>
+    <a href = "https://gardeningsolutions.ifas.ufl.edu/care/florida-friendly-landscapes/">https://gardeningsolutions.ifas.ufl.edu/care/florida-friendly-landscapes/</a>
+    <br><br>
+    <a href="https://www.bhg.com/gardening/yard/garden-care/ten-steps-to-beginning-a-garden/">https://www.bhg.com/gardening/yard/garden-care/ten-steps-to-beginning-a-garden/</a>
+    <br><br>
+    <a href="https://www.cypresscreeklandscapesupply.com/blog/florida-vegetable-gardening-tips-for-beginners/#:~:text=Start%20the%20following%20fall%20gardening,carrots%2C%20herbs%2C%20and%20lettuce.">https://www.cypresscreeklandscapesupply.com/blog/florida-vegetable-gardening-tips-for-beginners/#:~:text=Start%20the%20following%20fall%20gardening,carrots%2C%20herbs%2C%20and%20lettuce.</a>
+    <br>
+    <br>
+  
+    <button onclick="document.location='#topOfPage'">Back To Top</button> <!--Back to top button-->
+    <br>
+    <br>
+    <br>
+  </body>
+  
+  <!--Google Translate feature-->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <style>
+    body{
+      background-color: #FAF9F6;
+      margin: auto;
+    }
+  
+    h1{
+      text-align: center;
+      color: #365E36;
+    }
+  
+    h2{
+      text-align: center;
+      color: #365E36;
+    }
+  
+    .tableOfContents{
+      text-align: center;
+      font-size: 20px;
+      background-color: #F4FFEB;
+   
+      border-style: dotted;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: block;
+    }
+  
+    /* unvisited link */
+    a:link {
+      color: #30007D;
+    }
+  
+    /* visited link */
+    a:visited {
+      color: #30007D;
+    }
+  
+    /* mouse over link */
+    a:hover {
+      color: #72418B;
+    }
+  
+    /* selected link */
+    a:active {
+      color: blue;
+    }
+  
+    hr.dashed {
+      border-top: 3px dotted #30007D;
+    }
+  
+    .youtube {
+      text-align: center;
+      
+    }
+
+    button{ /*Back to Top Button Styling*/
+      background-color: #365E36;
+      color: white;
+      border-color: #365E36;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+     /*Google Translate*/
+     .googleTranslate{
+      justify-content: center;
+    }
+    .googleTranslateBox{
+      text-align: center;
+      font-size: 20px;
+      background-color: #F4FFEB;
+   
+      border-style: dotted;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: block;
+    }
+    @font-face {
+      font-family: growingGarden;
+      src: url("fonts/growingGarden.ttf") format("truetype");
+    }
+    .nav-item{
+      font-size: 18px;
+    }
+  </style>
+  
+  <script>
+    $(document).ready(()=>{
+      $.ajax({
+        url:"/getCurrentXP",
+        type:'GET',
+        success:(data)=>{
+          if(data.experience == "Beginner"){
+            //hide nav bar links
+            $("#companion_planting").hide();
+            $("#composting").hide();
+
+            //show info message
+            $(".expert_info_wrapper").append(`
+              Become an Intermediate level gardener to unlock more information ! 
+              <br>
+            `);
+          }
+          if(data.experience == "Intermediate"){
+            //hide nav bar link
+            $("#composting").hide();
+            
+            //show companion planting info and info message for expert gardening
+            $(".expert_info_wrapper").append(`
+              <class="subhead"><a href="/companion_planting"><b>Companion Planting</b></a></class>
+              <br>
+              Let the plants do the work for you! By learning how different plants interact with eachother we can allow our plants to act as pest repellent, mulch, fertilizer, and more. Visit this page before you start your next planting. 
+              <br>
+              <br>
+              Become an Expert gardener to unlock more information ! 
+            `);
+          }
+          if(data.experience === "Expert"){
+            //show all the info 
+            $(".expert_info_wrapper").append(`
+              <class="subhead"><a href="/companion_planting"><b>Companion Planting</b></a></class>
+              <br>
+              Let the plants do the work for you! By learning how different plants interact with eachother we can allow our plants to act as pest repellent, mulch, fertilizer, and more. Visit this page before you start your next planting. 
+              <br>
+              <br>
+            `);
+            $(".expert_info_wrapper").append(`
+              <class="subhead"><a href="/composting"><b>Composting</b></a></class>
+              <br>
+              Most of us have heard of composting, but did you know you can do it at home? Visit this page to learn how you can repurpose your food and other organic waste into a source of nutrients for your plants.
+              <br>
+              <br>
+            `);
+          }
+        }
+      })
+    })
+    
+  </script>
