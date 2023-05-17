@@ -15,10 +15,10 @@ module.exports.routes = {
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
 
   //plant search functions
-  '/plantSearch': {controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch', policy: 'sessionAuth'},
-  '/createPlant': { controller: 'SearchController', action: 'createPlant', view: 'pages/plantSearch', policy: 'sessionAuth' },  //create a plant
-  '/fetchPlants': { controller: 'SearchController', action: 'fetchPlants', view: 'pages/plantSearch', policy: 'sessionAuth' }, //get all plants
-  '/searchPlants': {controller: 'SearchController', action: 'searchPlant', view: 'pages/plantSearch', policy: 'sessionAuth'},//search for a specific plant
+  '/plantSearch': {controller: 'PlantSearchController', action: 'fetchPlants', view: 'pages/plantSearch', policy: 'sessionAuth'},
+  '/createPlant': { controller: 'PlantSearchController', action: 'createPlant', view: 'pages/plantSearch', policy: 'sessionAuth' },  //create a plant
+  '/fetchPlants': { controller: 'PlantSearchController', action: 'fetchPlants', view: 'pages/plantSearch', policy: 'sessionAuth' }, //get all plants
+  '/searchPlants': {controller: 'PlantSearchController', action: 'searchPlant', view: 'pages/plantSearch', policy: 'sessionAuth'},//search for a specific plant
 
   '/': {view: 'pages/homepage', policy: 'sessionAuth'},
   '/login': { view: 'pages/login' }, // Login page
