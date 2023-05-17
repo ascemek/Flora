@@ -56,6 +56,9 @@
     <br>
     <br>
 
+    <h1>My Garden</h1>
+    <br>
+
     <div class= "googleTranslateBox"> 
       <div class="googleTranslate"> <!--Google translate feature-->
         <br>  
@@ -64,9 +67,7 @@
       </div>
     </div>
 
-    <br>
 
-    <h1>My Garden</h1>
 
     <br>
     <br>
@@ -105,63 +106,54 @@
       </div>
     </div>
 
-
-    <h3 style="text-align: center;">My Favorites</h3>
+    <div class="keyBox" style="margin: auto;">
+      <h3 style="text-align: center;">Key: </h3>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col" style="text-align: center; background-color: #c3f798;">
+            <img src="images/happySadIcon.png" width="70" height="70" style="margin-top: 3em">
+          </div>
+          <div class="col" style="text-align: center; background-color: #F4FFEB; margin-right: 5px;">
+            <p><b>Plant Happiness Meter</b> shows the average of task completion.</p>
+          </div>
+          <div class="col" style="text-align: center; background-color: #c3f798;">
+            <img src="images/fertilizersIcon.png" width="70" height="70" style="margin-top: 3em">
+          </div>
+          <div class="col" style="text-align: center; background-color: #F4FFEB;margin-right: 5px; ">
+            <p><b>Fertilizer </b>shows how often you need to fertilize your plants.</p>
+          </div>
+          <div class="col" style="text-align: center; background-color: #c3f798;">
+            <img src="images/plantIcon.png" width="70" height="70" style="margin-top: 3em; margin-bottom: 1em;">
+          </div>
+          <div class="col" style="text-align: center; background-color: #F4FFEB;">
+            <p><b>My Favorites</b> shows the favorite plants in your garden.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
     
-    <!-- <p id="demo"> TODO: Are we still allowing users to water plants by clicking on them?
-      <img src="images/infoIcon.png" width="40" height="40">
-      Water your plants havorering over the plant icons below.
-    </p> -->
+    <h3 style="text-align: center; color: #365E36">My Favorites</h3>
 
     <br>
     <p>
-      <img src="images/infoIcon.png" width="40" height="40">
-      Hover over the plant image and wait for a second to see the name of the plant or click on it to see more information about the plant.
+      <img src="images/infoIcon.png" width="40" height="40" style="margin-left: 20px">
+      Hover over the plant image and wait for a few moments to see the name of the plant or click on it to see more information about the plant.
     </p>
 
     <div id="userFavorites" class="grid-container">
     </div>
 
       <br>
-      <br>
 
-      <div class="keyBox" style="margin: auto;">
-        <h3 style="text-align: center;">Keys</h3>
-        <br>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-4" style="text-align: center; background-color: #c3f798;">
-              <img src="images/happySadIcon.png" width="70" height="70" style="margin-top: 2em">
-            </div>
-            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
-              <p>Happy/Sad meter shows the average of task completion.</p>
-            </div>
-          </div>
-          <br>
-          <div class="row justify-content-center">
-            <div class="col-4" style="text-align: center; background-color: #c3f798;">
-              <img src="images/fertilizersIcon.png" width="90" height="90" style="margin-top: 1em">
-            </div>
-            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
-              <p>Fertilizer shows how often you need to fertilize your plants.</p>
-            </div>
-          </div>
-          <br>
-          <div class="row justify-content-center">
-            <div class="col-4" style="text-align: center; background-color: #c3f798;">
-              <img src="images/plantIcon.png" width="70" height="70" style="margin-top: 1em; margin-bottom: 1em;">
-            </div>
-            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
-              <p>Plant shows the favorite plants in your garden.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    
 
     <br>
     <br>
 
-    <h3 style="text-align: center;"> My Plants </h3>
+    <h3 style="text-align: center; color: #365E36"> My Plants </h3>
     <br>
 
     <div class="container">
@@ -292,7 +284,7 @@
       for (const plant of userPlants) {
         if (plant.isFavorite && favoriteCounter < 9) {
           $("#userFavorites").append(`
-            <div class="grid-item"><img onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})" src="${plant.plantID.images}" title="${plant.plantID.name}" alt="${plant.plantID.name} png" width="200" height="200"></div>
+            <div class="grid-item"><img onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})" src="${plant.plantID.images}" title="${plant.plantID.name}" alt="${plant.plantID.name} png" width="150px" height="150px"></div>
           `);
           favoriteCounter++;
         }
@@ -367,24 +359,25 @@
 
     .grid-container {
         display: grid;
-        gap: 20px;
+        gap: 5%;
         grid-template-columns: auto auto auto;
         background-color: #964B00;
-        padding: 10px;
-        margin: 20px 120px;
+        padding: 20px; 
+        margin: 5%;
     }
 
     .grid-item {
         background-color: rgba(255, 255, 255, 0.8);
         border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 10px;
+        padding: 5%;
         text-align: center;
     }
 
     .keyBox{
       background-color: lightgrey;
-      width: 500px;
-      border: 15px solid #365E36;
+      width: 75%;
+      height: 5%;
+      border: 8px solid #365E36;
       padding: 20px;
       margin: 20px;
     }
