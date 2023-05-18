@@ -184,7 +184,7 @@ module.exports.bootstrap = async function(done) {
   //}
 
   // import the plantInfoScraped.json file
-  var plantInfo = await require('../api/webScraping/plantInfoScraped.json');
+  var plantInfo = await require('../api/webScraping/plantInfoScraped2.json');
   const plants = [];
 
   // loop through the scraped plant information and add it to the database
