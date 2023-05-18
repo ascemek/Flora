@@ -28,7 +28,7 @@ module.exports.custom = {
     This is used to enable/disable certain features, like
     bypassing login and populating the database with test data.
   */
-  devMode: true,
+  devMode: false,
   /*
     The number of days before a task should be removed from the database.
   */
