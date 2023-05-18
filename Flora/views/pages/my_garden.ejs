@@ -6,46 +6,47 @@
 <!--Frameworks Used: Bootstrap, Sails.JS-->
 
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
-    <img src="images/floraIcon.png" width="60" height="60">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/">Getting Started</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item " href="/watering">Watering</a></li>
+            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+          </ul>
+ 
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/information">Getting Started</a></li>
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
-            </ul>
-   
-          </li>
-  
-  
-          <li class="nav-item">
-            <a class="nav-link" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/my_garden">My Garden</a>
-          </li>      
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Profile</a>
-          </li>    
-        </ul>
-      </div>  
-  </nav>
+        <li class="nav-item">
+          <a class="nav-link" href="/forum">Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/my_garden">My Garden</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>    
+      </ul>
+    </div>  
+</nav>
 
   <body>
     <div id="myGardenData" data-tasks="<%=tasks%>" data-plants="<%=plants%>"></div>
@@ -56,6 +57,9 @@
     <br>
     <br>
 
+    <h1>My Garden</h1>
+    <br>
+
     <div class= "googleTranslateBox"> 
       <div class="googleTranslate"> <!--Google translate feature-->
         <br>  
@@ -64,9 +68,7 @@
       </div>
     </div>
 
-    <br>
 
-    <h1>My Garden</h1>
 
     <br>
     <br>
@@ -105,63 +107,54 @@
       </div>
     </div>
 
-
-    <h3 style="text-align: center;">My Favorites</h3>
+    <div class="keyBox" style="margin: auto;">
+      <h3 style="text-align: center;">Key: </h3>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col" style="text-align: center; background-color: #c3f798;">
+            <img src="images/happySadIcon.png" width="70" height="70" style="margin-top: 3em">
+          </div>
+          <div class="col" style="text-align: center; background-color: #F4FFEB; margin-right: 5px;">
+            <p><b>Plant Happiness Meter</b> shows the average of task completion.</p>
+          </div>
+          <div class="col" style="text-align: center; background-color: #c3f798;">
+            <img src="images/fertilizersIcon.png" width="70" height="70" style="margin-top: 3em">
+          </div>
+          <div class="col" style="text-align: center; background-color: #F4FFEB;margin-right: 5px; ">
+            <p><b>Fertilizer </b>shows how often you need to fertilize your plants.</p>
+          </div>
+          <div class="col" style="text-align: center; background-color: #c3f798;">
+            <img src="images/plantIcon.png" width="70" height="70" style="margin-top: 3em; margin-bottom: 1em;">
+          </div>
+          <div class="col" style="text-align: center; background-color: #F4FFEB;">
+            <p><b>My Favorites</b> shows the favorite plants in your garden.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
     
-    <!-- <p id="demo"> TODO: Are we still allowing users to water plants by clicking on them?
-      <img src="images/infoIcon.png" width="40" height="40">
-      Water your plants havorering over the plant icons below.
-    </p> -->
+    <h3 style="text-align: center; color: #365E36">My Favorites</h3>
 
     <br>
     <p>
-      <img src="images/infoIcon.png" width="40" height="40">
-      Hover over the plant image and wait for a second to see the name of the plant or click on it to see more information about the plant.
+      <img src="images/infoIcon.png" width="40" height="40" style="margin-left: 20px">
+      Hover over the plant image and wait for a few moments to see the name of the plant or click on it to see more information about the plant.
     </p>
 
     <div id="userFavorites" class="grid-container">
     </div>
 
       <br>
-      <br>
 
-      <div class="keyBox" style="margin: auto;">
-        <h3 style="text-align: center;">Keys</h3>
-        <br>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-4" style="text-align: center; background-color: #c3f798;">
-              <img src="images/happySadIcon.png" width="70" height="70" style="margin-top: 2em">
-            </div>
-            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
-              <p>Happy/Sad meter shows the average of task completion.</p>
-            </div>
-          </div>
-          <br>
-          <div class="row justify-content-center">
-            <div class="col-4" style="text-align: center; background-color: #c3f798;">
-              <img src="images/fertilizersIcon.png" width="90" height="90" style="margin-top: 1em">
-            </div>
-            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
-              <p>Fertilizer shows how often you need to fertilize your plants.</p>
-            </div>
-          </div>
-          <br>
-          <div class="row justify-content-center">
-            <div class="col-4" style="text-align: center; background-color: #c3f798;">
-              <img src="images/plantIcon.png" width="70" height="70" style="margin-top: 1em; margin-bottom: 1em;">
-            </div>
-            <div class="col-4" style="text-align: center; background-color: #F4FFEB;">
-              <p>Plant shows the favorite plants in your garden.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    
 
     <br>
     <br>
 
-    <h3 style="text-align: center;"> My Plants </h3>
+    <h3 style="text-align: center; color: #365E36"> My Plants </h3>
     <br>
 
     <div class="container">
@@ -221,7 +214,7 @@
           taskTotalCounter += parseInt($(this).data("plantquantity"));
         });
         const plantPercentage = Math.round(((taskTotalCounter > 0 ? taskCompletedCounter : 1) / (taskTotalCounter > 0 ? taskTotalCounter : 1)) * 100);
-        $("#plantHappinesScore").html(`You watered ${taskCompletedCounter}/${taskTotalCounter} of your plants today.`);
+        $("#plantHappinesScore").html(`You completed ${taskCompletedCounter}/${taskTotalCounter} of today's tasks.`);
         $("#plantHappinessBar").html(`
           <div class="progress-bar" role="progressbar" style="width:${plantPercentage}%" aria-valuenow="${plantPercentage}" aria-valuemin="0" aria-valuemax="100">${plantPercentage}%</div>
         `);
@@ -292,21 +285,25 @@
       for (const plant of userPlants) {
         if (plant.isFavorite && favoriteCounter < 9) {
           $("#userFavorites").append(`
-            <div class="grid-item"><img onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})" src="${plant.plantID.images}" title="${plant.plantID.name}" alt="${plant.plantID.name} png" width="200" height="200"></div>
+            <div class="grid-item"><img onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})" src="${plant.plantID.images}" title="${plant.plantID.name}" alt="${plant.plantID.name} png" width="150px" height="150px"></div>
           `);
           favoriteCounter++;
         }
         if (column1) {
           $("#myPlantColumn1").append(`
           <div class="col-4" style="text-align: center;">
-            <a onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})">${plant.plantID.name}</a>
+            <button style="background-color: #365E36; color: white; text-align: center; justify-content: center; padding:2%;">
+              <a onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})">${plant.plantID.name}</a>
+            </button>
           </div>`);
           column1 = false;
         } else {
           $("#myPlantColumn2").append(`
           <div class="col-4" style="text-align: center;">
-            <a onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})">${plant.plantID.name}</a>
-          </div>`);
+            <button style="background-color: #365E36; color: white; text-align: center; justify-content: center; padding:2%;">
+              <a onclick="displayPlantInfo(${plant.plantID.id}, ${plant.id}, '${plant.plantID.name}', '${plant.plantID.images}', ${plant.isFavorite}, ${plant.waterFrequency}, ${plant.fertilizerFrequency})">${plant.plantID.name}</a>
+            </button>
+           </div>`);
           column1 = true;
         }
       }
@@ -367,24 +364,25 @@
 
     .grid-container {
         display: grid;
-        gap: 20px;
+        gap: 5%;
         grid-template-columns: auto auto auto;
         background-color: #964B00;
-        padding: 10px;
-        margin: 20px 120px;
+        padding: 20px; 
+        margin: 5%;
     }
 
     .grid-item {
         background-color: rgba(255, 255, 255, 0.8);
         border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 10px;
+        padding: 5%;
         text-align: center;
     }
 
     .keyBox{
       background-color: lightgrey;
-      width: 500px;
-      border: 15px solid #365E36;
+      width: 75%;
+      height: 5%;
+      border: 8px solid #365E36;
       padding: 20px;
       margin: 20px;
     }

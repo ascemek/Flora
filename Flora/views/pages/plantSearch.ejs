@@ -1,46 +1,47 @@
 <!--@author Faye Landers
   --@purpose Allow website users to search for a specific plant. Users will click on plant for info.-->
-<nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
-  <img src="images/floraIcon.png" width="60" height="60">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/plantSearch">Plant Search</a>
-      </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Information
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
-            <li><a class="dropdown-item " href="/watering">Watering</a></li>
-            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
-            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
-          </ul>
- 
+  <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
+    <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+    <img src="images/floraIcon.png" width="60" height="60">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Getting Started</a>
         </li>
-
-
-        <li class="nav-item">
-          <a class="nav-link" href="/forum">Forum</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/my_garden">My Garden</a>
-        </li>      
-        <li class="nav-item">
-          <a class="nav-link" href="/profile">Profile</a>
-        </li>    
-      </ul>
-    </div>  
-</nav>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Information
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item " href="/watering">Watering</a></li>
+              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+              <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+              <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
+            </ul>
+   
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/plantSearch">Plant Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/forum">Forum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/my_garden">My Garden</a>
+          </li>      
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>    
+        </ul>
+      </div>  
+  </nav>
 
 <body>
   <br>
@@ -271,6 +272,25 @@
   $("#createPlantButton").on("click", () => {
     window.location.href = "/new_plant"; //may need to be changed to reflect create plant in new window
   });
+  </script>
+
+  <script>
+    $(document).ready(() => {console.log($("#plantData").data("post"))});
+
+    $(".plants-wrapper").empty();
+
+
+    let plants = $("#plantData").data("post");
+
+    for(i = 0; i < plants.length; i++){  //update to include general info instead of water info
+      $(".plants-wrapper").append(`
+        <div class="resultBoxes">
+          <h4 id="plantResultName" style="color: #365E36;"><a href="/plantInfo/${plants[i].id}">${plants[i].name}</a></h4>
+          <br>
+          <img class="resultsImg" id ="plantResultIMg">
+           <p id="plantResultInfo"><b>Sunlight Information: </b> ${plants[i].sunFrequency}</p> 
+        </div>`);
+      }
   </script>
 
 <script>

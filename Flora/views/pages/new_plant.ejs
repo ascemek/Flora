@@ -14,13 +14,13 @@ form{
     width: 75%;
 }
 #favorite{
-    margin-left: 40%;
+    margin-left: 32%;
 }
 #fav_label{
     margin-left:2%;
 }
 label{
-    margin-left: 40%;
+    margin-left: 32%;
 }
 input, select{
   background-color: #FAF9F6;
@@ -31,17 +31,17 @@ input, select{
 #submit{
     float: right;
     background-color: #365E36;
-      color: white;
-      text-align: center;
-      justify-content: center;
+    color: white;
+    text-align: center;
+    justify-content: center;
 }
-    h2{
-          text-align: center;
-          color: #365E36;
-        }
-    a:link {
-        color: #30007D;
-    }
+h2{
+    text-align: center;
+    color: #365E36;
+  }
+a:link {
+    color: #30007D;
+}
     
     /* visited link */
     a:visited {
@@ -62,7 +62,7 @@ input, select{
     }
     @font-face {
       font-family: growingGarden;
-      src: url("fonts/growingGarden.ttf") format("truetype");
+      src: url("/fonts/growingGarden.ttf") format("truetype");
     }
     .nav-item{
       font-size: 18px;
@@ -72,21 +72,20 @@ input, select{
 <!-- NAV BAR -->
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
   <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
-  <img src="images/floraIcon.png" width="60" height="60">
+  <img src="/images/floraIcon.png" width="60" height="60">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ms-auto">
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+        <a class="nav-link" aria-current="page" href="/">Getting Started</a>
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             Information
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/information">Getting Started</a></li>
             <li><a class="dropdown-item " href="/watering">Watering</a></li>
             <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
             <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
@@ -98,7 +97,9 @@ input, select{
  
         </li>
 
-
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/plantSearch">Plant Search</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/forum">Forum</a>
         </li>
@@ -114,12 +115,12 @@ input, select{
 
 <body>
     <div id="plantDataDiv" data-plant="<%=plantInfo%>"></div>
-    <br><br><br><br>
+    <br><br><br><br><br><br>
     <h2 id="plantNameHeader"> Add PLANTNAME to My Garden</h2>
     <!--Number input and select for watering frequency-->
-    <br>
+    <br><br>
     <label for="water">Water every </label>
-    <input class = "water" type="number" id="water" name="water" min="0">
+    <input class = "water" type="number" id="water" name="water" min="0" value="1">
     <select class = "water_time" type="select" id="water_time" name="water_time">
         <option value="day">Day(s)</option>
         <option value="week">Week(s)</option>
@@ -128,7 +129,7 @@ input, select{
     <!--Number input and select for fertilizer frequency-->
     <br><br>
     <label for="fertilizer">Fertilize every </label>
-    <input class = "fertilizer" type="number" id="fertilizer" name="fertilizer" min="0">
+    <input class = "fertilizer" type="number" id="fertilizer" name="fertilizer" min="0" value="14">
     <select class = "f_time" type="select" id="f_time" name="f_time">
         <option value="day">Day(s)</option>
         <option value="week">Week(s)</option>
@@ -145,6 +146,9 @@ input, select{
     <br>
     <br>
     <input type="submit" value="Submit" id="submit">
+
+    <div class="begginer_info_wrapper"></div>
+
 </body>
 
 <script>
@@ -220,9 +224,18 @@ input, select{
         if(data.experience == "Beginner"){
           $("#companion_planting").hide();
           $("#composting").hide();
+
+          $(".begginer_info_wrapper").append(`
+          <br><br><br>
+          <img src="/images/infoIcon.png" width="40" height="40">
+          <p> Watering and Fertilizer frequency are defauled to once a day and once every two weeks respectively because this is how frequently you should check on the watering and fertilization needs of the plant. The frequencies of these tasks is dependent on  the age of the plant, season, and environmental factors. 
+            <br> Please visit our <a href="/watering">watering information page</a> for more information on watering frequency, signs of over watering, signs that your plant needs water, and proper watering methods. 
+            <br> Please visit our <a href="/fertilizer">fertilizer information page</a> for more information on fertilization frequency, risks of over fertilizing, fertilization methods, and signs a plant needs fertilizer.
+          </p>
+          `);
         }
         if(data.experience == "Intermediate"){
-          $("#composting").hide();
+          $("#composting").hide(); 
         }
       }
     })
