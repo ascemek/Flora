@@ -209,11 +209,13 @@
       let taskCompletedCounter = 0;
         let taskTotalCounter = 0;
         $(".userPlantTask").each(function() {
-          const taskCompleted = $(this).is(":checked");
-          if (taskCompleted) {
-            taskCompletedCounter += parseInt($(this).data("plantquantity"));
+          if ($(this).data("plantquantity")) {
+            const taskCompleted = $(this).is(":checked");
+            if (taskCompleted) {
+              taskCompletedCounter += parseInt($(this).data("plantquantity"));
+            }
+            taskTotalCounter += parseInt($(this).data("plantquantity"));
           }
-          taskTotalCounter += parseInt($(this).data("plantquantity"));
         });
         const plantPercentage = Math.round(((taskTotalCounter > 0 ? taskCompletedCounter : 1) / (taskTotalCounter > 0 ? taskTotalCounter : 1)) * 100);
         $("#plantHappinesScore").html(`You completed ${taskCompletedCounter}/${taskTotalCounter} of today's tasks.`);
@@ -290,6 +292,10 @@
         }
         $("#todaysTasks").append(itemHTML);
       }
+      $(".userPlantTask").change(function() {
+        updatePlantHappinessBar();
+      });
+      updatePlantHappinessBar();
     }
     $(document).ready(function() {
       const userTasks = $("#myGardenData").data("tasks");
