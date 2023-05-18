@@ -37,18 +37,81 @@ const fs = require("fs");
             "https://www.bhg.com/gardening/plant-dictionary/perennial/veronica/",
             "https://www.bhg.com/gardening/plant-dictionary/shrub/viburnum/",
             "https://www.bhg.com/gardening/plant-dictionary/annual/verbena/",
-            "https://www.bhg.com/gardening/plant-dictionary/vine/mandevilla/"
-
+            "https://www.bhg.com/gardening/plant-dictionary/vine/mandevilla/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/ajuga/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/alstroemeria/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/anemone/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/angels-trumpet/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/aster/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/astilbe/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/bacopa/",
+            "https://www.bhg.com/gardening/plant-dictionary/shrub/barberry/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/begonia/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/bellflower/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/bird-of-paradise/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/black-eyed-susan/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/blanket-flower/",
+            "https://www.bhg.com/gardening/plant-dictionary/vine/bougainvillea/",
+            "https://www.bhg.com/gardening/plant-dictionary/shrub/boxwood/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/california-poppy/",
+            "https://www.bhg.com/gardening/plant-dictionary/shrub/camellia/",
+            "https://www.bhg.com/gardening/plant-dictionary/bulb/canna/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/castor-bean/",
+            "https://www.bhg.com/gardening/plant-dictionary/rose/climbing-rose/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/columbine/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/coneflower/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/coral-bells/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/coreopsis/",
+            "https://www.bhg.com/gardening/plant-dictionary/bulb/crocus/",
+            "https://www.bhg.com/gardening/plant-dictionary/bulb/dahlia/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/daylily/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/delphinium/",
+            "https://www.bhg.com/gardening/plant-dictionary/shrub/dogwood/",
+            "https://www.bhg.com/gardening/plant-dictionary/tree/eucalyptus/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/euphorbia/",
+            "https://www.bhg.com/gardening/plant-dictionary/shrub/forsythia/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/foxglove/",
+            "https://www.bhg.com/gardening/plant-dictionary/bulb/freesia/",
+            "https://www.bhg.com/gardening/plant-dictionary/bulb/grape-hyacinth/",
+            "https://www.bhg.com/gardening/plant-dictionary/tree/hawthorn/",
+            "https://www.bhg.com/gardening/plant-dictionary/shrub/holly/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/impatiens/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/iris/",
+            "https://www.bhg.com/gardening/plant-dictionary/houseplant/jade-plant/",
+            "https://www.bhg.com/gardening/plant-dictionary/vine/jasmine/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/joe-pye-weed/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/betony/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/lantana/",
+            "https://www.bhg.com/gardening/plant-dictionary/herb/lavender/",
+            "https://www.bhg.com/gardening/plant-dictionary/shrub/lilac/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/lily-of-the-valley/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/lisianthus/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/lupine/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/mondo-grass/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/moss-rose/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/penstemon/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/petunia/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/phlox/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/perennial-poppy/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/primrose/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/meadowsweet/",
+            "https://www.bhg.com/gardening/plant-dictionary/shrub/rhododendron/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/russian-sage/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/solomons-seal/",
+            "https://www.bhg.com/gardening/plant-dictionary/bulb/spider-lily/",
+            "https://www.bhg.com/gardening/plant-dictionary/perennial/spiderwort/",
+            "https://www.bhg.com/gardening/plant-dictionary/vine/confederate-jasmine/",
+            "https://www.bhg.com/gardening/plant-dictionary/annual/zinnia/"
         ];
         console.log("Number of plants will scraped: " + urls.length);
 
         // if the file doesn't exists, add the opening bracket
-        if (!fs.existsSync("plantInfoScraped.json")) {
+        if (!fs.existsSync("plantInfoScraped2.json")) {
             // add the opening bracket to the json file
             try {
                 //fs.writeFileSync(
                 fs.appendFileSync(
-                    "plantInfoScraped.json",
+                    "plantInfoScraped2.json",
                     "[");
             } catch (error) {
                 console.log(error);
@@ -74,7 +137,7 @@ const fs = require("fs");
             if (i === urls.length - 1) {
                 try {
                     fs.appendFileSync(
-                        "plantInfoScraped.json",
+                        "plantInfoScraped2.json",
                         JSON.stringify(handleArr(plantFeatures)));
                 } catch (error) {
                     console.log(error);
@@ -83,7 +146,7 @@ const fs = require("fs");
             else { //else add a comma
                 try {
                     fs.appendFileSync(
-                        "plantInfoScraped.json",
+                        "plantInfoScraped2.json",
                         JSON.stringify(handleArr(plantFeatures)) + ",");
                 } catch (error) {
                     console.log(error);
@@ -101,7 +164,7 @@ const fs = require("fs");
     // add the closing bracket to the json file
         try {
             fs.appendFileSync(
-                "plantInfoScraped.json",
+                "plantInfoScraped2.json",
                 "]");
         } catch (error) {
             console.log(error);
