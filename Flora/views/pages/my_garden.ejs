@@ -76,6 +76,8 @@
     <div class = "container-fluid">
       <div class = "row">
         <div class = "col-sm-6">
+          <label for="view">View date:</label>
+          <input type="date" id="view" name="task-date">
           <div class = "TodayChecklist">
             <h3>Today's Tasks</h3>
             <br>
@@ -270,6 +272,25 @@
         showCloseButton: true,
       })
     }
+    async function fetchFutureTasks(date) {
+      const result = await ajaxCall("/viewFutureTask", {date: date});
+      $("#todaysTasks").empty();
+      for (const task of result.tasks) {
+        let itemHTML = "";
+        if (task?.isFutureTask) {
+          itemHTML = `
+        <input type="checkbox" class="userPlantTask" value="task${task.id}" disabled>
+        <label for="task${task.id}">${task.taskName}</label><br>
+        `;
+        } else {
+          itemHTML = `
+        <input type="checkbox" class="userPlantTask" data-taskid="${task.id}" data-plantquantity="${task.userPlantID.quantity}" onclick="updateTask(${task.id})" id="task${task.id}" name="task${task.id}" value="task${task.id}" ${task.taskCompleted ? "checked" : ""}>
+        <label for="task${task.id}">${task.taskName}</label><br>
+        `;
+        }
+        $("#todaysTasks").append(itemHTML);
+      }
+    }
     $(document).ready(function() {
       const userTasks = $("#myGardenData").data("tasks");
       for (const task of userTasks) {
@@ -312,6 +333,9 @@
         updatePlantHappinessBar();
       });
       updatePlantHappinessBar(); //Call function once to initialize the bar
+      $("#view").on("change", (event) => {
+        fetchFutureTasks(event.target.value);
+      });
     });
     function myFunction() {
       document.getElementById("demo").innerHTML = "You watered the plant!";

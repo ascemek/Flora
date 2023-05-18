@@ -120,8 +120,8 @@ module.exports = {
         plantID: plantID,
         waterFrequency: waterFreq,
         fertilizerFrequency: fertilizerFreq,
-        lastWatered: moment().valueOf(),
-        lastFertilized: moment().valueOf(),
+        lastWatered: moment().format(),
+        lastFertilized: moment().format(),
         quantity: quantity,
         isFavorite: favorite
       });

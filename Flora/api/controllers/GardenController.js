@@ -64,10 +64,10 @@ module.exports = {
       }
       if (task[0].taskCompleted) { // Check if task was completed
         if (task[0].taskType === 'water') { // Check if task was a water task
-          await UserPlants.update({id: task[0].userPlantID}, {lastWatered: moment().valueOf()}); // Update the last watered date
+          await UserPlants.update({id: task[0].userPlantID}, {lastWatered: moment().format()}); // Update the last watered date
         }
         if (task[0].taskType === 'fertilize') { // Check if task was a fertilize task
-          await UserPlants.update({id: task[0].userPlantID}, {lastFertilized: moment().valueOf()}); // Update the last fertilized date
+          await UserPlants.update({id: task[0].userPlantID}, {lastFertilized: moment().format()}); // Update the last fertilized date
         }
       }
       return res.send({ // Return success
@@ -144,6 +144,71 @@ module.exports = {
       return res.send({ // Return error
         error: 'Error favoriting plant'
       });
+    }
+  },
+  viewFutureTask: async function(req, res) {
+    try {
+      const date = req.param('date'); // Get the date
+      if (!req.session.userId) { // Check if user is logged in
+        return res.send({
+          error: 'User not logged in'
+        });
+      }
+      if (!date) { // Check if date is valid
+        return res.send({
+          error: 'Invalid date'
+        });
+      }
+      const dateObject = moment(date, 'YYYY-MM-DD'); // Create a moment object from the date
+      let userTasks = await Tasks.find({
+        where: {userID: req.session.userId, createdAt: {'>=': dateObject.startOf('day').valueOf(), '<=': dateObject.endOf('day').valueOf()}},
+        select: ['id', 'taskName', 'taskCompleted', 'userPlantID']
+      }).populate('userPlantID');
+      if (userTasks.length === 0 && dateObject.isAfter(moment())) {
+        userTasks = [];
+        let userPlants = await UserPlants.find({
+          where: {userID: req.session.userId},
+        }).populate('plantID'); // Find all user plants
+        let counter = 1;
+        for (const userPlant of userPlants) { // Loop through each user plant
+          const lastWatered = moment(userPlant.lastWatered); // Get the last watered date
+          const lastFertilized = moment(userPlant.lastFertilized); // Get the last fertilized date
+          const waterFrequency = userPlant.waterFrequency; // Get the water frequency
+          const fertilizerFrequency = userPlant.fertilizerFrequency; // Get the fertilizer frequency
+          const quantity = userPlant.quantity; // Get the quantity
+          const userID = userPlant.userID; // Get the user ID
+          const plantID = userPlant.plantID; // Get the plant ID
+          const waterDiff = dateObject.diff(lastWatered, 'days'); // Get the difference between the last watered date and now
+          const fertilizerDiff = dateObject.diff(lastFertilized, 'days'); // Get the difference between the last fertilized date and now
+          if (waterDiff >= waterFrequency) { // If the water difference is greater than or equal to the water frequency
+            userTasks.push({ // Push a new task to the array
+              id: counter,
+              userID,
+              taskName: `Water your ${quantity} ${plantID.name}`,
+              userPlantID: userPlant.id,
+              taskType: 'water',
+              isFutureTask: true
+            });
+            counter++;
+          }
+          if (fertilizerDiff >= fertilizerFrequency) { // If the fertilizer difference is greater than or equal to the fertilizer frequency
+            userTasks.push({ // Push a new task to the array
+              id: counter,
+              userID,
+              taskName: `Fertilize your ${quantity} ${plantID.name}`,
+              userPlantID: userPlant.id,
+              taskType: 'fertilize',
+              isFutureTask: true
+            });
+            counter++;
+          }
+        }
+      }
+      return res.send({ // Return success
+        success: true,
+        tasks: userTasks
+      });
+    } catch (error) {
     }
   }
 };
