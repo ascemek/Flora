@@ -182,170 +182,34 @@ module.exports.bootstrap = async function(done) {
   //     },
   //   ])
   //}
-    if (await Plant.count() === 0) {
-      // import the plantInfoScraped.json file
-      const plantInfo = await require('../webScraping/plantInfoScraped.json');
-      const plants = [];
 
-      for (let i = 0; i < plantInfo.length; i++) {
-        const newPlant = await Plant.create({
-          name: plantInfo[i]["COMMON NAME"],
-          sunFrequency: plantInfo[i]["LIGHT"],
-          waterFrequency: plantInfo[i]["WATER"],
-          fertilizerFrequency: plantInfo[i]["FERTILIZER"],
-          nativeRegion: plantInfo[i]["NATIVE REGION"],
-          category:  plantInfo[i]["CATEGORY"],
-          seedLink: 'https://www.burpee.com/',
-          images: 'images/defaultPlantIcon.png',
-        }).fetch();
-        plants.push(newPlant);
-        plants.createEach(newPlant);
-    }
-  }
-
-
-  //   if (await Plant.count() === 0){
-
-  //     // import the plantInfoScraped.json file
-  //     const plantInfo = await require('../webScraping/plantInfoScraped.json');
-
-  //     // loop through the scraped plant information and add it to the database
-  //     for (scraped of plantInfo) {
-  //       const plant = {
-  //         name: scraped["COMMON NAME"],
-  //         sunFrequency: scraped["LIGHT"],
-  //         waterFrequency: scraped["WATER"],
-  //         fertilizerFrequency: scraped["FERTILIZER"],
-  //         nativeRegion: scraped["NATIVE REGION"],
-  //         category: scraped["CATEGORY"],
-  //         //seedLink: scraped["SEED LINK"],
-  //       }
-
-  //       await Plant.createEach([ // create a plant with the following information
-  //         {
-  //           name: scraped["COMMON NAME"],
-  //           sunFrequency: scraped["LIGHT"],
-  //           waterFrequency: scraped["WATER"],
-  //           fertilizerFrequency: scraped["FERTILIZER"],
-  //           nativeRegion: scraped["NATIVE REGION"],
-  //           category: scraped["CATEGORY"],
-  //           seedLink: scraped["SEED LINK"],
-  //           //images: scraped["IMAGES"],
-  //         }
-  //       ]);
-  //     }
-
-  //     Plants.push(plant);
-  //     Plants.createEach(Plants);
-  // }
-
-  //console.log(await Plants.find());
-  return done();
-};
-
-// setting up baseline data for the plants table
-// module.exports.bootstrap = async function(done) {
-
-  //const Plants = [];
+  // import the plantInfoScraped.json file
+  var plantInfo = await require('../api/webScraping/plantInfoScraped.json');
+  const plants = [];
 
   // loop through the scraped plant information and add it to the database
-  // for (scraped of plantInfo) { // for each plant in the plantInfo array
-  //   await Plants.createEach([ // create a plant with the following information
-  //     {
-  //       name: scraped["COMMON NAME"],
-  //       sunFrequency: scraped["LIGHT"],
-  //       waterFrequency: scraped["WATER"],
-  //       fertilizerFrequency: scraped["FERTILIZER"],
-  //       nativeRegion: scraped["NATIVE REGION"],
-  //       category: scraped["CATEGORY"],
-  //       seedLink: scraped["SEED LINK"],
-  //       images: scraped["IMAGES"],
-  //     }
-  //   ]);
-    
-  // MANUALLY ADDING PLANTS TO THE DATABASE
-  // if ((await Plant.count()) === 0 && sails.config.custom.devMode) {
-  //   await Plant.createEach([
-  //     {
-  //       name: 'Allium',
-  //       sunFrequency: 'Full Sun',
-  //       waterFrequency: 'Once a week',
-  //       fertilizerFrequency: 'Once a month',
-  //       nativeRegion: 'Northern Hemisphere',
-  //       category: 'Edible',
-  //       seedLink: 'https://www.burpee.com/',
-  //       images: 'images/defaultPlantIcon.png',
-  //     },
-  //     {
-  //       name: 'Tulipa',
-  //       sunFrequency: 'Full Sun',
-  //       waterFrequency: 'Once a week',
-  //       fertilizerFrequency: 'Once a month',
-  //       nativeRegion: 'Northern Hemisphere',
-  //       category: 'Edible',
-  //       seedLink: 'https://www.burpee.com/',
-  //       images: 'images/defaultPlantIcon.png',
-  //     },
-  //     {
-  //       name: 'Tulbaghia',
-  //       sunFrequency: 'Full Sun',
-  //       waterFrequency: 'Once a week',
-  //       fertilizerFrequency: 'Once a month',
-  //       nativeRegion: 'Northern Hemisphere',
-  //       category: 'Edible',
-  //       seedLink: 'https://www.burpee.com/',
-  //       images: 'images/defaultPlantIcon.png',
-  //     },
-  //     {
-  //       name: 'Anemone',
-  //       sunFrequency: 'Full Sun',
-  //       waterFrequency: 'Once a week',
-  //       fertilizerFrequency: 'Once a month',
-  //       nativeRegion: 'Northern Hemisphere',
-  //       category: 'Edible',
-  //       seedLink: 'https://www.burpee.com/',
-  //       images: 'images/defaultPlantIcon.png',
-  //     },
-  //     {
-  //       name: 'Gloriosa superba',
-  //       sunFrequency: 'Full Sun',
-  //       waterFrequency: 'Once a week',
-  //       fertilizerFrequency: 'Once a month',
-  //       nativeRegion: 'Northern Hemisphere',
-  //       category: 'Edible',
-  //       seedLink: 'https://www.burpee.com/',
-  //       images: 'images/defaultPlantIcon.png',
-  //     },
-  //     {
-  //       name: 'Monarda',
-  //       sunFrequency: 'Full Sun',
-  //       waterFrequency: 'Once a week',
-  //       fertilizerFrequency: 'Once a month',
-  //       nativeRegion: 'Northern Hemisphere',
-  //       category: 'Edible',
-  //       seedLink: 'https://www.burpee.com/',
-  //       images: 'images/defaultPlantIcon.png',
-  //     },
-  //     {
-  //       name: 'Alcea rosea',
-  //       sunFrequency: 'Full Sun',
-  //       waterFrequency: 'Once a week',
-  //       fertilizerFrequency: 'Once a month',
-  //       nativeRegion: 'Northern Hemisphere',
-  //       category: 'Edible',
-  //       seedLink: 'https://www.burpee.com/',
-  //       images: 'images/defaultPlantIcon.png',
-  //     },
-  //     {
-  //       name: 'Geranium sp.',
-  //       sunFrequency: 'Full Sun',
-  //       waterFrequency: 'Once a week',
-  //       fertilizerFrequency: 'Once a month',
-  //       nativeRegion: 'Northern Hemisphere',
-  //       category: 'Edible',
-  //       seedLink: 'https://www.burpee.com/',
-  //       images: 'images/defaultPlantIcon.png',
-  //     }
-  //   ]);
-  // }
-// };
+  for (let i = 0; i < plantInfo.length; i++) {
+    // create a plant with the following information
+    const newPlant = await Plant.create({ 
+      genus : plantInfo[i]["Genus Names"],
+      name: plantInfo[i]["name"],
+      category: plantInfo[i]["category"],
+      sunFrequency: plantInfo[i]["sunFrequency"],
+      waterFrequency: " ", //plantInfo[i]["WATER"],      // NOT SCRAPED
+      fertilizerFrequency: " ", //plantInfo[i]["FERTILIZER"], // NOT SCRAPED
+      height: plantInfo[i]["Height"],
+      width: plantInfo[i]["Width"],
+      flowerColor: plantInfo[i]["Flower Color"],
+      foliageColor: plantInfo[i]["Foliage Color"],
+      seasonFeatures: plantInfo[i]["Season Features"],
+      specialFeatures: plantInfo[i]["Special Features"],
+      nativeRegion: plantInfo[i]["nativeRegion"],
+      propagation: plantInfo[i]["Propagation"],
+      problemSolvers: plantInfo[i]["Problem Solvers"],
+      seedLink: "https://www.burpee.com/",
+      images: "images/defaultPlantIcon.png",
+    }).fetch();
+    plants.push(newPlant);
+}
+  return done();
+};
