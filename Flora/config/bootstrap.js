@@ -207,7 +207,7 @@ module.exports.bootstrap = async function(done) {
       propagation: plantInfo[i]["Propagation"],
       problemSolvers: plantInfo[i]["Problem Solvers"],
       seedLink: "https://www.burpee.com/",
-      images: plantInfo[i]["image"],
+      images: plantInfo[i]["image"] ? plantInfo[i]["image"] : 'images/defaultPlantIcon.png',
     }).fetch();
     plants.push(newPlant);
 }
