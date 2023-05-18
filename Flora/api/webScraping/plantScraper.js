@@ -40,7 +40,7 @@ const fs = require("fs");
             "https://www.bhg.com/gardening/plant-dictionary/vine/mandevilla/"
 
         ];
-        console.log("Numeber of plants will scraped: " + urls.length);
+        console.log("Number of plants will scraped: " + urls.length);
 
         // if the file doesn't exists, add the opening bracket
         if (!fs.existsSync("plantInfoScraped.json")) {
@@ -111,9 +111,14 @@ const fs = require("fs");
 
 })();
 
+// Plant Model - Scraped Data (before renaming)
+// name = COMMON NAME
+// category = PLANT TYPE
+// sunFrequency = LIGHT
+// nativeRegion = ZONES
 
 function handleArr(arr) {
-    const labels = ["GENUS NAMES", "COMMON NAME", "PLANT TYPE", "LIGHT", "HEIGHT", "WIDTH", "FLOWER COLOR", "FOLIAGE COLOR", "SEASON FEATURES", "SPECIAL FEATURES", "ZONES", "PROPAGATION", "PROBLEM SOLVERS"]
+    const labels = ["Genus Names", "name", "category", "sunFrequency", "Height", "Width", "Flower Color", "Foliage Color", "Season Features", "Special Features", "nativeRegion", "Propagation", "Problem Solvers"]
     const returnObj = {}
 
     for (let i = 0; i < arr.length; i++) {

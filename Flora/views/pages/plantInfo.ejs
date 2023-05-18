@@ -6,57 +6,54 @@
 <!--Frameworks Used: Bootstrap, Sails.JS-->
 
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Sami Cemek">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title style="font-family: Garamond, serif"> Fertilizer </title>
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
+  <meta charset="utf-8">
+  <meta name="author" content="Sami Cemek">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title style="font-family: Garamond, serif"> Fertilizer </title>
 
-  <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
-    <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
-    <img src="images/floraIcon.png" width="60" height="60">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">Getting Started</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Information
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item " href="/watering">Watering</a></li>
-              <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-              <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-              <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-              <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-              <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
-              <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
-            </ul>
-   
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/plantSearch">Plant Search</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/forum">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/my_garden">My Garden</a>
-          </li>      
-          <li class="nav-item">
-            <a class="nav-link" href="/profile">Profile</a>
-          </li>    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
+  <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
+  <img src="images/floraIcon.png" width="60" height="60">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Information
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/information">Getting Started</a></li>
+          <li><a class="dropdown-item " href="/watering">Watering</a></li>
+          <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+          <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+          <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+          <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+          <li><a class="dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+          <li><a class="dropdown-item" id="composting" href="/composting">Composting</a></li>
+        </ul>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/forum">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/my_garden">My Garden</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">Profile</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -107,66 +104,201 @@
       </div>
       <div class="col-sm-6">
         <div class="plantInformationText">
-          <!-- <div class = "plantInformationGeneral"> Do we have general information on the plant?
+          <!-- THIS IS NOT SCRAPED
+                      <div class = "plantInformationGeneral"> Do we have general information on the plant?
                         <h3>General</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                     </div> -->
 
-          <!-- <div class = "plantInformationWatering">
+          <!-- THIS IS NOT SCRAPED
+                      <div class = "plantInformationWatering">
                         <h3>Watering</h3>
                         <p id="plantWateringInfo">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                     </div> -->
 
-          <div class="plantInformationSunlight">
-            <h3>Sunlight</h3>
-            <p id="plantSunlightInfo">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
+          <!-- THIS IS NOT SCRAPED
+                    <div class = "plantInformationFertilizer"> 
+                        <h3>Fertilizer</h3>
+                        <p id="plantFertilizerInfo">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    -->
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-4" style="text-align: center;">
+                <h4>Genus Name</h4>
+                <p id="plantGenusInfo">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                  officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              <div class="col-4" style="text-align: center;">
+                <h4>Category</h4>
+                <p id="plantCategoryInfo">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                  officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationSunlight">
+                  <h4>Sunlight</h4>
+                  <p id="plantSunlightInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationPropagataion">
+                  <h4>Propagation</h4>
+                  <p id="plantPropagataionInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationHeight">
+                  <h4>Height</h4>
+                  <p id="plantHeightInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationWidth">
+                  <h4>Width</h4>
+                  <p id="plantWidthInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationFoliageColor">
+                  <h4>Foliage Color</h4>
+                  <p id="plantFoliageColorInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationFlowerColor">
+                  <h4>Flower Color</h4>
+                  <p id="plantFlowerColorInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationSpecialFeatures">
+                  <h4>Special Features</h4>
+                  <p id="plantSpecialFeaturesInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationNativeRegion">
+                  <h4>Native Region</h4>
+                  <p id="plantNativeRegionInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationSeasonFeatures">
+                  <h4>Season Features</h4>
+                  <p id="plantSeasonFeaturesInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+              <div class="col-4" style="text-align: center;">
+                <div class="plantInformationProblemSolvers">
+                  <h4>Problem Solvers</h4>
+                  <p id="plantProblemSolversInfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-4" style="text-align: center;">
+                <a class="plantInformationSeed" id="plantSeedLink" href="https://www.burpee.com/garden-ready-plants"
+                  target="_blank" rel="noopener noreferrer" style="color: #0000EE;">Link to buy seeds</a>
+              </div>
+            </div>
           </div>
-
-          <div class="plantInformationFertilizer">
-            <h3>Fertilizer</h3>
-            <p id="plantFertilizerInfo">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
-          </div>
-
-          <div class="plantInformationNativeRegion">
-            <h3>Native Region</h3>
-            <p>
-              <img src="/images/infoIcon.png" width="40" height="40">
-              Refer to <a href="/agr_zones">Agricultural Zones</a> page for more information about these zones.
-            </p>
-
-
-            <p id="plantNativeRegionInfo">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
-          </div>
-
-          <a class="plantInformationSeed" id="plantSeedLink" href="https://www.burpee.com/garden-ready-plants"
-            target="_blank" rel="noopener noreferrer" style="color: #0000EE;">Link to buy seeds</a>
         </div>
       </div>
     </div>
   </div>
-
 
   <script type="text/javascript"
     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -206,17 +338,25 @@
     $(document).ready(() => {
       const plantData = $("#plantData").data("plant");
       $("#plantNameHeader").text(plantData.name);
+      $("#plantGenusInfo").text(plantData.name);
+      $("#plantCategoryInfo").text(plantData.category);
       //$("#plantWateringInfo").text(plantData.waterFrequency);
+      //$("#plantFertilizerInfo").text(plantData.fertilizerFrequency);
       $("#plantSunlightInfo").text(plantData.sunFrequency);
-      $("#plantFertilizerInfo").text(plantData.fertilizerFrequency);
+      $("#plantHeightInfo").text(plantData.height);
+      $("#plantWidthInfo").text(plantData.width);
+      $("#plantFlowerColorInfo").text(plantData.flowerColor);
+      $("#plantFoliageColorInfo").text(plantData.foliageColor);
+      $("#plantSeasonFeaturesInfo").text(plantData.seasonFeatures);
+      $("#plantSpecialFeaturesInfo").text(plantData.specialFeatures);
       $("#plantNativeRegionInfo").text(plantData.nativeRegion);
+      $("#plantPropagataionInfo").text(plantData.propagation);
+      $("#plantProblemSolversInfo").text(plantData.problemSolvers);
       $("#plantSeedLink").attr("href", plantData.seedLink);
       images = ["../" + plantData.images]
       $("#newPlantLink").attr("href", "/new_plant/" + plantData.id)
     });
   </script>
-  <!-- Meme List End-->
-
   <br>
   <br>
   <br>
@@ -245,8 +385,6 @@
     text-align: center;
     color: #365E36;
   }
-
-
 
   .googleTranslateBox {
     text-align: center;

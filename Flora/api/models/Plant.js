@@ -52,6 +52,55 @@ module.exports = {
             required: false,
             defaultsTo: 'images/defaultPlantIcon.png',
         },
+
+        // Additonal Scraped Information
+
+        // Genus Names
+        genus: {
+            type: 'string',
+            required: false,
+        },
+        // plant height
+        height: {
+            type: 'string',
+            required: false,
+        },
+        // plant width
+        width: {
+            type: 'string',
+            required: false,
+        },
+        // flower color
+        flowerColor: {
+            type: 'string',
+            required: false,
+        },
+        // foliage color
+        foliageColor: {
+            type: 'string',
+            required: false,
+        },
+        // season features
+        seasonFeatures: {
+            type: 'string',
+            required: false,
+        },
+        // special features
+        specialFeatures: {
+            type: 'string',
+            required: false,
+        },
+        // propagation
+        propagation: {
+            type: 'string',
+            required: false,
+        },
+        // problem solvers
+        problemSolvers: {
+            type: 'string',
+            required: false,
+        },
+
       }
 
 };
