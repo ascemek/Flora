@@ -44,6 +44,7 @@ module.exports.routes = {
   '/reply/create': {controller: 'PostsController', action: 'createReply', policy: 'sessionAuth'},
 
   //Garden routes
+  '/viewFutureTask': {controller: 'GardenController', action: 'viewFutureTask', policy: 'sessionAuth'},
   '/updateTask': {controller: 'GardenController', action: 'updateTask', policy: 'sessionAuth'},
   '/removePlant': {controller: 'GardenController', action: 'removePlant', policy: 'sessionAuth'},
   '/favoritePlant': {controller: 'GardenController', action: 'favoritePlant', policy: 'sessionAuth'},
