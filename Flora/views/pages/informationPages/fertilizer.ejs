@@ -1,9 +1,9 @@
-<!--@author Sami Cemek-->
+<!--@author Sami Cemek (ascemek)-->
 <!--@version 1.0-->
 <!--@date 04/17/23-->
 
-
-<!--Frameworks Used: Bootstrap, Sails.JS-->
+<!--Languages Used: HTML, CSS, JavaScript-->
+<!--Frameworks Used: Bootstrap, Sails.JS, jQuery-->
 
 <head>
   <meta charset="utf-8">
@@ -18,6 +18,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
+<!-- Navigation bar start  -->
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
   <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
   <img src="images/floraIcon.png" width="60" height="60">
@@ -30,144 +31,143 @@
         <a class="nav-link" aria-current="page" href="/">Getting Started</a>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Information
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item " href="/watering">Watering</a></li>
-            <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
-            <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
-            <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
-            <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
-            <li><a class = "dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
-            <li><a class= "dropdown-item" id="composting" href="/composting">Composting</a></li>
-          </ul>
- 
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/forum">Forum</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/my_garden">My Garden</a>
-        </li>      
-        <li class="nav-item">
-          <a class="nav-link" href="/profile">Profile</a>
-        </li>    
-      </ul>
-    </div>  
+        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Information
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item " href="/watering">Watering</a></li>
+          <li><a class="dropdown-item" href="/sunlight">Sunlight</a></li>
+          <li><a class="dropdown-item" href="/fertilizer">Fertilizer</a></li>
+          <li><a class="dropdown-item" href="/diseases_pests_weeds">Diseases, Pests, and Weeds</a></li>
+          <li><a class="dropdown-item" href="/agr_zones">Agricultural Zones</a></li>
+          <li><a class="dropdown-item" id="companion_planting" href="/companion_planting">Companion Planting</a></li>
+          <li><a class="dropdown-item" id="composting" href="/composting">Composting</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="/plantSearch">Plant Search</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/forum">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/my_garden">My Garden</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">Profile</a>
+      </li>
+    </ul>
+  </div>
 </nav>
+<!-- Navigation bar end  -->
 
-  <body id="topOfPage">
+<body id="topOfPage">
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-    <h1>Fertilizer</h1>
+  <h1>Fertilizer</h1>
 
-    <div class= "googleTranslateBox"> 
-      <div class="googleTranslate"> <!--Google translate feature-->
-        <br>  
-          <h6>You can translate this page to 100+ different languages now!</h6>
-          <div id="google_translate_element"></div>
-      </div>
+  <div class="googleTranslateBox">
+    <div class="googleTranslate"> <!--Google translate feature-->
+      <br>
+      <h6>You can translate this page to 100+ different languages now!</h6>
+      <div id="google_translate_element"></div>
     </div>
-    
-    <br>
+  </div>
+
+  <br>
+  <br>
+
+  <!--Table of Contents to aid in user's navigation of the page-->
+  <div class="tableOfContents">
+    <a href="#whatIs">What is Fertilizing?</a>
     <br>
 
-    <!--Table of Contents to aid in user's navigation of the page-->
-    <div class="tableOfContents">
-      <a href="#whatIs">What is Fertilizing?</a>
-      <br>
-  
-      <a href="#typeFertilizer">Types of Fertilizers</a>
-      <br>
-  
-      <a href="#benefit">Benefits & Detriments</a> 
-      <br>
-      
-      <a href="#useFertilizer">Uses of Fertilizers</a> 
-      <br>
-
-      <a href="#resource">Additional Resources</a> 
-      <br>
-    </div>
-
-    <br>
-    <br>
-  
-    <hr class="dashed">
-  
-    <h2 id="whatIs">What is Fertilizing?</h2>
-    <br>
-    <p> Fertilizers are additional substances supplied to the crops to increase their productivity. 
-      These are used by the farmers daily to increase the crop yield. These fertilizers contain essential 
-      nutrients required by the plants, including nitrogen, potassium, and phosphorus. They also enhance 
-      the water retention capacity of the soil and increase its fertility.
-    </p>
-  
-    <br>
-    <br>
-  
-    <hr class="dashed">
-
-    <h2 id="typeFertilizer">Types Of Fertilizers</h2>
-    <br>
-    <p>
-      Fertilizers are mainly classified into two main types, organic and inorganic fertilizers.
-    </p>
-    <h4 id="types">Organic Fertilizers</h4>
-    <p>
-      Natural fertilizers derived from plants and animals are known as organic fertilizers. By adding carbonic 
-      molecules necessary for plant growth, it enriches the soil. Organic fertilizers boost the amount of organic 
-      matter in the soil, encourage microbial reproduction, and alter the physical and chemical composition of the 
-      soil. It is regarded as one of the essential elements for foods that are green.
-    </p>
-    <p>
-      Organic fertilizers can be obtained from the following products:
-    </p>
-
-    <ls>
-      <li>Agricultural Waste</li>
-      <li>Livestock Manure</li>
-      <li>Industrial Waste</li>
-      <li>Municipal Sludge</li>
-    </ls>
-
+    <a href="#typeFertilizer">Types of Fertilizers</a>
     <br>
 
-    <h4 id="types">Inorganic Fertilizers</h4>
+    <a href="#benefit">Benefits & Detriments</a>
+    <br>
+
+    <a href="#useFertilizer">Uses of Fertilizers</a>
+    <br>
+
+    <a href="#resource">Additional Resources</a>
+    <br>
+  </div>
+
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="whatIs">What is Fertilizing?</h2>
+  <br>
+  <p> Fertilizers are additional substances supplied to the crops to increase their productivity.
+    These are used by the farmers daily to increase the crop yield. These fertilizers contain essential
+    nutrients required by the plants, including nitrogen, potassium, and phosphorus. They also enhance
+    the water retention capacity of the soil and increase its fertility.
+  </p>
+
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="typeFertilizer">Types Of Fertilizers</h2>
+  <br>
   <p>
-    Chemical fertilizers generated by chemical techniques that contain nutrients for crop growth are known as 
+    Fertilizers are mainly classified into two main types, organic and inorganic fertilizers.
+  </p>
+  <h4 id="types">Organic Fertilizers</h4>
+  <p>
+    Natural fertilizers derived from plants and animals are known as organic fertilizers. By adding carbonic
+    molecules necessary for plant growth, it enriches the soil. Organic fertilizers boost the amount of organic
+    matter in the soil, encourage microbial reproduction, and alter the physical and chemical composition of the
+    soil. It is regarded as one of the essential elements for foods that are green.
+  </p>
+  <p>
+    Organic fertilizers can be obtained from the following products:
+  </p>
+
+  <ls>
+    <li>Agricultural Waste</li>
+    <li>Livestock Manure</li>
+    <li>Industrial Waste</li>
+    <li>Municipal Sludge</li>
+  </ls>
+
+  <br>
+
+  <h4 id="types">Inorganic Fertilizers</h4>
+  <p>
+    Chemical fertilizers generated by chemical techniques that contain nutrients for crop growth are known as
     inorganic fertilizers. The inorganic fertilizers are of the following types:
   </p>
 
   <ls>
     <li>Nitrogen Fertilizers</li>
     <p>
-      Nitrogen fertilizers contain nitrogen necessary for the development of crops. Nitrogen, a key constituent 
-      of chlorophyll, helps main balance in the process of photosynthesis. It is also a part of amino acids in 
+      Nitrogen fertilizers contain nitrogen necessary for the development of crops. Nitrogen, a key constituent
+      of chlorophyll, helps main balance in the process of photosynthesis. It is also a part of amino acids in
       plants and contains protein. Nitrogen fertilizers improve the production and quality of agricultural products.
     </p>
     <li>Phosphorus Fertilizers</li>
     <p>
-      In a phosphorus fertilizer, phosphorus is the principal nutrient. The effective phosphorus concentration, 
-      fertilization techniques, soil characteristics, and crop strains all affect how successful a fertilizer is. 
-      The protoplasm of the cell contains phosphorus, which is crucial for cell growth and proliferation. The growth 
+      In a phosphorus fertilizer, phosphorus is the principal nutrient. The effective phosphorus concentration,
+      fertilization techniques, soil characteristics, and crop strains all affect how successful a fertilizer is.
+      The protoplasm of the cell contains phosphorus, which is crucial for cell growth and proliferation. The growth
       of the plants’ roots is aided by the phosphorus fertilizer.
     </p>
     <li>Speciality Fertilizers</li>
     <p>
-      Speciality fertilizers are used to improve the quality of the soil and the crop yield. They are used to 
-      increase the soil’s fertility and to improve the soil’s physical and chemical properties. They are also 
+      Speciality fertilizers are used to improve the quality of the soil and the crop yield. They are used to
+      increase the soil’s fertility and to improve the soil’s physical and chemical properties. They are also
       used to increase the crop’s resistance to diseases and pests.
     </p>
   </ls>
@@ -176,207 +176,227 @@
   <br>
 
   <hr class="dashed">
-  
-    <h2 id="benefit">Benefits of Fertilizing:</h2>
-    <p>The advantages of fertilizers are mentioned below:</p>
-    <ls>
-      <li>Increases the crop yield</li>
-      <li>Increases the quality of the crop</li>
-      <li>Increases the resistance of the crop to diseases and pests</li>
-      <li>Increases the soil’s fertility</li>
-      <li>Improves the soil’s physical and chemical properties</li>
-    </ls>
 
-    <br>
-    <br>
+  <h2 id="benefit">Benefits of Fertilizing:</h2>
+  <p>The advantages of fertilizers are mentioned below:</p>
+  <ls>
+    <li>Increases the crop yield</li>
+    <li>Increases the quality of the crop</li>
+    <li>Increases the resistance of the crop to diseases and pests</li>
+    <li>Increases the soil’s fertility</li>
+    <li>Improves the soil’s physical and chemical properties</li>
+  </ls>
 
-    <hr class="dashed">
+  <br>
+  <br>
 
-    <h2 id="detriment">Detriments of Fertilizing:</h2>
-    <p>The disadvanatges of fertilizers are mentioned below:</p>
-    <ls>
-      <li>Expensive</li>
-      <li>The ingredients in the fertilizers are toxic to the skin and respiratory system</li>
-      <li>Excessive use of fertilizers damages the plants and reduces soil fertility</li>
-      <li>Leaching occurs and the fertilizers reach the rivers causing eutrophication</li>
-      <li>Long term use reduces the microbial activity and disturbs the pH of the soil</li>
-    </ls>
-   
-    <br>
-    <br>
-  
-    <hr class="dashed">
-  
-    <h2 id="useFertilizer">Uses Of Fertilizers</h2>
-    <p>Fertilizers are used for various purposes. The uses of fertilizers are mentioned below:
-    </p>
-    <ls>
-      <li>Used to provide additional nutrients to the plants</li>
-      <li>They are added to improve the yield of the crops</li>
-      <li>Nitrogen-rich fertilizers are used for the greening of lawns</li>
-      <li>Organic fertilizers improve the texture and fertility of the soil</li>
-      <li>Gardeners use fertilizers to address certain needs of the plants such as nutritional needs</li>
-      <li>Fertilizers are added to potted plants to replace the lost nutrients</li>
-    </ls>
-  
-    <br>
-    <br>
+  <hr class="dashed">
 
-    <hr class="dashed">
-  
-    <h2 id="tips">Importance Of Fertilizers</h2>
-    <p>
-      With such limited resources, it is quite challenging to meet the demands of the expanding population. Agriculture output has declined due to pests, a shortage of fertilizers, and declining soil fertility. The significance of fertilizers in agriculture has expanded as a result.
-    </p>
-    <p>
-      Fertilizers can be essential to plants in the following ways:
-    </p>
+  <h2 id="detriment">Detriments of Fertilizing:</h2>
+  <p>The disadvanatges of fertilizers are mentioned below:</p>
+  <ls>
+    <li>Expensive</li>
+    <li>The ingredients in the fertilizers are toxic to the skin and respiratory system</li>
+    <li>Excessive use of fertilizers damages the plants and reduces soil fertility</li>
+    <li>Leaching occurs and the fertilizers reach the rivers causing eutrophication</li>
+    <li>Long term use reduces the microbial activity and disturbs the pH of the soil</li>
+  </ls>
 
-    <ls>
-      <li>Fertilizers make plants more resistant to pests. As a result, they are using fewer insecticides and herbicides, which results in healthier crops. Hence, fewer illnesses are present, giving the crops an aesthetic value.</li>
-      <li>Fertilizers improve the water holding capacity of the plants and increase root depth.</li>
-      <li>The potassium content present in the fertilizers strengthens the straws and stalks of the plants.</li>
-      <li>The phosphorus present in the fertilizers helps in faster development of roots and formation of seeds in plants.</li>
-      <li>Nitrogen in the fertilizers promotes plant growth, which is seen in the green colour of the plants</li>
-    </ls>
+  <br>
+  <br>
 
-    <br>
-    <br>
-  
-    <hr class="dashed">
-  
-    <h2 id="resource">Additional Resources</h2>
-    <div class = "container-fluid">
-      <div class = "row">
-        <div class = "col-sm-6">
-          <iframe width="500" height="300" src="https://www.youtube.com/embed/vMDC5sdpHL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class = "col-sm-6">
-          <iframe width="500" height="300" src="https://www.youtube.com/embed/qPRbs8pvvhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+  <hr class="dashed">
+
+  <h2 id="useFertilizer">Uses Of Fertilizers</h2>
+  <p>Fertilizers are used for various purposes. The uses of fertilizers are mentioned below:
+  </p>
+  <ls>
+    <li>Used to provide additional nutrients to the plants</li>
+    <li>They are added to improve the yield of the crops</li>
+    <li>Nitrogen-rich fertilizers are used for the greening of lawns</li>
+    <li>Organic fertilizers improve the texture and fertility of the soil</li>
+    <li>Gardeners use fertilizers to address certain needs of the plants such as nutritional needs</li>
+    <li>Fertilizers are added to potted plants to replace the lost nutrients</li>
+  </ls>
+
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="tips">Importance Of Fertilizers</h2>
+  <p>
+    With such limited resources, it is quite challenging to meet the demands of the expanding population. Agriculture
+    output has declined due to pests, a shortage of fertilizers, and declining soil fertility. The significance of
+    fertilizers in agriculture has expanded as a result.
+  </p>
+  <p>
+    Fertilizers can be essential to plants in the following ways:
+  </p>
+
+  <ls>
+    <li>Fertilizers make plants more resistant to pests. As a result, they are using fewer insecticides and herbicides,
+      which results in healthier crops. Hence, fewer illnesses are present, giving the crops an aesthetic value.</li>
+    <li>Fertilizers improve the water holding capacity of the plants and increase root depth.</li>
+    <li>The potassium content present in the fertilizers strengthens the straws and stalks of the plants.</li>
+    <li>The phosphorus present in the fertilizers helps in faster development of roots and formation of seeds in plants.
+    </li>
+    <li>Nitrogen in the fertilizers promotes plant growth, which is seen in the green colour of the plants</li>
+  </ls>
+
+  <br>
+  <br>
+
+  <hr class="dashed">
+
+  <h2 id="resource">Additional Resources</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/vMDC5sdpHL0" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-6">
+        <iframe width="500" height="300" src="https://www.youtube.com/embed/qPRbs8pvvhE" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </div>
     </div>
+  </div>
 
-    <br>
-    <br>
+  <br>
+  <br>
 
-    <hr class="dashed">
+  <hr class="dashed">
 
-    <!-- Resources used-->
-    <h2 id="resource">Resources Used</h2>
-    <ul>
-      <li> <a href="https://www.finegardening.com/project-guides/container-gardening/fertilizing-basics#:~:text=Simply%20apply%20the%20fertilizer%20around,parallel%20to%20the%20planting%20row.">[1] The Basics of Fertilizing Your Plants </a> </li>
-      <li> <a href="https://www.longfield-gardens.com/article/how-and-why-to-fertilize-your-plants#:~:text=Most%20garden%20fertilizers%20contain%20the,weight%20%E2%80%93%20of%20each%20major%20nutrient.">[2] How and Why to Fertilize Your Plants</a> </li>
-      <li> <a href="https://byjus.com/biology/fertilizers/">[3] Fertilizers 101 </a> </li>
-    </ul>
+  <!-- Resources used-->
+  <h2 id="resource">Resources Used</h2>
+  <ul>
+    <li> <a
+        href="https://www.finegardening.com/project-guides/container-gardening/fertilizing-basics#:~:text=Simply%20apply%20the%20fertilizer%20around,parallel%20to%20the%20planting%20row.">[1]
+        The Basics of Fertilizing Your Plants </a> </li>
+    <li> <a
+        href="https://www.longfield-gardens.com/article/how-and-why-to-fertilize-your-plants#:~:text=Most%20garden%20fertilizers%20contain%20the,weight%20%E2%80%93%20of%20each%20major%20nutrient.">[2]
+        How and Why to Fertilize Your Plants</a> </li>
+    <li> <a href="https://byjus.com/biology/fertilizers/">[3] Fertilizers 101 </a> </li>
+  </ul>
 
-    <br>
-    <br>
-    <button onclick="document.location='#topOfPage'">Back To Top</button> <!--Back to top button-->
-    <br>
-    <br>
-    <br>
-  
-    </body>
-  <!--Google Translate feature-->
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  <br>
+  <br>
+  <button onclick="document.location='#topOfPage'">Back To Top</button> <!--Back to top button-->
+  <br>
+  <br>
+  <br>
+
+</body>
+<!--Google Translate feature-->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<!-- @chloemjones: Script to hide certain information based on user's experience level -->
+<script>
+  $(document).ready(() => {
+    $.ajax({
+      url: "/getCurrentXP",
+      type: 'GET',
+      success: (data) => {
+        if (data.experience == "Beginner") {
+          $("#companion_planting").hide();
+          $("#composting").hide();
+        }
+        if (data.experience == "Intermediate") {
+          $("#composting").hide();
+        }
       }
-      </script>
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  
-  
-  <style>
-    body{
-      background-color: #FAF9F6;
-      margin: auto;
+    })
+  })
+</script>
 
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-  
-    h1{
-      text-align: center;
-      color: #365E36;
-    }
-  
-    h2{
-      text-align: center;
-      color: #365E36;
-    }
-  
-    .googleTranslateBox{
-      text-align: center;
-      font-size: 20px;
-      background-color: #F4FFEB;
-   
-      border-style: dotted;
-      margin-left: 10%;
-      margin-right: 10%;
-      display: block;
-    }
+<!-- Styling start -->
+<style>
+  body {
+    background-color: #FAF9F6;
+    margin: auto;
 
-    .tableOfContents{
-      text-align: center;
-      /*font-size: 20px;*/
-      background-color: #F4FFEB;
-   
-      border-style: dotted;
-      margin-left: 10%;
-      margin-right: 10%;
-      display: block;
-    }
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-    /* unvisited link */
-    a:link {
-      color: #30007D;
-    }
-  
-    /* visited link */
-    a:visited {
-      color: #30007D;
-    }
-  
-    /* mouse over link */
-    a:hover {
-      color: #72418B;
-    }
-  
-    /* selected link */
-    a:active {
-      color: blue;
-    }
-  
-    hr.dashed {
-      border-top: 3px dotted #30007D;
-    }
-  
-    .youtube {
-      text-align: center;
-      
-    }
+  h1 {
+    text-align: center;
+    color: #365E36;
+  }
 
-    button{ /*Back to Top Button Styling*/
-      background-color: #365E36;
-      color: white;
-      border-color: #365E36;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-    }
+  h2 {
+    text-align: center;
+    color: #365E36;
+  }
 
-    /*Google Translate*/
-    .googleTranslate{
-      justify-content: center;
-    }
+  .googleTranslateBox {
+    text-align: center;
+    font-size: 20px;
+    background-color: #F4FFEB;
 
-    button{
+    border-style: dotted;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+  }
+
+  .tableOfContents {
+    text-align: center;
+    /*font-size: 20px;*/
+    background-color: #F4FFEB;
+
+    border-style: dotted;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+  }
+
+  /* unvisited link */
+  a:link {
+    color: #30007D;
+  }
+
+  /* visited link */
+  a:visited {
+    color: #30007D;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: #72418B;
+  }
+
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+  hr.dashed {
+    border-top: 3px dotted #30007D;
+  }
+
+  .youtube {
+    text-align: center;
+
+  }
+
+  button {
+    /*Back to Top Button Styling*/
     background-color: #365E36;
     color: white;
     border-color: #365E36;
@@ -386,29 +406,31 @@
     align-items: center;
     margin: auto;
   }
+
+  /*Google Translate*/
+  .googleTranslate {
+    justify-content: center;
+  }
+
+  button {
+    background-color: #365E36;
+    color: white;
+    border-color: #365E36;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
   @font-face {
-      font-family: growingGarden;
-      src: url("fonts/growingGarden.ttf") format("truetype");
-    }
-    .nav-item{
-      font-size: 18px;
-    }
-  </style>
-  <script>
-    $(document).ready(()=>{
-      $.ajax({
-        url:"/getCurrentXP",
-        type:'GET',
-        success:(data)=>{
-          if(data.experience == "Beginner"){
-            $("#companion_planting").hide();
-            $("#composting").hide();
-          }
-          if(data.experience == "Intermediate"){
-            $("#composting").hide();
-          }
-        }
-      })
-    })
-    
-  </script>
+    font-family: growingGarden;
+    src: url("fonts/growingGarden.ttf") format("truetype");
+  }
+
+  .nav-item {
+    font-size: 18px;
+  }
+  
+</style>
+<!-- Styling end -->
