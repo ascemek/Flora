@@ -7,6 +7,10 @@
  *
  * For more information on seeding your app with fake data, check out:
  * https://sailsjs.com/config/bootstrap
+ * @author Nicolas Pitcher
+ * @author Sami Cemek
+ * @author Faye Landers
+ * @author Chloe Jones
  */
 
 const scheduler = require('node-schedule');
