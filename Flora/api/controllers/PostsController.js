@@ -1,5 +1,11 @@
-//Nicolas Pitcher
-//Chloe Jones
+
+/**
+ * @author Nicolas Pitcher, Chloe Jones
+ * @title Posts Controller
+ * @description This controller handles posts and replies on the forum page
+ * @frameworks sails.js
+ */
+
 
 module.exports = {
   createPost: async function(req, res) {

@@ -1,4 +1,5 @@
 /**
+ * @author chloe jones
  * Reply.js
  *
  * A table holding user blog post replies.

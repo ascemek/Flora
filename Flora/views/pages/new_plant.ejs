@@ -1,3 +1,5 @@
+<!-- @author chloe jones, Nicolas Pitcher-->
+
 <!-- STYLE -->
 <style>
 /* unvisited link */
@@ -217,14 +219,17 @@ a:link {
 
 <script>
   $(document).ready(()=>{
+    //adjusts page by experience 
     $.ajax({
       url:"/getCurrentXP",
       type:'GET',
       success:(data)=>{
         if(data.experience == "Beginner"){
+          //adjust nav bar
           $("#companion_planting").hide();
           $("#composting").hide();
 
+          //display info on default values for beginners 
           $(".begginer_info_wrapper").append(`
           <br><br><br>
           <img src="/images/infoIcon.png" width="40" height="40">
@@ -235,6 +240,7 @@ a:link {
           `);
         }
         if(data.experience == "Intermediate"){
+          //adjust nav bar
           $("#composting").hide(); 
         }
       }

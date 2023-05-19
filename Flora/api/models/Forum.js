@@ -1,4 +1,5 @@
 /**
+ * @author Nicolas Pitcher
  * Forum.js
  * @author Nicolas Pitcher
  * @author Chloe Jones
