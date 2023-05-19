@@ -3,6 +3,7 @@
  * comparePasswords.js
  *
  * A helper to compare passwords.
+ * @author Nicolas Pitcher
  * @param {string} password
  * @param {string} hashedPassword
  * @returns {boolean} Whether the passwords match.

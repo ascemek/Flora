@@ -1,4 +1,5 @@
-
+//Nicolas Pitcher
+//Chloe Jones
 
 module.exports = {
   createPost: async function(req, res) {

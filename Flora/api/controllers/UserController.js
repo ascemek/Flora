@@ -1,3 +1,4 @@
+//Nicolas Pitcher
 const uuidv4 = require('uuid/v4'); // Import uuid
 
 module.exports = {
