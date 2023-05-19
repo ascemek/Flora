@@ -96,7 +96,8 @@ module.exports.bootstrap = async function(done) {
       }
     ]);
   }
-  // if (await Plants.count() === 0){ /*.count function not working???*/
+  // @chloemjones creating a database with 10 plants manually for testing
+  // if (await Plants.count() === 0){
   //   await Plant.createEach( [
   //     {
   //      // id: 'basil',
@@ -211,5 +212,5 @@ module.exports.bootstrap = async function(done) {
     }).fetch();
     plants.push(newPlant);
 }
-  return done();
+  return done(); // Finished initializing
 };
