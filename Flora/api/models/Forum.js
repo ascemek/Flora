@@ -1,7 +1,8 @@
 /**
  * @author Nicolas Pitcher
  * Forum.js
- *
+ * @author Nicolas Pitcher
+ * @author Chloe Jones
  * A table holding user blog posts.
  */
 

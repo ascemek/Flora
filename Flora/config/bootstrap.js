@@ -7,6 +7,10 @@
  *
  * For more information on seeding your app with fake data, check out:
  * https://sailsjs.com/config/bootstrap
+ * @author Nicolas Pitcher
+ * @author Sami Cemek
+ * @author Faye Landers
+ * @author Chloe Jones
  */
 
 const scheduler = require('node-schedule');
@@ -96,7 +100,8 @@ module.exports.bootstrap = async function(done) {
       }
     ]);
   }
-  // if (await Plants.count() === 0){ /*.count function not working???*/
+  // @chloemjones creating a database with 10 plants manually for testing
+  // if (await Plants.count() === 0){
   //   await Plant.createEach( [
   //     {
   //      // id: 'basil',
@@ -184,7 +189,7 @@ module.exports.bootstrap = async function(done) {
   //}
 
   // import the plantInfoScraped.json file
-  var plantInfo = await require('../api/webScraping/plantInfoScraped.json');
+  var plantInfo = await require('../api/webScraping/plantInfoScraped2.json');
   const plants = [];
 
   // loop through the scraped plant information and add it to the database
@@ -211,5 +216,5 @@ module.exports.bootstrap = async function(done) {
     }).fetch();
     plants.push(newPlant);
 }
-  return done();
+  return done(); // Finished initializing
 };

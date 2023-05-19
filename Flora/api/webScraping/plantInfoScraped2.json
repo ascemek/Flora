@@ -12,7 +12,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Allium.jpg"
     },
     {
         "Genus Names": "Tulipa",
@@ -27,7 +28,8 @@
         "Special Features": "Cut Flowers, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8",
         "Propagation": "Division",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Triumph Tulips.jpg"
     },
     {
         "Genus Names": "Tulbaghia",
@@ -42,7 +44,8 @@
         "Special Features": "Attracts Birds, Fragrance, Low Maintenance",
         "nativeRegion": "10, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Society Garlic.jpg"
     },
     {
         "Genus Names": "Anemone",
@@ -57,7 +60,8 @@
         "Special Features": "Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "5, 6, 7, 8",
         "Propagation": "Division",
-        "Problem Solvers": "Drought Tolerant, Good For Privacy, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Drought Tolerant, Good For Privacy, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Anemone Bulbs.jpg"
     },
     {
         "Genus Names": "Gloriosa superba",
@@ -72,7 +76,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers",
         "nativeRegion": "10, 11",
         "Propagation": "Division",
-        "Problem Solvers": "Slope/Erosion Control"
+        "Problem Solvers": "Slope/Erosion Control",
+        "image": "images/plantPictures/Gloriosa Lily.jpg"
     },
     {
         "Genus Names": "Monarda",
@@ -87,7 +92,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Bee Balm.jpg"
     },
     {
         "Genus Names": "Alcea rosea",
@@ -102,7 +108,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Low Maintenance",
         "nativeRegion": "10, 2, 3, 4, 5, 6, 7, 8",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Good For Privacy"
+        "Problem Solvers": "Good For Privacy",
+        "image": "images/plantPictures/Hollyhock.jpg"
     },
     {
         "Genus Names": "Geranium sp.",
@@ -117,7 +124,8 @@
         "Special Features": "Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Perennial Geranium.jpg"
     },
     {
         "Genus Names": "Euphorbia",
@@ -132,7 +140,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Spurge.jpeg"
     },
     {
         "Genus Names": "Oxalis",
@@ -147,7 +156,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant, Groundcover"
+        "Problem Solvers": "Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Oxalis.jpg"
     },
     {
         "Genus Names": "Nerium",
@@ -162,7 +172,8 @@
         "Special Features": "Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy, Slope/Erosion Control",
+        "image": "images/plantPictures/Oleander.jpg"
     },
     {
         "Genus Names": "Erysimum",
@@ -176,7 +187,8 @@
         "Season Features": "Fall Bloom, Spring Bloom, Summer Bloom",
         "Special Features": "Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
-        "Propagation": "Seed, Stem Cuttings"
+        "Propagation": "Seed, Stem Cuttings",
+        "image":"images/plantPictures/Wallflower.jpg"
     },
     {
         "Genus Names": "Ligustrum",
@@ -191,7 +203,8 @@
         "Special Features": "Attracts Birds, Fragrance, Low Maintenance",
         "nativeRegion": "5, 6, 7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant, Good For Privacy"
+        "Problem Solvers": "Drought Tolerant, Good For Privacy",
+        "image": "images/plantPictures/Privet.jpg"
     },
     {
         "Genus Names": "Salvia officinalis",
@@ -206,7 +219,8 @@
         "Special Features": "Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 4, 5, 6, 7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Sage.jpg"
     },
     {
         "Genus Names": "Hylotelephium (formerly Sedum)",
@@ -221,7 +235,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Sedum.jpg"
     },
     {
         "Genus Names": "Armeria",
@@ -236,7 +251,8 @@
         "Special Features": "Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Thrift.jpg"
     },
     {
         "Genus Names": "Campsis",
@@ -251,7 +267,8 @@
         "Special Features": "Attracts Birds",
         "nativeRegion": "5, 6, 7, 8, 9",
         "Propagation": "Layering, Seed, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant, Slope/Erosion Control"
+        "Problem Solvers": "Drought Tolerant, Slope/Erosion Control",
+        "image": "images/plantPictures/Trumpet Vine.jpg"
     },
     {
         "Genus Names": "Viola",
@@ -266,7 +283,8 @@
         "Special Features": "Cut Flowers, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 2, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Groundcover"
+        "Problem Solvers": "Groundcover",
+        "image": "images/plantPictures/Violet.jpg"
     },
     {
         "Genus Names": "Yucca",
@@ -281,7 +299,8 @@
         "Special Features": "Attracts Birds, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Yucca.jpg"
     },
     {
         "Genus Names": "Tecoma stans",
@@ -296,7 +315,8 @@
         "Special Features": "Attracts Birds, Good for Containers",
         "nativeRegion": "10, 11",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant, Good For Privacy"
+        "Problem Solvers": "Drought Tolerant, Good For Privacy",
+        "image": "images/plantPictures/Yellow Bells.jpg"
     },
     {
         "Genus Names": "Achillea",
@@ -311,7 +331,8 @@
         "Special Features": "Attracts Birds, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Yarrow.jpeg"
     },
     {
         "Genus Names": "Veronica",
@@ -326,7 +347,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Veronica.jpg"
     },
     {
         "Genus Names": "Viburnum",
@@ -341,7 +363,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Low Maintenance",
         "nativeRegion": "2, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy, Slope/Erosion Control",
+        "image": "images/plantPictures/Viburnum.jpg"
     },
     {
         "Genus Names": "Verbena",
@@ -356,7 +379,8 @@
         "Special Features": "Good for Containers",
         "nativeRegion": "7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Verbena.jpg"
     },
     {
         "Genus Names": "Mandevilla",
@@ -371,7 +395,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11",
         "Propagation": "Stem Cuttings",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Mandevilla.jpg"
     },
     {
         "Genus Names": "Ajuga",
@@ -386,7 +411,8 @@
         "Special Features": "Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Ajuga.jpg"
     },
     {
         "Genus Names": "Alstroemeria",
@@ -401,7 +427,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Alstroemeria.jpg"
     },
     {
         "Genus Names": "Anemone",
@@ -416,7 +443,8 @@
         "Special Features": "Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "4, 5, 6, 7, 8",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Groundcover",
+        "image": "images/plantPictures/Anemone Bulbs.jpg"
     },
     {
         "Genus Names": "Brugmansia",
@@ -431,7 +459,8 @@
         "Special Features": "Attracts Birds, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Angel's Trumpet.jpg"
     },
     {
         "Genus Names": "Symphyotrichum",
@@ -446,7 +475,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Aster.jpg"
     },
     {
         "Genus Names": "Astilbe",
@@ -461,7 +491,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Good for Containers",
         "nativeRegion": "4, 5, 6, 7, 8",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Groundcover",
+        "image": "images/plantPictures/Astilbe.jpg"
     },
     {
         "Genus Names": "Sutera",
@@ -476,7 +507,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Groundcover"
+        "Problem Solvers": "Groundcover",
+        "image": "images/plantPictures/Bacopa.jpg"
     },
     {
         "Genus Names": "Berberis",
@@ -491,7 +523,8 @@
         "Special Features": "Attracts Birds, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy",
+        "image": "images/plantPictures/Barberry.jpg"
     },
     {
         "Genus Names": "Begonia",
@@ -506,7 +539,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Begonias.jpg"
     },
     {
         "Genus Names": "Campanula",
@@ -521,7 +555,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Bellflower.jpg"
     },
     {
         "Genus Names": "Strelitzia",
@@ -536,7 +571,8 @@
         "Special Features": "Cut Flowers, Good for Containers",
         "nativeRegion": "10, 11",
         "Propagation": "Division, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Bird of Paradise.jpg"
     },
     {
         "Genus Names": "Rudbeckia",
@@ -551,7 +587,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Black-Eyed Susan.jpg"
     },
     {
         "Genus Names": "Gaillardia",
@@ -566,7 +603,8 @@
         "Special Features": "Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Blanket Flower.jpg"
     },
     {
         "Genus Names": "Bougainvillea",
@@ -581,7 +619,8 @@
         "Special Features": "Attracts Birds, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 9",
         "Propagation": "Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Bougainvillea.jpg"
     },
     {
         "Genus Names": "Buxus",
@@ -596,7 +635,8 @@
         "Special Features": "Good for Containers",
         "nativeRegion": "4, 5, 6, 7, 8",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Good For Privacy, Groundcover"
+        "Problem Solvers": "Deer Resistant, Good For Privacy, Groundcover",
+        "image": "images/plantPictures/Boxwood.jpg"
     },
     {
         "Genus Names": "Eschscholzia californica",
@@ -611,7 +651,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 2, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/California Poppy.jpg"
     },
     {
         "Genus Names": "Camellia",
@@ -626,7 +667,8 @@
         "Special Features": "Cut Flowers, Good for Containers",
         "nativeRegion": "10, 6, 7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Good For Privacy"
+        "Problem Solvers": "Good For Privacy",
+        "image": "images/plantPictures/Camellia.jpg"
     },
     {
         "Genus Names": "Canna",
@@ -641,7 +683,8 @@
         "Special Features": "Attracts Birds, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Canna.jpg"
     },
     {
         "Genus Names": "Ricinus communis",
@@ -656,7 +699,8 @@
         "Special Features": "Low Maintenance",
         "nativeRegion": "10, 11, 9",
         "Propagation": "Seed",
-        "Problem Solvers": "Deer Resistant, Good For Privacy"
+        "Problem Solvers": "Deer Resistant, Good For Privacy",
+        "image": "images/plantPictures/Castor Bean.jpg"
     },
     {
         "Genus Names": "Rosa",
@@ -671,7 +715,8 @@
         "Special Features": "Attracts Birds, Fragrance",
         "nativeRegion": "10, 11, 4, 5, 6, 7, 8, 9",
         "Propagation": "Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Good For Privacy"
+        "Problem Solvers": "Deer Resistant, Good For Privacy",
+        "image": "images/plantPictures/Climbing Rose.jpg"
     },
     {
         "Genus Names": "Aquilegia",
@@ -686,7 +731,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Seed",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Columbine.jpg"
     },
     {
         "Genus Names": "Echinacea",
@@ -701,7 +747,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Coneflower.jpg"
     },
     {
         "Genus Names": "Heuchera",
@@ -716,7 +763,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division",
-        "Problem Solvers": "Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Coral Bells.jpg"
     },
     {
         "Genus Names": "Coreopsis",
@@ -731,7 +779,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Coreopsis.jpg"
     },
     {
         "Genus Names": "Crocus",
@@ -746,7 +795,8 @@
         "Special Features": "Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8",
         "Propagation": "Division",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Crocus.jpg"
     },
     {
         "Genus Names": "Dahlia",
@@ -761,7 +811,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 8, 9",
         "Propagation": "Division, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Dahlia.jpg"
     },
     {
         "Genus Names": "Hemerocallis",
@@ -776,7 +827,8 @@
         "Special Features": "Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Daylily.jpg"
     },
     {
         "Genus Names": "Delphinium",
@@ -791,7 +843,8 @@
         "Special Features": "Cut Flowers, Good for Containers",
         "nativeRegion": "3, 4, 5, 6, 7",
         "Propagation": "Seed",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Delphiniums.jpg"
     },
     {
         "Genus Names": "Cornus",
@@ -806,7 +859,8 @@
         "Special Features": "Attracts Birds, Good for Containers",
         "nativeRegion": "2, 3, 4, 5, 6, 7, 8",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Good For Privacy, Slope/Erosion Control"
+        "Problem Solvers": "Good For Privacy, Slope/Erosion Control",
+        "image": "images/plantPictures/Dogwood Shrub.jpg"
     },
     {
         "Genus Names": "Eucalyptus",
@@ -821,7 +875,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Good for Containers",
         "nativeRegion": "10, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Good For Privacy, Slope/Erosion Control"
+        "Problem Solvers": "Good For Privacy, Slope/Erosion Control",
+        "image": "images/plantPictures/Eucalyptus.jpg"
     },
     {
         "Genus Names": "Euphorbia",
@@ -836,7 +891,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 5, 6, 7, 8, 9",
         "Propagation": "Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Euphorbia.jpg"
     },
     {
         "Genus Names": "Forsythia",
@@ -851,7 +907,8 @@
         "Special Features": "Cut Flowers, Low Maintenance",
         "nativeRegion": "4, 5, 6, 7, 8, 9",
         "Propagation": "Layering, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Good For Privacy, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Good For Privacy, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Forsythia.jpg"
     },
     {
         "Genus Names": "Digitalis",
@@ -866,7 +923,8 @@
         "Special Features": "Attracts Birds, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Seed",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Foxglove.jpg"
     },
     {
         "Genus Names": "Freesia ssp.",
@@ -881,7 +939,8 @@
         "Special Features": "Attracts Birds, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 9",
         "Propagation": "Division",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Freesia.jpg"
     },
     {
         "Genus Names": "Muscari",
@@ -896,7 +955,8 @@
         "Special Features": "Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "4, 5, 6, 7, 8",
         "Propagation": "Division",
-        "Problem Solvers": "Deer Resistant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Groundcover",
+        "image": "images/plantPictures/Grape Hyacinth.jpg"
     },
     {
         "Genus Names": "Crataegus crus-galli",
@@ -911,7 +971,8 @@
         "Special Features": "Attracts Birds",
         "nativeRegion": "3, 4, 5, 6, 7",
         "Propagation": "Stem Cuttings",
-        "Problem Solvers": "Slope/Erosion Control"
+        "Problem Solvers": "Slope/Erosion Control",
+        "image": "images/plantPictures/Hawthorn Tree.jpg"
     },
     {
         "Genus Names": "Ilex",
@@ -926,7 +987,8 @@
         "Special Features": "Attracts Birds, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Good For Privacy"
+        "Problem Solvers": "Deer Resistant, Good For Privacy",
+        "image": "images/plantPictures/Holly.jpg"
     },
     {
         "Genus Names": "Impatiens",
@@ -941,7 +1003,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Groundcover"
+        "Problem Solvers": "Groundcover",
+        "image": "images/plantPictures/Impatiens.jpg"
     },
     {
         "Genus Names": "Iris",
@@ -956,7 +1019,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Iris.jpg"
     },
     {
         "Genus Names": "Crassula",
@@ -971,7 +1035,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "11",
         "Propagation": "Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Jade Plant.jpg"
     },
     {
         "Genus Names": "Jasminum",
@@ -986,7 +1051,8 @@
         "Special Features": "Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 6, 7, 8, 9",
         "Propagation": "Layering, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Good For Privacy, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Good For Privacy, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Jasmine.jpg"
     },
     {
         "Genus Names": "Eutrochium",
@@ -1001,11 +1067,12 @@
         "Special Features": "Attracts Birds, Fragrance, Low Maintenance",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy, Groundcover",
+        "image": "images/plantPictures/Joe Pye Weed.jpg"
     },
     {
         "Genus Names": "Stachys",
-        "name": "Lamb’s Ear",
+        "name": "Lamb's Ear",
         "category": "Perennial",
         "sunFrequency": "Part Sun, Sun",
         "Height": "6 to 24 inches",
@@ -1016,7 +1083,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Lamb’s Ear.jpg"
     },
     {
         "Genus Names": "Lantana",
@@ -1031,7 +1099,8 @@
         "Special Features": "Attracts Birds, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Lantana.jpg"
     },
     {
         "Genus Names": "Lavandula spp.",
@@ -1046,7 +1115,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Good for Containers",
         "nativeRegion": "5, 6, 7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Lavender.jpg"
     },
     {
         "Genus Names": "Syringa",
@@ -1061,7 +1131,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Low Maintenance",
         "nativeRegion": "2, 3, 4, 5, 6, 7, 8",
         "Propagation": "Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant, Good For Privacy"
+        "Problem Solvers": "Drought Tolerant, Good For Privacy",
+        "image": "images/plantPictures/Lilac.jpg"
     },
     {
         "Genus Names": "Convallaria majus",
@@ -1076,7 +1147,8 @@
         "Special Features": "Cut Flowers, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division",
-        "Problem Solvers": "Deer Resistant, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Lily of the Valley.jpg"
     },
     {
         "Genus Names": "Eustoma",
@@ -1091,7 +1163,8 @@
         "Special Features": "Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 8, 9",
         "Propagation": "Seed",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Lisianthus.jpg"
     },
     {
         "Genus Names": "Lupinus",
@@ -1106,7 +1179,8 @@
         "Special Features": "Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "4, 5, 6, 7, 8, 9",
         "Propagation": "Seed",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Lupine.jpg"
     },
     {
         "Genus Names": "Ophiopogon",
@@ -1121,7 +1195,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 6, 7, 8, 9",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Mondo Grass.jpg"
     },
     {
         "Genus Names": "Portulaca spp.",
@@ -1136,7 +1211,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Moss Rose.jpg"
     },
     {
         "Genus Names": "Penstemon",
@@ -1151,7 +1227,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant, Good For Privacy, Groundcover, Slope/Erosion Control"
+        "Problem Solvers": "Drought Tolerant, Good For Privacy, Groundcover, Slope/Erosion Control",
+        "image": "images/plantPictures/Penstemon.jpg"
     },
     {
         "Genus Names": "Petunia",
@@ -1166,7 +1243,8 @@
         "Special Features": "Attracts Birds, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Groundcover",
+        "image": "images/plantPictures/Petunia.jpg"
     },
     {
         "Genus Names": "Phlox",
@@ -1181,7 +1259,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Phlox.jpg"
     },
     {
         "Genus Names": "Papaver",
@@ -1196,7 +1275,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Low Maintenance",
         "nativeRegion": "2, 3, 4, 5, 6, 7, 8",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant",
+        "image": "images/plantPictures/Oriental Poppy.jpg"
     },
     {
         "Genus Names": "Primula",
@@ -1211,7 +1291,8 @@
         "Special Features": "Attracts Birds, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "2, 3, 4, 5, 6, 7, 8",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Primrose.jpg"
     },
     {
         "Genus Names": "Filipendula rubra",
@@ -1226,7 +1307,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8",
         "Propagation": "Division, Seed",
-        "Problem Solvers": "Deer Resistant, Slope/Erosion Control"
+        "Problem Solvers": "Deer Resistant, Slope/Erosion Control",
+        "image": "images/plantPictures/Queen of the Prairie.jpg"
     },
     {
         "Genus Names": "Rhododendron",
@@ -1241,7 +1323,8 @@
         "Special Features": "Fragrance, Good for Containers",
         "nativeRegion": "10, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Layering, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Good For Privacy"
+        "Problem Solvers": "Deer Resistant, Good For Privacy",
+        "image": "images/plantPictures/Rhododendrons.jpg"
     },
     {
         "Genus Names": "Perovskia atriplicifolia",
@@ -1256,7 +1339,8 @@
         "Special Features": "Attracts Birds, Cut Flowers, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Good For Privacy",
+        "image": "images/plantPictures/Russian Sage.jpg"
     },
     {
         "Genus Names": "Polygonatum",
@@ -1271,7 +1355,8 @@
         "Special Features": "Cut Flowers, Fragrance, Good for Containers, Low Maintenance",
         "nativeRegion": "3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division",
-        "Problem Solvers": "Drought Tolerant"
+        "Problem Solvers": "Drought Tolerant",
+        "image": "images/plantPictures/Solomon's Seal.jpg"
     },
     {
         "Genus Names": "Lycoris",
@@ -1286,7 +1371,8 @@
         "Special Features": "Attracts Birds, Cut Flowers",
         "nativeRegion": "10, 5, 6, 7, 8, 9",
         "Propagation": "Division",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Spider Lily.jpg"
     },
     {
         "Genus Names": "Tradescantia",
@@ -1301,7 +1387,8 @@
         "Special Features": "Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 4, 5, 6, 7, 8, 9",
         "Propagation": "Division, Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover"
+        "Problem Solvers": "Deer Resistant, Drought Tolerant, Groundcover",
+        "image": "images/plantPictures/Spiderwort.jpg"
     },
     {
         "Genus Names": "Trachelospermum",
@@ -1316,7 +1403,8 @@
         "Special Features": "Attracts Birds, Fragrance, Low Maintenance",
         "nativeRegion": "10, 7, 8, 9",
         "Propagation": "Division, Stem Cuttings",
-        "Problem Solvers": "Good For Privacy"
+        "Problem Solvers": "Good For Privacy",
+        "image": "images/plantPictures/Star Jasmine.jpg"
     },
     {
         "Genus Names": "Zinnia",
@@ -1331,6 +1419,7 @@
         "Special Features": "Attracts Birds, Cut Flowers, Good for Containers, Low Maintenance",
         "nativeRegion": "10, 11, 2, 3, 4, 5, 6, 7, 8, 9",
         "Propagation": "Seed, Stem Cuttings",
-        "Problem Solvers": "Deer Resistant"
+        "Problem Solvers": "Deer Resistant",
+        "image": "images/plantPictures/Zinnia.jpg"
     }
 ]

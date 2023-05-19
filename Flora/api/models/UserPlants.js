@@ -1,6 +1,6 @@
 /**
  * UserPlants.js
- *
+ * @author Nicolas Pitcher
  * A table holding user plants.
  */
 

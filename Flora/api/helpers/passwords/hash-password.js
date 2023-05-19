@@ -3,6 +3,7 @@
  * hashPassword.js
  *
  * A helper to hash a password.
+ * @author Nicolas Pitcher
  * @param {string} password
  * @returns {string} The hashed password.
  * @example const hashedPassword = await sails.helpers.passwords.hashPassword('password');

@@ -3,6 +3,7 @@
  * schedule-plant-tasks.js
  *
  * A helper to schedule plant tasks based on user plant needs.
+ * @author Nicolas Pitcher
  * @example await sails.helpers.schedulePlantTasks();
  * @see https://sailsjs.com/documentation/concepts/helpers
   */
