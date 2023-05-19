@@ -1,3 +1,5 @@
+<!-- @author Chloe Jones-->
+
 <nav class="navbar navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #3C683C;">
   <a class="navbar-brand" href="/" style="font-size: 45px; font-family: 'growingGarden', Verdana;">Flora</a>
   <img src="images/floraIcon.png" width="60" height="60">
@@ -64,13 +66,13 @@
   <br>
   <!--Table of Contents to aid in user's navigation of the page-->
   <div class="tableOfContents">
-    <a href="#guide">Information Guide</a> <!--Info on what Composting is-->
+    <a href="#guide">Information Guide</a> <!--Info on all the info pages -->
     <br>
 
-    <a href="#start">Starting a Garden</a> <!--Common benefits of composting-->
+    <a href="#start">Starting a Garden</a> <!--Tips on starting a garden-->
     <br>
 
-    <a href="#resource">Resources</a> <!--Examples of how to compost-->
+    <a href="#resource">Resources</a> <!--Resources-->
     <br>
 
   </div>
@@ -321,6 +323,7 @@
 </style>
 
 <script>
+  //adjust page based off experience level 
   $(document).ready(() => {
     $.ajax({
       url: "/getCurrentXP",

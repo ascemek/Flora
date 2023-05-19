@@ -1,4 +1,5 @@
 /**
+ * @author Nicolas Pitcher
  * Forum.js
  *
  * A table holding user blog posts.
