@@ -1,18 +1,23 @@
 /**
- * @author Sami Cemek
+ * @author Sami Cemek (ascemek)
  * @version 1.0
  * @date 04/25/23
- * 
+ * @title Plant Scraper
+ * @description This scraper scrapes the plant information from the Better Homes and Gardens website.
+ * https://www.bhg.com/gardening/plant-dictionary/
+ * @frameworks puppeteer (node.js)
+ * @dependencies puppeteer, fs
  */
 
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 
 (async () => {
+    // open the browser and prepare a page
     const browser = await puppeteer.launch();
 
     await (async () => {
-        const urls = [ // 25 plants
+        const urls = [ // 89 plants
             "https://www.bhg.com/gardening/plant-dictionary/bulb/allium/",
             "https://www.bhg.com/gardening/plant-dictionary/bulb/triumph-tulips/",
             "https://www.bhg.com/gardening/plant-dictionary/bulb/society-garlic/",
@@ -118,6 +123,7 @@ const fs = require("fs");
             }
         }
 
+        // loop through the urls array
         for (let i = 0; i < urls.length; i++) {
             const url = urls[i];
             const page = await browser.newPage();
@@ -125,9 +131,9 @@ const fs = require("fs");
 
             let plantFeatures = "Null";
 
-            // Scrape the data from the selector specified
+            // scrape the data from the selector specified
             plantFeatures = await page.$$eval(
-                "tr > td.mntl-sc-block-profile__value",
+                "tr > td.mntl-sc-block-profile__value", // selector
                 els => els.map(el => el.textContent)
             );
 
@@ -152,12 +158,12 @@ const fs = require("fs");
                     console.log(error);
                 }
 
-                await page.close();
+                await page.close(); // close the page
             }
         }
 
     })()
-        .catch(err => console.error(err))
+        .catch(err => console.error(err)) // catch any errors
         .finally(() => browser?.close());
 
     // Future work: check if the last line on the file is a bracket if so don't add a bracket again
@@ -170,20 +176,21 @@ const fs = require("fs");
             console.log(error);
         }
 
-    await browser.close();
+    await browser.close(); // close the browser
 
 })();
 
-// Plant Model - Scraped Data (before renaming)
-// name = COMMON NAME
-// category = PLANT TYPE
-// sunFrequency = LIGHT
-// nativeRegion = ZONES
-
+/**
+ * Make the array of plant features into an object - easier to read JSON style formatted
+ * @param arr - array of scraped plant features
+ * @returns - formatted object of plant features
+ */
+// handle the array of plant features
 function handleArr(arr) {
     const labels = ["Genus Names", "name", "category", "sunFrequency", "Height", "Width", "Flower Color", "Foliage Color", "Season Features", "Special Features", "nativeRegion", "Propagation", "Problem Solvers"]
     const returnObj = {}
 
+    // loop through the array and add the label as the key and the value as the value
     for (let i = 0; i < arr.length; i++) {
         const label = labels[i]
         const value = arr[i]
